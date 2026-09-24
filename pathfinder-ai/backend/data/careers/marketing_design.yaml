@@ -1,0 +1,363 @@
+# Career definitions — marketing and design families.
+
+- id: digital-marketing-analyst
+  name: Digital Marketing Analyst
+  family: marketing
+  categories: [marketing, data]
+  summary: Plan, measure and optimise digital campaigns.
+  what_they_do: Digital marketing analysts run and analyse campaigns across search, social and email, reporting on performance and optimising spend.
+  responsibilities:
+    - Track campaign performance
+    - Optimise targeting and budget
+    - Report results to stakeholders
+  skills:
+    digital_marketing: [2, core]
+    marketing_analytics: [2, core]
+    excel: [2, important]
+    seo: [1, useful]
+    data_visualization: [1, important]
+    communication: [2, important]
+    sql: [1, useful]
+  technologies: [Google Ads, Meta Ads, GA4, Looker Studio, Excel]
+  entry_routes:
+    - Marketing degrees or coordinator roles
+    - Platform certifications with a real campaign
+  example_projects: [Campaign report with measured results]
+  project_templates: [marketing-attribution, seo-growth-plan]
+  certificates: [google-ads-search, ga4-certification, hubspot-inbound]
+  related: [marketing-analyst, growth-analyst, seo-specialist]
+  who_might_enjoy:
+    - Creative people who also like numbers
+  questions_to_explore:
+    - Do you prefer creative work or optimisation work?
+  signals:
+    domains: {marketing: 1.0, data: 0.4, media: 0.3}
+    activities: [analyzing_data, writing, people]
+    work_styles: [work_with_customers, analyze_information]
+  skill_focus: Campaign performance
+  typical_outputs: Campaign plans, performance reports
+
+- id: growth-analyst
+  name: Growth Analyst
+  family: marketing
+  categories: [marketing, product, data]
+  summary: Find and test levers that grow users and revenue.
+  what_they_do: Growth analysts analyse acquisition, activation and retention and run experiments to improve them.
+  responsibilities:
+    - Analyse funnels and cohorts
+    - Design and evaluate growth experiments
+    - Build growth models
+  skills:
+    growth: [2, core]
+    experimentation: [2, core]
+    sql: [2, core]
+    marketing_analytics: [2, important]
+    statistics: [1, important]
+    python: [1, useful]
+    product_management: [1, useful]
+  technologies: [SQL, Amplitude, GA4, experimentation platforms]
+  entry_routes:
+    - Analysts in startups
+    - Marketers who learn SQL and experimentation
+  example_projects: [A/B test toolkit, Growth-loop analysis]
+  project_templates: [ab-test-analysis, marketing-attribution]
+  certificates: [ga4-certification]
+  related: [product-analyst, marketing-analyst, digital-marketing-analyst]
+  who_might_enjoy:
+    - Experimenters who like fast feedback loops
+  questions_to_explore:
+    - Do you enjoy startup-style pace?
+  signals:
+    domains: {marketing: 0.9, product: 0.8, data: 0.7}
+    activities: [analyzing_data, problem_solving, starting_businesses]
+    work_styles: [analyze_information, create_products, work_with_data]
+  skill_focus: Growth experimentation
+  typical_outputs: Experiments, funnel analyses, growth models
+
+- id: marketing-analyst
+  name: Marketing Analyst
+  family: marketing
+  categories: [marketing, data]
+  summary: Use data to understand customers and marketing effectiveness.
+  what_they_do: Marketing analysts measure campaigns, segment customers and model marketing ROI.
+  responsibilities:
+    - Build attribution and ROI analyses
+    - Segment customers
+    - Forecast marketing outcomes
+  skills:
+    marketing_analytics: [3, core]
+    sql: [2, core]
+    statistics: [2, important]
+    excel: [2, important]
+    data_visualization: [2, important]
+    python: [1, useful]
+    market_research: [1, important]
+  technologies: [SQL, Python/R, GA4, BI tools]
+  entry_routes:
+    - Analytics graduates
+    - Marketers building quantitative skills
+  example_projects: [Attribution comparison, Customer segmentation]
+  project_templates: [marketing-attribution, customer-churn-prediction]
+  certificates: [ga4-certification, google-data-analytics]
+  related: [growth-analyst, data-analyst, digital-marketing-analyst]
+  who_might_enjoy:
+    - People curious about customer behaviour
+  questions_to_explore:
+    - How technical do you want your analysis work to be?
+  signals:
+    domains: {marketing: 1.0, data: 0.8}
+    activities: [analyzing_data, numbers, researching]
+    work_styles: [analyze_information, work_with_data, work_with_customers]
+  skill_focus: Customer and marketing analytics
+  typical_outputs: ROI analyses, segments, forecasts
+
+- id: seo-specialist
+  name: SEO Specialist
+  family: marketing
+  categories: [marketing, media]
+  summary: Help people find content through search.
+  what_they_do: SEO specialists improve site structure, content and authority so that pages rank for relevant searches.
+  responsibilities:
+    - Audit technical SEO
+    - Research keywords and content opportunities
+    - Measure organic performance
+  skills:
+    seo: [3, core]
+    digital_marketing: [1, important]
+    html_css: [1, useful]
+    marketing_analytics: [1, important]
+    communication: [2, important]
+    data_analysis: [1, useful]
+  technologies: [Google Search Console, Ahrefs / Semrush, Screaming Frog, GA4]
+  entry_routes:
+    - Content writers and marketers
+    - Site owners who grew organic traffic
+  example_projects: [SEO audit and growth plan]
+  project_templates: [seo-growth-plan, technical-docs-site]
+  certificates: [ga4-certification]
+  related: [digital-marketing-analyst, marketing-analyst, technical-writer]
+  who_might_enjoy:
+    - Writers who enjoy analytical puzzles
+  questions_to_explore:
+    - Technical SEO or content-led SEO?
+  signals:
+    domains: {marketing: 1.0, media: 0.5}
+    activities: [writing, analyzing_data, problem_solving]
+    work_styles: [analyze_information, work_with_customers]
+  skill_focus: Search visibility
+  typical_outputs: Audits, content strategies, ranking reports
+
+- id: marketing-automation-specialist
+  name: Marketing Automation Specialist
+  family: marketing
+  categories: [marketing, operations]
+  summary: Build the automated journeys that nurture customers.
+  what_they_do: Marketing automation specialists configure CRM and automation platforms to deliver the right message at the right time, and keep customer data clean.
+  responsibilities:
+    - Build email and lifecycle workflows
+    - Manage segmentation and lead scoring
+    - Maintain CRM data quality
+  skills:
+    marketing_automation: [3, core]
+    digital_marketing: [2, important]
+    marketing_analytics: [1, important]
+    sql: [1, useful]
+    business_analysis: [1, useful]
+    communication: [1, important]
+  technologies: [HubSpot, Salesforce, Marketo, Braze]
+  entry_routes:
+    - Marketing coordinators who own tools
+    - CRM administrators
+  example_projects: [Lifecycle nurture programme]
+  project_templates: [marketing-attribution, seo-growth-plan]
+  certificates: [hubspot-inbound, salesforce-admin]
+  related: [digital-marketing-analyst, growth-analyst]
+  who_might_enjoy:
+    - Systems-minded marketers
+  questions_to_explore:
+    - Do you enjoy configuring tools more than creating content?
+  signals:
+    domains: {marketing: 1.0, operations: 0.4, technology: 0.3}
+    activities: [technology, problem_solving, writing]
+    work_styles: [work_with_customers, solve_business_problems]
+  skill_focus: Lifecycle automation
+  typical_outputs: Automated journeys, segments, CRM workflows
+
+# ------------------------------------------------------------------------- design
+- id: ux-designer
+  name: UX Designer
+  family: design
+  categories: [design, product]
+  summary: Design products that are useful, usable and enjoyable.
+  what_they_do: UX designers research user needs, design flows and prototypes, and validate them with users and teams.
+  responsibilities:
+    - Conduct and synthesise research
+    - Design flows, wireframes and prototypes
+    - Run usability tests and iterate
+  skills:
+    ux_research: [2, core]
+    interaction_design: [3, core]
+    ui_design: [2, important]
+    accessibility: [1, important]
+    communication: [2, core]
+    product_management: [1, useful]
+  technologies: [Figma, FigJam, Maze, Dovetail]
+  entry_routes:
+    - Design degrees or bootcamps
+    - Career changers with strong case studies
+  example_projects: [End-to-end UX case study]
+  project_templates: [ux-case-study, design-system-kit]
+  certificates: [google-ux-design, nng-ux-certification]
+  related: [product-designer, ux-researcher, ui-designer]
+  who_might_enjoy:
+    - Empathetic problem solvers
+  questions_to_explore:
+    - Research-heavy or craft-heavy design?
+  signals:
+    domains: {design: 1.0, product: 0.6}
+    activities: [designing, people, problem_solving]
+    work_styles: [design_experiences, create_products]
+  skill_focus: User-centred design
+  typical_outputs: Flows, prototypes, research insights
+
+- id: ui-designer
+  name: UI Designer
+  family: design
+  categories: [design]
+  summary: Craft the visual layer of digital products.
+  what_they_do: UI designers define visual hierarchy, typography, colour and components to make interfaces clear and beautiful.
+  responsibilities:
+    - Design high-fidelity interfaces
+    - Build and maintain component libraries
+    - Collaborate with developers on implementation
+  skills:
+    ui_design: [3, core]
+    design_systems: [2, core]
+    interaction_design: [1, important]
+    accessibility: [2, important]
+    html_css: [1, useful]
+  technologies: [Figma, design tokens, prototyping tools]
+  entry_routes:
+    - Visual or graphic designers moving to product
+    - Design bootcamps
+  example_projects: [UI kit, Design system]
+  project_templates: [design-system-kit, ux-case-study]
+  certificates: [google-ux-design]
+  related: [ux-designer, product-designer, web-developer, creative-technologist]
+  who_might_enjoy:
+    - People with a strong visual eye
+  questions_to_explore:
+    - Do you enjoy pixel-level detail?
+  signals:
+    domains: {design: 1.0, media: 0.3}
+    activities: [designing]
+    work_styles: [design_experiences]
+  skill_focus: Visual interface design
+  typical_outputs: UI designs, component libraries
+
+- id: product-designer
+  name: Product Designer
+  family: design
+  categories: [design, product]
+  summary: Own the end-to-end design of product experiences.
+  what_they_do: Product designers combine research, interaction and visual design with product thinking to shape what gets built.
+  responsibilities:
+    - Define problems with PMs and engineers
+    - Design end-to-end experiences
+    - Validate with users and data
+  skills:
+    interaction_design: [3, core]
+    ui_design: [2, core]
+    ux_research: [2, important]
+    product_management: [1, important]
+    design_systems: [1, useful]
+    communication: [2, core]
+    accessibility: [1, important]
+  technologies: [Figma, prototyping tools, analytics tools]
+  entry_routes:
+    - UX/UI designers growing scope
+  example_projects: [End-to-end case study with outcomes]
+  project_templates: [ux-case-study, design-system-kit, product-teardown-prd]
+  certificates: [google-ux-design, nng-ux-certification]
+  related: [ux-designer, product-manager, ui-designer]
+  who_might_enjoy:
+    - Designers who like strategy and business
+  questions_to_explore:
+    - How much do you want to influence what gets built, not just how?
+  signals:
+    domains: {design: 1.0, product: 0.9}
+    activities: [designing, problem_solving, people]
+    work_styles: [design_experiences, create_products]
+  skill_focus: End-to-end product experiences
+  typical_outputs: Product designs, prototypes, specs
+
+- id: ux-researcher
+  name: UX Researcher
+  family: design
+  categories: [design, research, product]
+  summary: Help teams understand the people they build for.
+  what_they_do: UX researchers plan and run studies — interviews, usability tests, surveys — and turn findings into insights that shape products.
+  responsibilities:
+    - Plan research studies
+    - Recruit participants and run sessions
+    - Synthesise and share insights
+  skills:
+    ux_research: [3, core]
+    research_methods: [2, core]
+    statistics: [1, important]
+    communication: [3, core]
+    interaction_design: [1, useful]
+  technologies: [Dovetail, Maze, UserTesting, survey tools]
+  entry_routes:
+    - Psychology, anthropology or HCI degrees
+    - Designers specialising in research
+  example_projects: [Research study with insights]
+  project_templates: [ux-case-study, reproducible-research-study]
+  certificates: [nng-ux-certification]
+  related: [ux-designer, research-analyst, product-designer]
+  who_might_enjoy:
+    - Curious, empathetic listeners
+  questions_to_explore:
+    - Qualitative or quantitative research?
+  signals:
+    domains: {design: 0.8, research: 1.0, product: 0.5}
+    activities: [researching, people, writing]
+    work_styles: [design_experiences, analyze_information]
+  skill_focus: User research
+  typical_outputs: Studies, insight reports, personas
+
+- id: creative-technologist
+  name: Creative Technologist
+  family: design
+  categories: [design, technology, media]
+  summary: Blend code and design to prototype new experiences.
+  what_they_do: Creative technologists build interactive prototypes, installations and experimental experiences using code as a creative medium.
+  responsibilities:
+    - Prototype interactive concepts
+    - Explore emerging technologies
+    - Collaborate with designers and engineers
+  skills:
+    creative_coding: [3, core]
+    javascript: [2, core]
+    frontend: [1, important]
+    ui_design: [2, important]
+    interaction_design: [1, important]
+    llms: [1, useful]
+  technologies: [p5.js, three.js, TouchDesigner, Unity, WebGL]
+  entry_routes:
+    - Design or media arts degrees with coding
+    - Developers with a creative portfolio
+  example_projects: [Interactive generative art, AR prototype]
+  project_templates: [generative-art-piece, design-system-kit]
+  certificates: []
+  related: [ui-designer, web-developer, product-designer]
+  who_might_enjoy:
+    - Artists who code, or coders who make art
+  questions_to_explore:
+    - Agencies, studios, or product teams?
+  signals:
+    domains: {design: 1.0, technology: 0.7, media: 0.7}
+    activities: [designing, building, technology]
+    work_styles: [design_experiences, build_software, research_technology]
+  skill_focus: Code as a creative medium
+  typical_outputs: Prototypes, installations, interactive pieces

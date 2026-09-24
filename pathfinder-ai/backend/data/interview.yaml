@@ -1,0 +1,508 @@
+# Interview question bank. Questions are selected by the user's target career skills and mode.
+# concepts: what a strong answer covers; keywords are used by the offline rubric
+# (the LLM rubric uses the concept names directly).
+
+# ------------------------------------------------------------------ technical
+- id: rag-how
+  mode: technical
+  skills: [rag]
+  prompt: Explain how Retrieval-Augmented Generation (RAG) works, end to end.
+  concepts:
+    - {name: "Document ingestion and chunking", keywords: [chunk, split, ingest, document, parse]}
+    - {name: "Embeddings and vector search", keywords: [embedding, vector, similarity, semantic, cosine]}
+    - {name: "Retrieval of top-k context", keywords: [retrieve, retrieval, top-k, top k, relevant]}
+    - {name: "Prompt augmentation with context", keywords: [context, prompt, augment, inject, grounding]}
+    - {name: "Generation grounded in sources / citations", keywords: [cite, citation, source, ground, hallucin]}
+    - {name: "Evaluation of retrieval and answers", keywords: [evaluat, recall, faithful, precision, metric]}
+  follow_ups:
+    - How would you improve retrieval quality when semantic search misses exact keyword matches?
+    - How would you evaluate whether your RAG system's answers are faithful to the sources?
+    - How do you choose chunk size and overlap?
+
+- id: rag-hybrid
+  mode: technical
+  skills: [rag, vector_databases]
+  prompt: What is hybrid search, and why combine BM25 with dense retrieval? How would you fuse results?
+  concepts:
+    - {name: "Sparse/lexical retrieval (BM25)", keywords: [bm25, keyword, lexical, sparse, term]}
+    - {name: "Dense/semantic retrieval", keywords: [dense, embedding, semantic, vector]}
+    - {name: "Complementary strengths", keywords: [exact, synonym, rare, complement, paraphrase]}
+    - {name: "Fusion (e.g. Reciprocal Rank Fusion)", keywords: [rrf, reciprocal rank, fusion, fuse, merge]}
+    - {name: "Reranking", keywords: [rerank, cross-encoder, cross encoder]}
+  follow_ups:
+    - Why is RRF robust to score scale differences between retrievers?
+    - When would a cross-encoder reranker be too slow?
+
+- id: llm-hallucination
+  mode: technical
+  skills: [llms, llm_evaluation]
+  prompt: Why do LLMs hallucinate, and what can you do about it in a production system?
+  concepts:
+    - {name: "Next-token prediction without grounding", keywords: [predict, probabil, next token, plausible, pattern]}
+    - {name: "Grounding with retrieval", keywords: [rag, retriev, ground, context, source]}
+    - {name: "Constrained / structured outputs", keywords: [schema, structured, json, constrain, valid]}
+    - {name: "Evaluation and monitoring", keywords: [evaluat, test set, monitor, judge, metric]}
+    - {name: "Abstaining / uncertainty handling", keywords: [don't know, abstain, refuse, confidence, fallback]}
+  follow_ups:
+    - How would you measure hallucination rate?
+    - What role do temperature and decoding play?
+
+- id: agents-design
+  mode: technical
+  skills: [ai_agents]
+  prompt: How would you design an AI agent that uses tools reliably? What can go wrong?
+  concepts:
+    - {name: "Tool definitions and schemas", keywords: [tool, function, schema, argument]}
+    - {name: "Planning / control loop", keywords: [loop, plan, react, step, iterate, graph]}
+    - {name: "State and memory", keywords: [state, memory, history, context]}
+    - {name: "Guardrails, limits and human-in-the-loop", keywords: [guardrail, limit, max, approval, human, timeout]}
+    - {name: "Observability and evaluation", keywords: [trace, log, evaluat, observ, success rate]}
+    - {name: "Failure modes (loops, wrong tool, compounding errors)", keywords: [infinite, loop, wrong, error, fail, compound]}
+  follow_ups:
+    - When would you use a fixed workflow instead of an autonomous agent?
+    - How do you test an agent?
+
+- id: llm-eval
+  mode: technical
+  skills: [llm_evaluation]
+  prompt: How would you set up evaluation for an LLM feature before and after launch?
+  concepts:
+    - {name: "Golden / test dataset", keywords: [golden, test set, dataset, examples, labelled]}
+    - {name: "Task-specific metrics", keywords: [metric, accuracy, faithful, relevance, exact match]}
+    - {name: "LLM-as-judge with calibration", keywords: [judge, llm-as, grader, calibrat, human]}
+    - {name: "Regression testing in CI", keywords: [ci, regression, automat, pipeline]}
+    - {name: "Production monitoring and feedback", keywords: [monitor, feedback, production, drift, online]}
+  follow_ups:
+    - How do you know your LLM judge agrees with humans?
+
+- id: ml-bias-variance
+  mode: technical
+  skills: [machine_learning]
+  prompt: Explain the bias–variance trade-off and how you'd diagnose which one is hurting your model.
+  concepts:
+    - {name: "Bias (underfitting)", keywords: [bias, underfit, too simple]}
+    - {name: "Variance (overfitting)", keywords: [variance, overfit, memoriz]}
+    - {name: "Learning curves / train vs validation error", keywords: [learning curve, train, validation, gap]}
+    - {name: "Remedies (regularisation, data, complexity)", keywords: [regulari, more data, complex, dropout, feature]}
+  follow_ups:
+    - How does cross-validation help here?
+
+- id: ml-eval-imbalanced
+  mode: technical
+  skills: [machine_learning, statistics]
+  prompt: You're building a fraud model where 0.5% of transactions are fraud. How do you evaluate it?
+  concepts:
+    - {name: "Accuracy is misleading", keywords: [accuracy, mislead, imbalanc]}
+    - {name: "Precision / recall / PR-AUC", keywords: [precision, recall, pr-auc, pr auc, f1]}
+    - {name: "Threshold choice tied to costs", keywords: [threshold, cost, business]}
+    - {name: "Proper validation (time-based splits, leakage)", keywords: [leak, time, split, temporal, validation]}
+    - {name: "Resampling or class weights", keywords: [smote, oversampl, undersampl, class weight, resampl]}
+  follow_ups:
+    - How would you pick the operating threshold?
+
+- id: dl-backprop
+  mode: technical
+  skills: [deep_learning]
+  prompt: Explain how a neural network learns — what happens in forward pass, loss and backpropagation?
+  concepts:
+    - {name: "Forward pass", keywords: [forward, layer, activation, weights]}
+    - {name: "Loss function", keywords: [loss, error, cross-entropy, mse]}
+    - {name: "Backpropagation / chain rule", keywords: [backprop, chain rule, gradient]}
+    - {name: "Optimiser updates", keywords: [optimi, sgd, adam, learning rate, update]}
+    - {name: "Training issues (vanishing gradients, overfitting)", keywords: [vanishing, exploding, overfit, normaliz, regulari]}
+  follow_ups:
+    - Why do residual connections help deep networks train?
+
+- id: transformers-attention
+  mode: technical
+  skills: [deep_learning, llms, nlp]
+  prompt: What is self-attention and why did transformers replace RNNs for most language tasks?
+  concepts:
+    - {name: "Queries, keys, values", keywords: [query, key, value, qkv]}
+    - {name: "Attention weights over all tokens", keywords: [weight, softmax, all tokens, relate, context]}
+    - {name: "Parallelism vs sequential RNNs", keywords: [parallel, sequential, rnn, lstm]}
+    - {name: "Long-range dependencies", keywords: [long-range, long range, dependenc, distant]}
+    - {name: "Positional information", keywords: [position, positional, encoding]}
+  follow_ups:
+    - What's the computational cost of attention with sequence length?
+
+- id: docker-why
+  mode: technical
+  skills: [docker]
+  prompt: What problem do containers solve, and how is a container different from a virtual machine?
+  concepts:
+    - {name: "Reproducible environments", keywords: [reproduc, works on my machine, consistent, environment]}
+    - {name: "Images vs containers", keywords: [image, layer, dockerfile]}
+    - {name: "Shared kernel vs full OS", keywords: [kernel, lightweight, virtual machine, vm, os]}
+    - {name: "Isolation (namespaces/cgroups)", keywords: [isolat, namespace, cgroup]}
+  follow_ups:
+    - How do multi-stage builds reduce image size?
+
+- id: deploy-model
+  mode: technical
+  skills: [model_deployment, mlops]
+  prompt: Walk me through deploying a trained model to production and keeping it healthy.
+  concepts:
+    - {name: "Packaging and serving API", keywords: [api, serve, fastapi, endpoint, package]}
+    - {name: "Containerisation and infrastructure", keywords: [docker, container, kubernetes, cloud]}
+    - {name: "CI/CD and versioning", keywords: [ci, cd, version, registry, pipeline]}
+    - {name: "Monitoring latency, errors and drift", keywords: [monitor, latency, drift, alert, log]}
+    - {name: "Rollback and safe rollout", keywords: [rollback, canary, shadow, a/b, blue]}
+  follow_ups:
+    - How would you detect data drift?
+
+- id: k8s-basics
+  mode: technical
+  skills: [kubernetes]
+  prompt: Explain Pods, Deployments and Services in Kubernetes and how they work together.
+  concepts:
+    - {name: "Pod as the smallest unit", keywords: [pod, container, smallest]}
+    - {name: "Deployment manages replicas and rollouts", keywords: [deployment, replica, rollout, desired state]}
+    - {name: "Service provides stable networking", keywords: [service, stable, load balanc, dns, network]}
+    - {name: "Self-healing / reconciliation", keywords: [self-heal, reconcil, restart, controller]}
+  follow_ups:
+    - How do readiness and liveness probes differ?
+
+- id: cloud-basics
+  mode: technical
+  skills: [cloud, cloud_architecture]
+  prompt: How would you design a simple, secure web application on a public cloud?
+  concepts:
+    - {name: "Compute choice", keywords: [ec2, vm, container, serverless, lambda, cloud run]}
+    - {name: "Managed data stores", keywords: [database, rds, managed, storage, s3]}
+    - {name: "Networking (VPC, subnets, load balancer)", keywords: [vpc, subnet, load balanc, network]}
+    - {name: "IAM and least privilege", keywords: [iam, least privilege, role, permission]}
+    - {name: "Reliability and cost", keywords: [availability, multi-az, backup, cost, autoscal]}
+  follow_ups:
+    - How would you keep costs under control?
+
+- id: api-design
+  mode: technical
+  skills: [apis]
+  prompt: What makes a well-designed REST API?
+  concepts:
+    - {name: "Resource-oriented URLs and HTTP methods", keywords: [resource, get, post, put, delete, method, noun]}
+    - {name: "Status codes and error format", keywords: [status code, "404", "400", error]}
+    - {name: "Validation and authentication", keywords: [validat, auth, token, jwt]}
+    - {name: "Pagination and versioning", keywords: [paginat, version, limit]}
+    - {name: "Documentation", keywords: [openapi, swagger, document]}
+  follow_ups:
+    - When would you choose GraphQL or gRPC instead?
+
+- id: stats-pvalue
+  mode: technical
+  skills: [statistics, experimentation]
+  prompt: What is a p-value, and what are common mistakes people make when interpreting A/B tests?
+  concepts:
+    - {name: "Definition under the null hypothesis", keywords: [null, probability, extreme, assum]}
+    - {name: "Not the probability the hypothesis is true", keywords: [not the probability, misinterpret, true]}
+    - {name: "Peeking / multiple testing", keywords: [peek, multiple, early stop, correction]}
+    - {name: "Power and sample size", keywords: [power, sample size, underpower]}
+    - {name: "Practical vs statistical significance", keywords: [practical, effect size, business]}
+  follow_ups:
+    - How would you decide the sample size before the test?
+
+- id: data-cleaning
+  mode: technical
+  skills: [data_analysis]
+  prompt: You receive a messy dataset for an urgent analysis. How do you approach it?
+  concepts:
+    - {name: "Understand the question and data context", keywords: [question, context, stakeholder, understand]}
+    - {name: "Profiling (types, missing values, distributions)", keywords: [missing, null, distribution, profile, type]}
+    - {name: "Handling duplicates and outliers", keywords: [duplicate, outlier, anomal]}
+    - {name: "Documenting assumptions", keywords: [assum, document, note]}
+    - {name: "Validating results", keywords: [sanity, validat, check, reconcil]}
+  follow_ups:
+    - How do you decide whether to drop or impute missing values?
+
+- id: etl-idempotent
+  mode: technical
+  skills: [data_engineering, orchestration]
+  prompt: How do you make a data pipeline reliable?
+  concepts:
+    - {name: "Idempotency and reruns", keywords: [idempot, rerun, backfill]}
+    - {name: "Data quality tests", keywords: [test, quality, validat, schema]}
+    - {name: "Monitoring and alerting", keywords: [monitor, alert, sla]}
+    - {name: "Incremental loads and partitions", keywords: [incremental, partition, watermark]}
+    - {name: "Orchestration with retries", keywords: [retry, orchestr, dag, airflow]}
+  follow_ups:
+    - How would you handle late-arriving data?
+
+- id: security-cia
+  mode: technical
+  skills: [cybersecurity]
+  prompt: Explain defence in depth and give examples of controls at different layers.
+  concepts:
+    - {name: "Multiple layered controls", keywords: [layer, multiple, defence in depth, defense in depth]}
+    - {name: "Identity and access controls", keywords: [mfa, access, identity, least privilege, iam]}
+    - {name: "Network controls", keywords: [firewall, segment, network]}
+    - {name: "Endpoint and application controls", keywords: [endpoint, edr, patch, application, input validation]}
+    - {name: "Detection and response", keywords: [monitor, detect, siem, incident, response]}
+  follow_ups:
+    - How would you prioritise controls with a small budget?
+
+- id: incident-triage
+  mode: technical
+  skills: [security_operations]
+  prompt: An alert shows unusual logins from a new country for an admin account. What do you do?
+  concepts:
+    - {name: "Validate and gather context", keywords: [verify, context, validate, log, false positive]}
+    - {name: "Containment", keywords: [contain, disable, reset, revoke, isolat]}
+    - {name: "Investigation scope", keywords: [scope, other accounts, lateral, timeline]}
+    - {name: "Communication and escalation", keywords: [escalat, notify, communicat]}
+    - {name: "Lessons learned", keywords: [lesson, post-incident, improve, root cause]}
+  follow_ups:
+    - What logs would you look at first?
+
+- id: pentest-sqli
+  mode: technical
+  skills: [penetration_testing, application_security]
+  prompt: Explain SQL injection, how you'd test for it, and how developers should prevent it.
+  concepts:
+    - {name: "Untrusted input in queries", keywords: [input, query, concaten, untrusted]}
+    - {name: "Testing approach", keywords: [payload, test, quote, error, blind]}
+    - {name: "Parameterised queries", keywords: [parameter, prepared statement, bind]}
+    - {name: "Least privilege and defence in depth", keywords: [least privilege, waf, validation, orm]}
+  follow_ups:
+    - What's the difference between error-based and blind SQL injection?
+
+# ------------------------------------------------------------------ sql
+- id: sql-window
+  mode: sql
+  skills: [sql]
+  prompt: "Given orders(order_id, customer_id, order_date, amount), how would you find each customer's second most recent order? Explain your query."
+  concepts:
+    - {name: "Window function with partition by customer", keywords: [window, partition by, over]}
+    - {name: "Ordering by date descending", keywords: [order by, desc]}
+    - {name: "ROW_NUMBER / RANK choice and ties", keywords: [row_number, rank, dense_rank, tie]}
+    - {name: "Filtering in an outer query or CTE", keywords: [cte, with, subquery, where rn, = 2]}
+  follow_ups:
+    - How would ties on order_date change your choice of function?
+
+- id: sql-joins
+  mode: sql
+  skills: [sql, data_analysis]
+  prompt: Explain the difference between INNER, LEFT and FULL OUTER joins, and a bug you've seen from choosing the wrong one.
+  concepts:
+    - {name: "Inner join keeps matches only", keywords: [inner, match, both]}
+    - {name: "Left join keeps all left rows", keywords: [left, all rows, null]}
+    - {name: "Full outer join", keywords: [full, outer, either]}
+    - {name: "Fan-out / duplication pitfalls", keywords: [duplicat, fan-out, fan out, many-to-many, double count]}
+  follow_ups:
+    - How would you detect accidental row duplication after a join?
+
+# ------------------------------------------------------------------ coding
+- id: coding-dedupe
+  mode: coding
+  skills: [python, dsa]
+  prompt: Describe how you'd write a function returning the first non-repeating character in a string. What's the time and space complexity?
+  concepts:
+    - {name: "Counting with a hash map", keywords: [dict, hash, count, counter, map]}
+    - {name: "Second pass preserving order", keywords: [second pass, order, iterate again, first]}
+    - {name: "O(n) time complexity", keywords: ["o(n)", linear]}
+    - {name: "Edge cases", keywords: [empty, none, edge, all repeat]}
+  follow_ups:
+    - How would you handle a stream where you can't store the full string?
+
+- id: coding-lru
+  mode: coding
+  skills: [dsa, python]
+  prompt: How would you implement an LRU cache with O(1) get and put?
+  concepts:
+    - {name: "Hash map for O(1) lookup", keywords: [hash, dict, map]}
+    - {name: "Doubly linked list for recency order", keywords: [linked list, doubly, ordereddict]}
+    - {name: "Eviction of least recently used", keywords: [evict, least recently, capacity]}
+    - {name: "Updating recency on access", keywords: [move to, front, recent, access]}
+  follow_ups:
+    - How would you make it thread-safe?
+
+# ------------------------------------------------------------------ system design
+- id: sd-rag-platform
+  mode: system_design
+  skills: [rag, system_design, ai_agents]
+  prompt: Design a document Q&A system for a company with 5 million internal documents and strict access controls.
+  concepts:
+    - {name: "Ingestion pipeline and chunking", keywords: [ingest, chunk, pipeline, parse]}
+    - {name: "Index design (hybrid, metadata)", keywords: [index, vector, hybrid, metadata, bm25]}
+    - {name: "Access control at retrieval time", keywords: [access, permission, acl, filter, tenant]}
+    - {name: "Serving, caching and latency", keywords: [cache, latency, scale, shard]}
+    - {name: "Evaluation and feedback loop", keywords: [evaluat, feedback, metric, monitor]}
+  follow_ups:
+    - How do you keep the index fresh when documents change?
+
+- id: sd-url-shortener
+  mode: system_design
+  skills: [system_design]
+  prompt: Design a URL shortener that handles 10,000 writes and 1 million reads per second.
+  concepts:
+    - {name: "ID generation", keywords: [hash, base62, id, counter, unique]}
+    - {name: "Storage choice", keywords: [database, key-value, nosql, storage]}
+    - {name: "Caching for reads", keywords: [cache, redis, cdn]}
+    - {name: "Scaling and partitioning", keywords: [shard, partition, replica, scale]}
+    - {name: "Analytics / expiry considerations", keywords: [analytic, expir, ttl, click]}
+  follow_ups:
+    - How would you prevent abuse?
+
+- id: sd-ml-system
+  mode: system_design
+  skills: [mlops, model_deployment, system_design]
+  prompt: Design a recommendation system for an e-commerce site, from data to serving.
+  concepts:
+    - {name: "Data and features", keywords: [event, feature, data, interaction]}
+    - {name: "Candidate generation and ranking", keywords: [candidate, retrieval, rank, two-stage]}
+    - {name: "Offline and online evaluation", keywords: [offline, online, a/b, metric]}
+    - {name: "Serving latency and caching", keywords: [latency, serve, cache, real-time]}
+    - {name: "Cold start and feedback loops", keywords: [cold start, new user, feedback loop, popularity]}
+  follow_ups:
+    - How do you handle new users with no history?
+
+# ------------------------------------------------------------------ case study / domain
+- id: case-churn-drop
+  mode: case_study
+  skills: [data_analysis, product_management, business_analysis]
+  prompt: Weekly active users dropped 15% last week. How do you investigate?
+  concepts:
+    - {name: "Verify data quality first", keywords: [tracking, data quality, instrument, bug, verify]}
+    - {name: "Segment the drop", keywords: [segment, platform, region, cohort, break down]}
+    - {name: "Internal changes (releases, campaigns)", keywords: [release, launch, change, campaign, deploy]}
+    - {name: "External factors (seasonality, competitors)", keywords: [season, holiday, competitor, external]}
+    - {name: "Hypothesis-driven next steps", keywords: [hypothes, next step, test, recommend]}
+  follow_ups:
+    - Which segment would you look at first, and why?
+
+- id: case-market-entry
+  mode: case_study
+  skills: [strategy, market_research]
+  prompt: A coffee chain wants to enter a new city. How would you decide whether it should?
+  concepts:
+    - {name: "Market size", keywords: [market size, demand, population, tam]}
+    - {name: "Competition", keywords: [competit, rival, share]}
+    - {name: "Unit economics / profitability", keywords: [cost, revenue, margin, profit, break-even, breakeven]}
+    - {name: "Capabilities and risks", keywords: [risk, capabilit, supply, regulat]}
+    - {name: "Clear recommendation", keywords: [recommend, go, no-go, decision]}
+  follow_ups:
+    - What single number would most change your recommendation?
+
+- id: domain-dcf
+  mode: domain
+  skills: [valuation, financial_modeling]
+  prompt: Walk me through a discounted cash flow (DCF) valuation.
+  concepts:
+    - {name: "Forecast free cash flows", keywords: [free cash flow, fcf, forecast, project]}
+    - {name: "Discount rate (WACC)", keywords: [wacc, discount rate, cost of capital]}
+    - {name: "Terminal value", keywords: [terminal, perpetuity, exit multiple]}
+    - {name: "Enterprise to equity value", keywords: [enterprise value, equity value, net debt]}
+    - {name: "Sensitivity analysis", keywords: [sensitiv, scenario, assumption]}
+  follow_ups:
+    - Which assumption usually drives most of the value, and why?
+
+- id: domain-var
+  mode: domain
+  skills: [risk_management]
+  prompt: What is Value at Risk (VaR), how can it be computed, and what are its limitations?
+  concepts:
+    - {name: "Definition (loss at confidence over horizon)", keywords: [confidence, horizon, loss, percentile, quantile]}
+    - {name: "Historical, parametric and Monte Carlo methods", keywords: [historical, parametric, variance-covariance, monte carlo]}
+    - {name: "Tail risk limitations", keywords: [tail, fat, beyond, extreme]}
+    - {name: "Expected shortfall as complement", keywords: [expected shortfall, cvar, es]}
+  follow_ups:
+    - How would you backtest a VaR model?
+
+- id: domain-ux-process
+  mode: domain
+  skills: [ux_research, interaction_design]
+  prompt: Walk me through how you'd redesign a checkout flow with a high drop-off rate.
+  concepts:
+    - {name: "Understand the problem with data", keywords: [data, analytics, funnel, drop-off, drop off]}
+    - {name: "User research / usability testing", keywords: [interview, usability, test, research, user]}
+    - {name: "Ideation and prototyping", keywords: [prototype, wireframe, ideat, sketch]}
+    - {name: "Validation and iteration", keywords: [validat, iterate, a/b, measure]}
+    - {name: "Accessibility and edge cases", keywords: [accessib, edge case, error state]}
+  follow_ups:
+    - How do you balance user research findings with business constraints?
+
+- id: domain-seo
+  mode: domain
+  skills: [seo, digital_marketing]
+  prompt: Organic traffic fell 30% after a site redesign. What would you check?
+  concepts:
+    - {name: "Redirects and URL changes", keywords: [redirect, 301, url, broken]}
+    - {name: "Indexing and crawlability", keywords: [index, crawl, robots, sitemap, noindex]}
+    - {name: "Content and metadata changes", keywords: [content, title, meta, heading]}
+    - {name: "Performance and Core Web Vitals", keywords: [speed, performance, core web vitals, mobile]}
+    - {name: "Data sources", keywords: [search console, analytics, log]}
+  follow_ups:
+    - How would you prioritise fixes?
+
+- id: domain-fhir
+  mode: domain
+  skills: [healthcare_data, health_privacy]
+  prompt: What is FHIR and what should you consider when building a pipeline on patient data?
+  concepts:
+    - {name: "FHIR resources and REST API", keywords: [resource, patient, observation, rest, api]}
+    - {name: "Interoperability purpose", keywords: [interoperab, exchange, standard]}
+    - {name: "Privacy and consent", keywords: [privacy, hipaa, consent, phi, gdpr]}
+    - {name: "De-identification and access control", keywords: [de-identif, anonymi, access, audit]}
+  follow_ups:
+    - How would you validate data quality across hospitals?
+
+- id: domain-pm-prioritize
+  mode: domain
+  skills: [product_management]
+  prompt: You have ten feature requests and capacity for two. How do you decide?
+  concepts:
+    - {name: "Tie to goals / strategy", keywords: [goal, strategy, objective, okr, outcome]}
+    - {name: "User and business impact", keywords: [impact, value, user, revenue]}
+    - {name: "Effort and confidence (e.g. RICE)", keywords: [effort, rice, confidence, cost, ice]}
+    - {name: "Evidence from research/data", keywords: [data, research, evidence, interview]}
+    - {name: "Communicating trade-offs", keywords: [communicat, stakeholder, say no, trade-off, tradeoff]}
+  follow_ups:
+    - How do you handle a senior stakeholder pushing a low-priority feature?
+
+# ------------------------------------------------------------------ behavioral
+- id: beh-challenge
+  mode: behavioral
+  skills: []
+  prompt: Tell me about a technically or personally challenging project and how you handled it.
+  concepts:
+    - {name: "Situation and stakes", keywords: [situation, context, project, when]}
+    - {name: "Your specific actions", keywords: ["i ", "i decided", "i built", "i led", my role]}
+    - {name: "Measurable result", keywords: [result, outcome, "%", improved, reduced, increased]}
+    - {name: "Reflection and learning", keywords: [learn, next time, differently, reflect]}
+  follow_ups:
+    - What would you do differently if you started again?
+
+- id: beh-conflict
+  mode: behavioral
+  skills: []
+  prompt: Describe a time you disagreed with a teammate. What happened?
+  concepts:
+    - {name: "Context of disagreement", keywords: [disagree, conflict, different view]}
+    - {name: "Listening and understanding their view", keywords: [listen, understand, perspective, asked]}
+    - {name: "Resolution based on evidence", keywords: [data, evidence, compromise, test, agreed]}
+    - {name: "Relationship afterwards", keywords: [relationship, trust, afterwards, respect]}
+  follow_ups:
+    - What if you had been wrong?
+
+- id: beh-learning
+  mode: behavioral
+  skills: []
+  prompt: Tell me about a time you had to learn something new quickly.
+  concepts:
+    - {name: "What and why", keywords: [needed, deadline, new, learn]}
+    - {name: "Learning strategy", keywords: [docs, course, practice, mentor, built, experiment]}
+    - {name: "Applying it", keywords: [applied, used, shipped, delivered]}
+    - {name: "Outcome", keywords: [result, outcome, success]}
+  follow_ups:
+    - How do you decide what not to learn?
+
+- id: beh-failure
+  mode: behavioral
+  skills: []
+  prompt: Tell me about a mistake you made and what you did about it.
+  concepts:
+    - {name: "Ownership", keywords: [my mistake, i made, responsib, owned]}
+    - {name: "Impact and response", keywords: [impact, fixed, communicat, told]}
+    - {name: "Prevention going forward", keywords: [prevent, process, check, never again, changed]}
+  follow_ups:
+    - How did you communicate it to others?

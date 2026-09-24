@@ -1,0 +1,1438 @@
+# PathFinder skill taxonomy.
+# hours: estimated focused hours to reach [beginner, intermediate, advanced] from the previous level.
+# learn: curated, well-known public resources. practice/build/prove: evidence-first guidance.
+# onboarding: which picker group the skill appears in during onboarding (omit = not shown directly).
+
+# ---------------------------------------------------------------- programming languages
+- id: python
+  name: Python
+  category: programming
+  domains: [technology, data, ai]
+  onboarding: languages
+  aliases: [python3, pandas, numpy, py]
+  hours: [20, 50, 65]
+  description: General-purpose language that dominates data, AI and automation work.
+  learn:
+    - {title: The Python Tutorial, provider: Python Software Foundation, url: "https://docs.python.org/3/tutorial/", type: docs}
+    - {title: Python for Everybody, provider: py4e.com, url: "https://www.py4e.com/", type: course}
+  practice: Solve 20 small scripting problems and refactor one into a package with tests.
+  build: A command-line tool that automates a task you actually repeat.
+  prove: Public repo with a README, type hints and a passing test suite.
+
+- id: java
+  name: Java
+  category: programming
+  domains: [technology, engineering]
+  onboarding: languages
+  aliases: [jvm, spring, spring boot]
+  hours: [25, 60, 70]
+  description: Statically typed JVM language used widely in enterprise backends and Android.
+  learn:
+    - {title: Learn Java, provider: Oracle (dev.java), url: "https://dev.java/learn/", type: docs}
+    - {title: Java Programming MOOC, provider: University of Helsinki, url: "https://java-programming.mooc.fi/", type: course}
+  practice: Implement core data structures and a small REST service.
+  build: A Spring Boot API with persistence and tests.
+  prove: Repo with CI running unit and integration tests.
+
+- id: javascript
+  name: JavaScript
+  category: programming
+  domains: [technology, design]
+  onboarding: languages
+  aliases: [js, node, nodejs, node.js, es6]
+  hours: [20, 50, 65]
+  description: The language of the web — browsers, Node.js servers and tooling.
+  learn:
+    - {title: The Modern JavaScript Tutorial, provider: javascript.info, url: "https://javascript.info/", type: docs}
+    - {title: MDN Learn Web Development, provider: Mozilla, url: "https://developer.mozilla.org/en-US/docs/Learn", type: docs}
+  practice: Build DOM exercises, then async data fetching with error handling.
+  build: An interactive web app that consumes a public API.
+  prove: Deployed app plus repo.
+
+- id: typescript
+  name: TypeScript
+  category: programming
+  domains: [technology]
+  onboarding: languages
+  aliases: [ts, tsx]
+  prereqs: [javascript]
+  hours: [12, 35, 40]
+  description: Typed superset of JavaScript for maintainable frontends and backends.
+  learn:
+    - {title: The TypeScript Handbook, provider: Microsoft, url: "https://www.typescriptlang.org/docs/handbook/intro.html", type: docs}
+  practice: Migrate a small JS project to strict TypeScript.
+  build: A typed full-stack feature with shared types between client and server.
+  prove: Repo compiling under strict mode.
+
+- id: cpp
+  name: C++
+  category: programming
+  domains: [technology, engineering, finance]
+  onboarding: languages
+  aliases: ["c++", cpp17, cpp20]
+  hours: [30, 70, 85]
+  description: Systems language used for performance-critical software, games and trading systems.
+  learn:
+    - {title: LearnCpp, provider: learncpp.com, url: "https://www.learncpp.com/", type: docs}
+  practice: Implement containers and algorithms with modern C++ idioms.
+  build: A performance-sensitive tool (e.g. an order book or image filter).
+  prove: Benchmarks and tests in the repo.
+
+- id: csharp
+  name: C#
+  category: programming
+  domains: [technology, engineering]
+  onboarding: languages
+  aliases: ["c#", dotnet, .net, asp.net]
+  hours: [25, 55, 65]
+  description: Microsoft's general-purpose language for .NET services, desktop and games (Unity).
+  learn:
+    - {title: C# documentation, provider: Microsoft Learn, url: "https://learn.microsoft.com/en-us/dotnet/csharp/", type: docs}
+  practice: Build console apps, then an ASP.NET minimal API.
+  build: A .NET web API with a database.
+  prove: Repo with tests and a short architecture note.
+
+- id: go
+  name: Go
+  category: programming
+  domains: [technology, cloud]
+  onboarding: languages
+  aliases: [golang]
+  hours: [20, 45, 55]
+  description: Simple, fast language widely used for cloud infrastructure and backend services.
+  learn:
+    - {title: A Tour of Go, provider: The Go Authors, url: "https://go.dev/tour/", type: docs}
+  practice: Write concurrent programs using goroutines and channels.
+  build: A small HTTP service or CLI with concurrency.
+  prove: Repo with tests and benchmarks.
+
+- id: rust
+  name: Rust
+  category: programming
+  domains: [technology, engineering]
+  onboarding: languages
+  aliases: [cargo]
+  hours: [35, 80, 90]
+  description: Memory-safe systems language for performance and reliability.
+  learn:
+    - {title: The Rust Programming Language, provider: Rust Project, url: "https://doc.rust-lang.org/book/", type: book}
+  practice: Complete Rustlings-style exercises on ownership and lifetimes.
+  build: A CLI tool or small service in Rust.
+  prove: Published crate or repo with tests.
+
+- id: sql
+  name: SQL
+  category: data
+  domains: [data, technology, business, finance]
+  onboarding: languages
+  aliases: [postgres, postgresql, mysql, sqlite, t-sql, bigquery, snowflake]
+  hours: [12, 30, 40]
+  description: The standard language for querying and shaping relational data.
+  learn:
+    - {title: SQLBolt, provider: sqlbolt.com, url: "https://sqlbolt.com/", type: practice}
+    - {title: SQL Tutorial, provider: Mode, url: "https://mode.com/sql-tutorial/", type: course}
+  practice: Solve 30 query problems covering joins, window functions and CTEs.
+  build: An analysis on a public dataset written entirely in SQL.
+  prove: Repo of documented queries with the questions they answer.
+
+- id: html_css
+  name: HTML/CSS
+  category: software
+  domains: [technology, design]
+  onboarding: languages
+  aliases: [html, css, html5, css3, tailwind, sass]
+  hours: [12, 30, 40]
+  description: Structure and styling of web interfaces, including responsive layout.
+  learn:
+    - {title: Learn CSS, provider: web.dev (Google), url: "https://web.dev/learn/css", type: course}
+    - {title: MDN HTML guides, provider: Mozilla, url: "https://developer.mozilla.org/en-US/docs/Learn/HTML", type: docs}
+  practice: Rebuild three real layouts responsively without a framework.
+  build: A responsive, accessible personal site.
+  prove: Deployed site passing an accessibility audit.
+
+- id: r
+  name: R
+  category: programming
+  domains: [data, research, science, healthcare]
+  onboarding: languages
+  aliases: [rstudio, tidyverse, ggplot2]
+  hours: [15, 40, 50]
+  description: Language for statistical computing and data visualisation.
+  learn:
+    - {title: R for Data Science (2e), provider: Wickham, Çetinkaya-Rundel & Grolemund, url: "https://r4ds.hadley.nz/", type: book}
+  practice: Reproduce analyses from the book on a new dataset.
+  build: A reproducible Quarto/RMarkdown report.
+  prove: Rendered report with code.
+
+- id: kotlin
+  name: Kotlin
+  category: programming
+  domains: [technology]
+  aliases: [android]
+  hours: [20, 45, 55]
+  description: Modern JVM language and the preferred language for Android development.
+  learn:
+    - {title: Kotlin docs — Getting started, provider: JetBrains, url: "https://kotlinlang.org/docs/getting-started.html", type: docs}
+  practice: Complete Kotlin koans-style exercises.
+  build: A small Android app.
+  prove: Repo and a demo video or store listing.
+
+- id: swift
+  name: Swift
+  category: programming
+  domains: [technology, design]
+  aliases: [swiftui, ios, xcode]
+  hours: [20, 45, 55]
+  description: Apple's language for iOS, macOS and SwiftUI apps.
+  learn:
+    - {title: SwiftUI Tutorials, provider: Apple Developer, url: "https://developer.apple.com/tutorials/swiftui", type: course}
+  practice: Build the tutorial apps, then modify them.
+  build: A small iOS app with local persistence.
+  prove: TestFlight build or demo video with repo.
+
+# ---------------------------------------------------------------- software engineering
+- id: git
+  name: Git
+  category: software
+  domains: [technology]
+  onboarding: tools
+  aliases: [github, gitlab, version control]
+  hours: [5, 12, 20]
+  description: Version control and collaboration workflows (branches, PRs, reviews).
+  learn:
+    - {title: Pro Git, provider: git-scm.com, url: "https://git-scm.com/book/en/v2", type: book}
+    - {title: Learn Git Branching, provider: learngitbranching.js.org, url: "https://learngitbranching.js.org/", type: practice}
+  practice: Use feature branches, rebases and PR reviews on your own projects.
+  build: Contribute a fix to an open-source repository.
+  prove: Merged pull request.
+
+- id: linux
+  name: Linux & Shell
+  category: software
+  domains: [technology, cloud, cybersecurity]
+  aliases: [bash, shell, unix, command line, terminal]
+  hours: [8, 25, 35]
+  description: Operating a Linux environment from the command line.
+  learn:
+    - {title: The Missing Semester of Your CS Education, provider: MIT, url: "https://missing.csail.mit.edu/", type: course}
+  practice: Automate a workflow with shell scripts.
+  build: A dotfiles repo or server setup script.
+  prove: Script repo with usage docs.
+
+- id: apis
+  name: APIs & Backend Services
+  category: software
+  domains: [technology]
+  aliases: [rest, rest api, fastapi, flask, django, express, graphql, http]
+  prereqs: [python]
+  hours: [10, 30, 40]
+  description: Designing and building HTTP APIs, validation, auth and error handling.
+  learn:
+    - {title: FastAPI Tutorial, provider: FastAPI, url: "https://fastapi.tiangolo.com/tutorial/", type: docs}
+    - {title: Backend Developer Roadmap, provider: roadmap.sh, url: "https://roadmap.sh/backend", type: docs}
+  practice: Build CRUD endpoints with validation, pagination and auth.
+  build: A documented API with tests and OpenAPI docs.
+  prove: Deployed API with public docs page.
+
+- id: dsa
+  name: Data Structures & Algorithms
+  category: software
+  domains: [technology, engineering]
+  aliases: [algorithms, data structures, leetcode]
+  hours: [20, 60, 85]
+  description: Core CS problem solving used in engineering work and interviews.
+  learn:
+    - {title: CS50x, provider: Harvard University, url: "https://cs50.harvard.edu/x/", type: course}
+    - {title: NeetCode roadmap, provider: neetcode.io, url: "https://neetcode.io/roadmap", type: practice}
+  practice: Solve 60–100 problems across the major patterns.
+  build: Implement a non-trivial algorithm in a real tool (search, scheduling, graph).
+  prove: Problem log with explanations.
+
+- id: system_design
+  name: System Design
+  category: software
+  domains: [technology, cloud]
+  aliases: [distributed systems, scalability, architecture]
+  prereqs: [apis, databases]
+  hours: [15, 45, 65]
+  description: Designing scalable, reliable systems and reasoning about trade-offs.
+  learn:
+    - {title: The System Design Primer, provider: GitHub (donnemartin), url: "https://github.com/donnemartin/system-design-primer", type: docs}
+    - {title: Designing Data-Intensive Applications, provider: O'Reilly (Kleppmann), url: "https://dataintensive.net/", type: book}
+  practice: Write design docs for three familiar systems.
+  build: Add caching, queues and rate limiting to one of your services.
+  prove: Published design doc with diagrams and trade-offs.
+
+- id: testing
+  name: Software Testing
+  category: software
+  domains: [technology]
+  aliases: [pytest, unit testing, jest, tdd, integration testing]
+  hours: [6, 20, 30]
+  description: Unit, integration and end-to-end testing practices.
+  learn:
+    - {title: pytest documentation, provider: pytest, url: "https://docs.pytest.org/", type: docs}
+  practice: Add tests to an untested project until coverage is meaningful.
+  build: A CI pipeline that blocks merges on failing tests.
+  prove: Coverage badge and CI history.
+
+- id: databases
+  name: Databases
+  category: software
+  domains: [technology, data]
+  aliases: [database design, rdbms, orm, sqlalchemy, indexing, postgresql design]
+  prereqs: [sql]
+  hours: [10, 30, 40]
+  description: Relational modelling, indexing, transactions and query performance.
+  learn:
+    - {title: PostgreSQL Tutorial, provider: PostgreSQL, url: "https://www.postgresql.org/docs/current/tutorial.html", type: docs}
+    - {title: CMU 15-445 Database Systems, provider: Carnegie Mellon University, url: "https://15445.courses.cs.cmu.edu/", type: course}
+  practice: Model a domain, then profile and index slow queries.
+  build: A schema with migrations for a real app.
+  prove: ERD plus migration history.
+
+- id: frontend
+  name: Frontend Development
+  category: software
+  domains: [technology, design]
+  aliases: [react, next.js, nextjs, vue, angular, svelte, frontend]
+  prereqs: [javascript, html_css]
+  hours: [20, 50, 65]
+  description: Building interactive web UIs with a modern framework.
+  learn:
+    - {title: React — Learn, provider: React, url: "https://react.dev/learn", type: docs}
+    - {title: The Odin Project, provider: The Odin Project, url: "https://www.theodinproject.com/", type: course}
+  practice: Rebuild UI patterns (forms, tables, modals) with state management.
+  build: A production-like SPA with routing, data fetching and tests.
+  prove: Deployed app with Lighthouse report.
+
+- id: mobile
+  name: Mobile Development
+  category: software
+  domains: [technology, design]
+  aliases: [android, ios, react native, flutter, mobile app]
+  hours: [20, 50, 65]
+  description: Building native or cross-platform mobile applications.
+  learn:
+    - {title: Android Basics with Compose, provider: Google, url: "https://developer.android.com/courses", type: course}
+    - {title: React Native — Getting Started, provider: Meta, url: "https://reactnative.dev/docs/getting-started", type: docs}
+  practice: Build screens with navigation, offline state and API calls.
+  build: A complete app with auth and sync.
+  prove: Store listing, TestFlight build or demo video.
+
+# ---------------------------------------------------------------- data & statistics
+- id: statistics
+  name: Statistics
+  category: statistics
+  domains: [data, research, science, finance]
+  aliases: [probability, hypothesis testing, regression, inferential statistics, bayesian]
+  hours: [15, 40, 55]
+  description: Probability, inference, regression and reasoning under uncertainty.
+  learn:
+    - {title: OpenIntro Statistics, provider: OpenIntro, url: "https://www.openintro.org/book/os/", type: book}
+    - {title: Statistics and probability, provider: Khan Academy, url: "https://www.khanacademy.org/math/statistics-probability", type: course}
+  practice: Re-derive the results of a published analysis on its public data.
+  build: An analysis that quantifies uncertainty, not just point estimates.
+  prove: Notebook with assumptions and limitations stated.
+
+- id: math_for_ml
+  name: Mathematics for ML
+  category: statistics
+  domains: [ai, research, science]
+  aliases: [linear algebra, calculus, optimization, matrix]
+  hours: [15, 45, 65]
+  description: Linear algebra, calculus and optimisation behind machine learning.
+  learn:
+    - {title: Mathematics for Machine Learning, provider: Deisenroth, Faisal & Ong, url: "https://mml-book.github.io/", type: book}
+    - {title: Essence of Linear Algebra, provider: 3Blue1Brown, url: "https://www.3blue1brown.com/topics/linear-algebra", type: video}
+  practice: Implement gradient descent and PCA from scratch in NumPy.
+  build: A from-scratch model with derivations in the README.
+  prove: Notebook comparing your implementation with a library.
+
+- id: data_analysis
+  name: Data Analysis
+  category: data
+  domains: [data, business, finance]
+  onboarding: ai_data
+  aliases: [pandas, eda, exploratory data analysis, data cleaning, analytics, data wrangling]
+  prereqs: [python]
+  hours: [12, 35, 50]
+  description: Cleaning, exploring and summarising data to answer questions.
+  learn:
+    - {title: Kaggle Learn — Pandas, provider: Kaggle, url: "https://www.kaggle.com/learn/pandas", type: course}
+    - {title: Python for Data Analysis (3e), provider: Wes McKinney, url: "https://wesmckinney.com/book/", type: book}
+  practice: Complete three end-to-end EDA notebooks on messy public data.
+  build: An analysis that leads to a concrete recommendation.
+  prove: Notebook + a one-page written summary.
+
+- id: data_visualization
+  name: Data Visualization
+  category: data
+  domains: [data, design, business]
+  aliases: [matplotlib, seaborn, plotly, charts, d3, dashboards]
+  hours: [8, 25, 35]
+  description: Choosing and designing charts that communicate clearly.
+  learn:
+    - {title: Kaggle Learn — Data Visualization, provider: Kaggle, url: "https://www.kaggle.com/learn/data-visualization", type: course}
+    - {title: Storytelling with Data, provider: Cole Nussbaumer Knaflic, url: "https://www.storytellingwithdata.com/books", type: book}
+  practice: Redesign five poor charts you find in the wild.
+  build: A chart-driven narrative on a topic you care about.
+  prove: Published visual essay or dashboard.
+
+- id: excel
+  name: Spreadsheets (Excel)
+  category: data
+  domains: [business, finance, data]
+  aliases: [excel, google sheets, spreadsheets, pivot tables, vlookup, xlookup]
+  hours: [6, 20, 30]
+  description: Spreadsheet modelling, lookups, pivots and clean workbook structure.
+  learn:
+    - {title: Excel help & learning, provider: Microsoft, url: "https://support.microsoft.com/en-us/excel", type: docs}
+  practice: Rebuild a real report with pivots and lookups.
+  build: A structured model with inputs, calculations and outputs separated.
+  prove: Shareable workbook with a documentation tab.
+
+- id: bi_tools
+  name: BI Tools
+  category: data
+  domains: [data, business]
+  aliases: [power bi, tableau, looker, metabase, superset, dax]
+  prereqs: [sql]
+  hours: [8, 25, 35]
+  description: Building dashboards and semantic models in BI platforms.
+  learn:
+    - {title: Power BI training, provider: Microsoft Learn, url: "https://learn.microsoft.com/en-us/training/powerplatform/power-bi", type: course}
+    - {title: Tableau free training, provider: Tableau, url: "https://www.tableau.com/learn/training", type: course}
+  practice: Rebuild a KPI dashboard from a public dataset.
+  build: A stakeholder-ready dashboard with defined metrics.
+  prove: Public dashboard link plus metric definitions.
+
+- id: experimentation
+  name: Experimentation & A/B Testing
+  category: statistics
+  domains: [data, product, marketing]
+  aliases: [a/b testing, ab testing, experiments, causal inference, hypothesis test]
+  prereqs: [statistics]
+  hours: [8, 25, 35]
+  description: Designing, running and interpreting controlled experiments.
+  learn:
+    - {title: Trustworthy Online Controlled Experiments, provider: Kohavi, Tang & Xu, url: "https://experimentguide.com/", type: book}
+  practice: Analyse public A/B test datasets including power calculations.
+  build: An experiment analysis template with guardrail metrics.
+  prove: Write-up explaining a decision and its uncertainty.
+
+- id: time_series
+  name: Time Series & Forecasting
+  category: statistics
+  domains: [data, finance, science]
+  aliases: [forecasting, arima, prophet, time-series]
+  prereqs: [statistics]
+  hours: [10, 30, 40]
+  description: Modelling and forecasting data indexed by time.
+  learn:
+    - {title: "Forecasting: Principles and Practice (3e)", provider: Hyndman & Athanasopoulos, url: "https://otexts.com/fpp3/", type: book}
+  practice: Build baseline, statistical and ML forecasts and compare them properly.
+  build: A forecasting pipeline with backtesting.
+  prove: Backtest report with error metrics.
+
+# ---------------------------------------------------------------- AI
+- id: machine_learning
+  name: Machine Learning
+  category: ai
+  domains: [ai, data]
+  onboarding: ai_data
+  aliases: [ml, scikit-learn, sklearn, xgboost, supervised learning, classification, regression model, random forest]
+  prereqs: [python, statistics]
+  hours: [20, 60, 85]
+  description: Supervised and unsupervised learning, feature engineering and evaluation.
+  learn:
+    - {title: Machine Learning Specialization, provider: DeepLearning.AI & Stanford (Coursera), url: "https://www.coursera.org/specializations/machine-learning-introduction", type: course}
+    - {title: An Introduction to Statistical Learning (Python), provider: James, Witten, Hastie, Tibshirani & Taylor, url: "https://www.statlearning.com/", type: book}
+    - {title: scikit-learn User Guide, provider: scikit-learn, url: "https://scikit-learn.org/stable/user_guide.html", type: docs}
+  practice: Train, tune and honestly evaluate models on 3 tabular datasets.
+  build: An end-to-end ML project with a clear baseline and error analysis.
+  prove: Repo with evaluation report and model card.
+
+- id: deep_learning
+  name: Deep Learning
+  category: ai
+  domains: [ai, research]
+  onboarding: ai_data
+  aliases: [pytorch, tensorflow, keras, neural networks, cnn, transformers, backpropagation]
+  prereqs: [machine_learning, math_for_ml]
+  hours: [25, 70, 100]
+  description: Neural networks, training dynamics and modern architectures.
+  learn:
+    - {title: Practical Deep Learning for Coders, provider: fast.ai, url: "https://course.fast.ai/", type: course}
+    - {title: Dive into Deep Learning, provider: d2l.ai, url: "https://d2l.ai/", type: book}
+    - {title: PyTorch Tutorials, provider: PyTorch, url: "https://pytorch.org/tutorials/", type: docs}
+  practice: Train CNNs and a small transformer; debug over/underfitting.
+  build: A deep learning model that beats a sensible baseline on a real task.
+  prove: Training logs, ablations and a written report.
+
+- id: nlp
+  name: Natural Language Processing
+  category: ai
+  domains: [ai, research]
+  aliases: [nlp, text classification, tokenization, embeddings, spacy, ner]
+  prereqs: [machine_learning]
+  hours: [15, 45, 65]
+  description: Processing and modelling text, from classical NLP to transformers.
+  learn:
+    - {title: Hugging Face Learn (LLM & NLP course), provider: Hugging Face, url: "https://huggingface.co/learn", type: course}
+    - {title: "CS224N: NLP with Deep Learning", provider: Stanford University, url: "https://web.stanford.edu/class/cs224n/", type: course}
+  practice: Fine-tune a small transformer for classification.
+  build: A text pipeline solving a real problem (triage, extraction, search).
+  prove: Evaluation report with error analysis.
+
+- id: computer_vision
+  name: Computer Vision
+  category: ai
+  domains: [ai, engineering, healthcare]
+  aliases: [opencv, image classification, object detection, yolo, segmentation]
+  prereqs: [deep_learning]
+  hours: [15, 45, 65]
+  description: Models that understand images and video.
+  learn:
+    - {title: "CS231n: Deep Learning for Computer Vision", provider: Stanford University, url: "https://cs231n.stanford.edu/", type: course}
+  practice: Train a detector with transfer learning on a custom dataset.
+  build: A vision app with a documented dataset and metrics.
+  prove: Demo plus evaluation on a held-out set.
+
+- id: llms
+  name: Large Language Models
+  category: ai
+  domains: [ai, technology]
+  onboarding: ai_data
+  aliases: [llm, gpt, openai, gemini, claude, transformers, generative ai, genai, hugging face]
+  prereqs: [python]
+  hours: [10, 35, 55]
+  description: How LLMs work, how to call them reliably and where they fail.
+  learn:
+    - {title: "Neural Networks: Zero to Hero", provider: Andrej Karpathy, url: "https://karpathy.ai/zero-to-hero.html", type: video}
+    - {title: Hugging Face Learn, provider: Hugging Face, url: "https://huggingface.co/learn", type: course}
+  practice: Build structured-output, tool-calling and streaming examples.
+  build: An LLM feature with guardrails and fallbacks.
+  prove: Repo plus an evaluation of failure cases.
+
+- id: prompt_engineering
+  name: Prompt Engineering
+  category: ai
+  domains: [ai]
+  aliases: [prompting, prompt design, few-shot, chain of thought]
+  prereqs: [llms]
+  hours: [4, 12, 20]
+  description: Designing prompts and structured outputs that behave reliably.
+  learn:
+    - {title: Prompt engineering overview, provider: Anthropic, url: "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview", type: docs}
+    - {title: Prompt engineering guide, provider: OpenAI, url: "https://platform.openai.com/docs/guides/prompt-engineering", type: docs}
+  practice: Iterate prompts against a fixed test set and track results.
+  build: A prompt library with versioned evaluations.
+  prove: Before/after evaluation table.
+
+- id: rag
+  name: RAG
+  category: ai
+  domains: [ai]
+  onboarding: ai_data
+  aliases: [retrieval augmented generation, retrieval-augmented generation, vector search, semantic search, hybrid search, reranking, langchain, llamaindex]
+  prereqs: [llms]
+  hours: [8, 30, 50]
+  description: Grounding LLM answers in retrieved documents — chunking, retrieval, reranking and citations.
+  learn:
+    - {title: Build a RAG app, provider: LangChain, url: "https://python.langchain.com/docs/tutorials/rag/", type: docs}
+    - {title: Short courses on RAG and retrieval, provider: DeepLearning.AI, url: "https://www.deeplearning.ai/short-courses/", type: course}
+  practice: Build a basic retriever, then add hybrid search and reranking.
+  build: A RAG application over a real document set with citations.
+  prove: GitHub project + retrieval/answer evaluation report.
+
+- id: ai_agents
+  name: AI Agents
+  category: ai
+  domains: [ai, technology]
+  onboarding: ai_data
+  aliases: [agents, agentic, langgraph, crewai, autogen, tool calling, function calling, multi-agent]
+  prereqs: [llms, apis]
+  hours: [10, 35, 55]
+  description: LLM systems that plan, call tools and act over multiple steps.
+  learn:
+    - {title: Building effective agents, provider: Anthropic, url: "https://www.anthropic.com/engineering/building-effective-agents", type: docs}
+    - {title: LangGraph documentation, provider: LangChain, url: "https://langchain-ai.github.io/langgraph/", type: docs}
+    - {title: Agents Course, provider: Hugging Face, url: "https://huggingface.co/learn/agents-course", type: course}
+  practice: Implement a tool-calling loop by hand before using a framework.
+  build: A multi-step agent with tools, state and human-in-the-loop.
+  prove: Repo with traces and a task-success evaluation.
+
+- id: llm_evaluation
+  name: LLM Evaluation
+  category: ai
+  domains: [ai, research]
+  aliases: [evals, ragas, llm-as-judge, evaluation harness, langsmith]
+  prereqs: [llms]
+  hours: [6, 20, 30]
+  description: Measuring LLM system quality — test sets, metrics, judges and regressions.
+  learn:
+    - {title: Your AI product needs evals, provider: Hamel Husain, url: "https://hamel.dev/blog/posts/evals/", type: docs}
+    - {title: Ragas documentation, provider: Ragas, url: "https://docs.ragas.io/", type: docs}
+  practice: Build a golden set and automated checks for one LLM feature.
+  build: An evaluation pipeline that runs in CI.
+  prove: Eval dashboard or report tracking changes over time.
+
+- id: fine_tuning
+  name: Fine-tuning
+  category: ai
+  domains: [ai, research]
+  aliases: [lora, qlora, peft, sft, fine tuning, rlhf, dpo]
+  prereqs: [deep_learning, llms]
+  hours: [10, 35, 55]
+  description: Adapting pretrained models with supervised fine-tuning and parameter-efficient methods.
+  learn:
+    - {title: PEFT documentation, provider: Hugging Face, url: "https://huggingface.co/docs/peft", type: docs}
+  practice: Run LoRA fine-tunes on a small open model.
+  build: A fine-tuned model that beats prompting on a narrow task.
+  prove: Model card with evaluation against baselines.
+
+- id: vector_databases
+  name: Vector Databases
+  category: ai
+  domains: [ai, data]
+  aliases: [qdrant, pinecone, weaviate, chroma, chromadb, pgvector, faiss, milvus, vector store, vector database]
+  prereqs: [llms]
+  hours: [4, 15, 25]
+  description: Storing and searching embeddings at scale, with filtering and hybrid retrieval.
+  learn:
+    - {title: Qdrant documentation, provider: Qdrant, url: "https://qdrant.tech/documentation/", type: docs}
+  practice: Compare dense, sparse and hybrid retrieval on the same corpus.
+  build: A search service with metadata filters.
+  prove: Retrieval benchmark (recall@k) in the repo.
+
+- id: mlops
+  name: MLOps
+  category: infrastructure
+  domains: [ai, cloud]
+  aliases: [mlflow, model registry, feature store, kubeflow, model monitoring, llmops]
+  prereqs: [machine_learning, docker]
+  hours: [12, 40, 55]
+  description: Operating ML systems — pipelines, tracking, deployment and monitoring.
+  learn:
+    - {title: Made With ML, provider: Goku Mohandas, url: "https://madewithml.com/", type: course}
+    - {title: MLOps Zoomcamp, provider: DataTalks.Club, url: "https://github.com/DataTalksClub/mlops-zoomcamp", type: course}
+  practice: Track experiments and register models with MLflow.
+  build: A reproducible training-to-serving pipeline with monitoring.
+  prove: Pipeline repo plus a monitoring screenshot and runbook.
+
+- id: model_deployment
+  name: Model Deployment
+  category: infrastructure
+  domains: [ai, cloud, technology]
+  aliases: [model serving, inference api, deploy model, bentoml, triton, vllm]
+  prereqs: [apis, docker]
+  hours: [8, 25, 35]
+  description: Serving models behind reliable APIs with latency, cost and scaling in mind.
+  learn:
+    - {title: Made With ML — Serving, provider: Goku Mohandas, url: "https://madewithml.com/", type: course}
+    - {title: FastAPI Deployment, provider: FastAPI, url: "https://fastapi.tiangolo.com/deployment/", type: docs}
+  practice: Containerise a model API and load-test it.
+  build: A deployed inference service with health checks and logging.
+  prove: Public endpoint or recorded demo plus latency report.
+
+# ---------------------------------------------------------------- data engineering
+- id: data_engineering
+  name: Data Pipelines (ETL/ELT)
+  category: data
+  domains: [data, cloud]
+  aliases: [etl, elt, data pipeline, data engineering, ingestion]
+  prereqs: [sql, python]
+  hours: [15, 45, 65]
+  description: Moving and transforming data reliably between systems.
+  learn:
+    - {title: Data Engineering Zoomcamp, provider: DataTalks.Club, url: "https://github.com/DataTalksClub/data-engineering-zoomcamp", type: course}
+    - {title: Fundamentals of Data Engineering, provider: O'Reilly (Reis & Housley), url: "https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/", type: book}
+  practice: Build batch pipelines with idempotent loads and tests.
+  build: An end-to-end pipeline from an API to a warehouse.
+  prove: Repo with architecture diagram and data-quality checks.
+
+- id: big_data
+  name: Distributed Data Processing
+  category: data
+  domains: [data, cloud]
+  aliases: [spark, pyspark, hadoop, databricks, kafka, flink, streaming]
+  prereqs: [data_engineering]
+  hours: [12, 35, 50]
+  description: Processing large or streaming datasets with Spark, Kafka and similar tools.
+  learn:
+    - {title: Spark Quick Start, provider: Apache Spark, url: "https://spark.apache.org/docs/latest/quick-start.html", type: docs}
+  practice: Rewrite a pandas job in PySpark and compare.
+  build: A streaming or large-batch pipeline.
+  prove: Benchmarks and design notes.
+
+- id: orchestration
+  name: Workflow Orchestration
+  category: data
+  domains: [data, cloud]
+  aliases: [airflow, dagster, prefect, cron, scheduling]
+  prereqs: [data_engineering]
+  hours: [6, 20, 30]
+  description: Scheduling and monitoring dependent data and ML jobs.
+  learn:
+    - {title: Apache Airflow documentation, provider: Apache Airflow, url: "https://airflow.apache.org/docs/", type: docs}
+  practice: Convert scripts into a DAG with retries and alerts.
+  build: An orchestrated pipeline with backfills.
+  prove: DAG repo and screenshots of runs.
+
+- id: data_modeling
+  name: Data Modeling & Warehousing
+  category: data
+  domains: [data, business]
+  aliases: [dimensional modeling, star schema, kimball, data warehouse, lakehouse]
+  prereqs: [sql]
+  hours: [8, 25, 35]
+  description: Designing analytical schemas (facts, dimensions) and warehouse layers.
+  learn:
+    - {title: The Data Warehouse Toolkit, provider: Kimball Group, url: "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/", type: book}
+  practice: Model a business process as a star schema.
+  build: A warehouse layer powering a dashboard.
+  prove: ERD and documented model.
+
+- id: analytics_engineering
+  name: Analytics Engineering (dbt)
+  category: data
+  domains: [data]
+  aliases: [dbt, semantic layer, data build tool]
+  prereqs: [sql, data_modeling]
+  hours: [6, 20, 30]
+  description: Version-controlled, tested SQL transformations and metric definitions.
+  learn:
+    - {title: "What is dbt?", provider: dbt Labs, url: "https://docs.getdbt.com/docs/introduction", type: docs}
+  practice: Build staged, intermediate and mart models with tests.
+  build: A dbt project with docs and tests on a public dataset.
+  prove: Hosted dbt docs site.
+
+# ---------------------------------------------------------------- infrastructure
+- id: cloud
+  name: Cloud Fundamentals
+  category: infrastructure
+  domains: [cloud, technology]
+  onboarding: tools
+  aliases: [aws, azure, gcp, google cloud, s3, ec2, lambda, cloud run]
+  hours: [10, 35, 50]
+  description: Core compute, storage, networking and IAM concepts on a major cloud.
+  learn:
+    - {title: AWS Skill Builder, provider: Amazon Web Services, url: "https://skillbuilder.aws/", type: course}
+    - {title: Azure training, provider: Microsoft Learn, url: "https://learn.microsoft.com/en-us/training/azure/", type: course}
+    - {title: Google Cloud Skills Boost, provider: Google Cloud, url: "https://www.cloudskillsboost.google/", type: course}
+  practice: Deploy a small app using managed services with least-privilege IAM.
+  build: A cloud-hosted project with infrastructure documented.
+  prove: Architecture diagram + cost estimate + live link.
+
+- id: cloud_architecture
+  name: Cloud Architecture
+  category: infrastructure
+  domains: [cloud]
+  aliases: [well-architected, solution architecture, high availability, serverless architecture]
+  prereqs: [cloud, system_design]
+  hours: [15, 40, 55]
+  description: Designing secure, reliable and cost-aware systems on cloud platforms.
+  learn:
+    - {title: AWS Well-Architected Framework, provider: Amazon Web Services, url: "https://aws.amazon.com/architecture/well-architected/", type: docs}
+  practice: Review an existing architecture against the Well-Architected pillars.
+  build: A multi-service architecture with failover and cost controls.
+  prove: Design review document.
+
+- id: docker
+  name: Docker
+  category: infrastructure
+  domains: [cloud, technology]
+  onboarding: tools
+  aliases: [containers, dockerfile, docker compose, containerization]
+  prereqs: [linux]
+  hours: [5, 15, 25]
+  description: Packaging applications into reproducible containers.
+  learn:
+    - {title: Docker — Get started, provider: Docker, url: "https://docs.docker.com/get-started/", type: docs}
+  practice: Containerise three of your projects with multi-stage builds.
+  build: A docker-compose stack (app + database + cache).
+  prove: One-command setup documented in a README.
+
+- id: kubernetes
+  name: Kubernetes
+  category: infrastructure
+  domains: [cloud]
+  onboarding: tools
+  aliases: [k8s, helm, eks, gke, aks]
+  prereqs: [docker]
+  hours: [12, 40, 55]
+  description: Orchestrating containers — deployments, services, scaling and config.
+  learn:
+    - {title: Kubernetes Basics, provider: Kubernetes, url: "https://kubernetes.io/docs/tutorials/kubernetes-basics/", type: docs}
+  practice: Deploy an app to a local cluster with probes and autoscaling.
+  build: Helm chart for a multi-service app.
+  prove: Repo with manifests and a runbook.
+
+- id: ci_cd
+  name: CI/CD
+  category: infrastructure
+  domains: [cloud, technology]
+  aliases: [github actions, jenkins, gitlab ci, continuous integration, continuous deployment]
+  prereqs: [git]
+  hours: [5, 15, 25]
+  description: Automating builds, tests and deployments.
+  learn:
+    - {title: GitHub Actions documentation, provider: GitHub, url: "https://docs.github.com/en/actions", type: docs}
+  practice: Add lint, test and build workflows to your projects.
+  build: A pipeline that deploys on merge with rollbacks.
+  prove: Workflow history in a public repo.
+
+- id: infrastructure_as_code
+  name: Infrastructure as Code
+  category: infrastructure
+  domains: [cloud]
+  aliases: [terraform, pulumi, cloudformation, ansible, iac]
+  prereqs: [cloud]
+  hours: [8, 25, 35]
+  description: Declaring infrastructure in versioned code.
+  learn:
+    - {title: Terraform tutorials, provider: HashiCorp, url: "https://developer.hashicorp.com/terraform/tutorials", type: docs}
+  practice: Recreate a manually built environment in Terraform.
+  build: Reusable modules with plan checks in CI.
+  prove: Repo with module docs.
+
+- id: observability
+  name: Observability
+  category: infrastructure
+  domains: [cloud, technology]
+  aliases: [monitoring, logging, tracing, prometheus, grafana, opentelemetry, datadog, sre]
+  prereqs: [linux]
+  hours: [6, 20, 30]
+  description: Logs, metrics and traces to understand production systems.
+  learn:
+    - {title: OpenTelemetry documentation, provider: OpenTelemetry, url: "https://opentelemetry.io/docs/", type: docs}
+    - {title: Prometheus overview, provider: Prometheus, url: "https://prometheus.io/docs/introduction/overview/", type: docs}
+  practice: Instrument a service and build dashboards and alerts.
+  build: SLOs with alerting for one of your services.
+  prove: Dashboard screenshots and an incident write-up.
+
+- id: networking
+  name: Networking
+  category: infrastructure
+  domains: [cybersecurity, cloud]
+  aliases: [tcp/ip, dns, http, vpn, subnetting, firewalls]
+  hours: [8, 25, 35]
+  description: How networks work — TCP/IP, DNS, routing, TLS and firewalls.
+  learn:
+    - {title: Cloudflare Learning Center, provider: Cloudflare, url: "https://www.cloudflare.com/learning/", type: docs}
+  practice: Capture and explain traffic with Wireshark.
+  build: A segmented home lab network.
+  prove: Lab documentation with diagrams.
+
+# ---------------------------------------------------------------- security
+- id: cybersecurity
+  name: Security Fundamentals
+  category: security
+  domains: [cybersecurity]
+  onboarding: tools
+  aliases: [cybersecurity, infosec, information security, security+, cia triad]
+  hours: [12, 35, 50]
+  description: Threats, controls, identity, cryptography basics and secure practices.
+  learn:
+    - {title: TryHackMe learning paths, provider: TryHackMe, url: "https://tryhackme.com/", type: practice}
+    - {title: OWASP Top 10, provider: OWASP, url: "https://owasp.org/www-project-top-ten/", type: docs}
+  practice: Complete a structured introductory path with hands-on rooms.
+  build: A hardened server with documented controls.
+  prove: Write-ups of completed labs.
+
+- id: security_operations
+  name: Security Operations
+  category: security
+  domains: [cybersecurity]
+  aliases: [soc, siem, splunk, incident response, threat detection, blue team, edr]
+  prereqs: [cybersecurity, networking]
+  hours: [12, 35, 50]
+  description: Detection, triage and incident response in a SOC context.
+  learn:
+    - {title: TryHackMe SOC paths, provider: TryHackMe, url: "https://tryhackme.com/", type: practice}
+  practice: Write detection rules and triage simulated alerts.
+  build: A home SOC lab with a SIEM ingesting real logs.
+  prove: Incident reports from lab scenarios.
+
+- id: penetration_testing
+  name: Penetration Testing
+  category: security
+  domains: [cybersecurity]
+  aliases: [pentesting, ethical hacking, red team, burp suite, metasploit, ctf]
+  prereqs: [cybersecurity, networking, linux]
+  hours: [15, 50, 75]
+  description: Finding and responsibly reporting vulnerabilities in systems and apps.
+  learn:
+    - {title: Web Security Academy, provider: PortSwigger, url: "https://portswigger.net/web-security", type: practice}
+    - {title: Hack The Box, provider: Hack The Box, url: "https://www.hackthebox.com/", type: practice}
+  practice: Complete labs across the OWASP Top 10.
+  build: A full assessment of an intentionally vulnerable app.
+  prove: Professional-style pentest report.
+
+- id: application_security
+  name: Application Security
+  category: security
+  domains: [cybersecurity, technology]
+  aliases: [appsec, secure coding, threat modeling, sast, dast, devsecops]
+  prereqs: [cybersecurity]
+  hours: [10, 30, 40]
+  description: Building security into software — threat modelling, secure code and testing.
+  learn:
+    - {title: Threat Modeling, provider: OWASP, url: "https://owasp.org/www-community/Threat_Modeling", type: docs}
+  practice: Threat-model one of your own apps and fix findings.
+  build: Add SAST/dependency scanning to a CI pipeline.
+  prove: Threat model document and remediation PRs.
+
+- id: cloud_security
+  name: Cloud Security
+  category: security
+  domains: [cybersecurity, cloud]
+  aliases: [iam, cloud security posture, cspm, kms]
+  prereqs: [cloud, cybersecurity]
+  hours: [10, 30, 40]
+  description: Securing cloud identities, data and workloads.
+  learn:
+    - {title: flAWS challenge, provider: flaws.cloud, url: "http://flaws.cloud/", type: practice}
+  practice: Audit an account against CIS benchmarks.
+  build: Guardrails-as-code for a cloud environment.
+  prove: Audit report and remediation code.
+
+# ---------------------------------------------------------------- business & product
+- id: business_analysis
+  name: Business Analysis
+  category: business
+  domains: [business, operations]
+  aliases: [requirements gathering, process mapping, user stories, bpmn, stakeholder analysis]
+  hours: [8, 25, 35]
+  description: Understanding problems, eliciting requirements and mapping processes.
+  learn:
+    - {title: BABOK Guide overview, provider: IIBA, url: "https://www.iiba.org/", type: docs}
+  practice: Map an as-is and to-be process for a real workflow.
+  build: A requirements pack for a feature you'd build.
+  prove: Documented case study.
+
+- id: product_management
+  name: Product Management
+  category: business
+  domains: [product, business]
+  aliases: [product strategy, roadmapping, prd, product discovery, prioritization, okrs]
+  hours: [10, 35, 50]
+  description: Discovering valuable problems, prioritising and shipping outcomes with a team.
+  learn:
+    - {title: Inspired (and SVPG articles), provider: Marty Cagan / SVPG, url: "https://www.svpg.com/articles/", type: book}
+    - {title: Lenny's Newsletter, provider: Lenny Rachitsky, url: "https://www.lennysnewsletter.com/", type: docs}
+  practice: Write PRDs and teardown analyses for products you use.
+  build: Ship a small product and iterate from user feedback.
+  prove: Case study with metrics and decisions.
+
+- id: project_management
+  name: Project Management
+  category: business
+  domains: [business, operations]
+  aliases: [pmp, project planning, gantt, risk register, jira, delivery management]
+  hours: [8, 25, 35]
+  description: Planning scope, schedule, risk and communication to deliver projects.
+  learn:
+    - {title: Google Project Management Certificate, provider: Google (Coursera), url: "https://grow.google/certificates/project-management/", type: course}
+  practice: Run a personal or community project with a plan and risk log.
+  build: A project plan, status reports and retrospective.
+  prove: Delivered project with artefacts.
+
+- id: agile
+  name: Agile & Scrum
+  category: business
+  domains: [business, product, technology]
+  aliases: [scrum, kanban, sprint, agile]
+  hours: [4, 12, 20]
+  description: Iterative delivery practices and team rituals.
+  learn:
+    - {title: The Scrum Guide, provider: Schwaber & Sutherland, url: "https://scrumguides.org/", type: docs}
+  practice: Run sprints on a side project with a board and retros.
+  build: A team working agreement and delivery metrics.
+  prove: Sprint artefacts from a real project.
+
+- id: strategy
+  name: Business Strategy
+  category: business
+  domains: [business, entrepreneurship]
+  aliases: [competitive analysis, market sizing, case interviews, consulting frameworks]
+  hours: [10, 30, 40]
+  description: Structuring ambiguous problems, market analysis and strategic recommendations.
+  learn:
+    - {title: Case in Point, provider: Marc Cosentino, url: "https://www.caseinpoint.com/", type: book}
+  practice: Solve 15 structured case problems with written recommendations.
+  build: A strategy memo on a real company decision.
+  prove: Published memo or case deck.
+
+- id: market_research
+  name: Market & Customer Research
+  category: business
+  domains: [business, marketing, entrepreneurship, product]
+  aliases: [customer interviews, surveys, market analysis, user interviews]
+  hours: [6, 20, 30]
+  description: Learning what customers need through interviews, surveys and market data.
+  learn:
+    - {title: The Mom Test, provider: Rob Fitzpatrick, url: "https://www.momtestbook.com/", type: book}
+  practice: Run 5 customer interviews and synthesise findings.
+  build: A research report with insights and recommendations.
+  prove: Interview synthesis document.
+
+- id: communication
+  name: Communication & Storytelling
+  category: professional
+  domains: [business, marketing, education]
+  aliases: [presentation, stakeholder communication, public speaking, storytelling, pyramid principle]
+  hours: [6, 20, 30]
+  description: Explaining complex work clearly to different audiences.
+  learn:
+    - {title: The Pyramid Principle, provider: Barbara Minto, url: "https://www.barbaraminto.com/", type: book}
+  practice: Present one project to a non-technical audience and collect feedback.
+  build: A talk, video walkthrough or written explainer.
+  prove: Recorded talk or published article.
+
+- id: stakeholder_management
+  name: Stakeholder Management
+  category: professional
+  domains: [business, product, operations]
+  aliases: [cross-functional, stakeholders, negotiation, alignment]
+  prereqs: [communication]
+  hours: [6, 20, 30]
+  description: Aligning people with different goals around a shared outcome.
+  learn:
+    - {title: The Manager's Path, provider: Camille Fournier, url: "https://www.oreilly.com/library/view/the-managers-path/9781491973882/", type: book}
+  practice: Lead a cross-team decision and document the trade-offs.
+  build: A decision log for a real project.
+  prove: Reference or retrospective describing your role.
+
+- id: leadership
+  name: Team Leadership
+  category: professional
+  domains: [business, operations]
+  aliases: [people management, mentoring, team lead]
+  prereqs: [communication]
+  hours: [10, 30, 50]
+  description: Guiding a team — delegation, feedback, coaching and decisions.
+  learn:
+    - {title: The Manager's Path, provider: Camille Fournier, url: "https://www.oreilly.com/library/view/the-managers-path/9781491973882/", type: book}
+  practice: Mentor someone or lead a small group project.
+  build: A team process you introduced and measured.
+  prove: Written reflection with outcomes.
+
+- id: operations_analysis
+  name: Operations & Process Improvement
+  category: business
+  domains: [operations, business]
+  aliases: [lean, six sigma, process improvement, supply chain, kpis]
+  prereqs: [data_analysis]
+  hours: [8, 25, 35]
+  description: Measuring and improving how work flows through an organisation.
+  learn:
+    - {title: Operations Management resources, provider: MIT OpenCourseWare, url: "https://ocw.mit.edu/", type: course}
+  practice: Measure a process's cycle time and bottlenecks.
+  build: A process-improvement case with before/after metrics.
+  prove: Case study document.
+
+# ---------------------------------------------------------------- finance
+- id: accounting
+  name: Accounting Fundamentals
+  category: finance
+  domains: [finance, business]
+  aliases: [financial statements, balance sheet, income statement, cash flow, gaap, ifrs]
+  hours: [10, 30, 40]
+  description: Reading and connecting the three financial statements.
+  learn:
+    - {title: Finance and capital markets, provider: Khan Academy, url: "https://www.khanacademy.org/economics-finance-domain/core-finance", type: course}
+    - {title: Free finance courses, provider: Corporate Finance Institute, url: "https://corporatefinanceinstitute.com/", type: course}
+  practice: Analyse the annual reports of three companies in one industry.
+  build: A ratio analysis comparing competitors.
+  prove: Written equity/credit note.
+
+- id: financial_modeling
+  name: Financial Modeling
+  category: finance
+  domains: [finance]
+  aliases: [dcf, three statement model, lbo, excel modeling, forecasting model]
+  prereqs: [accounting, excel]
+  hours: [12, 35, 50]
+  description: Building driver-based models of company performance and value.
+  learn:
+    - {title: Free finance courses, provider: Corporate Finance Institute, url: "https://corporatefinanceinstitute.com/", type: course}
+  practice: Build a three-statement model for a listed company.
+  build: A DCF with scenario and sensitivity analysis.
+  prove: Model plus investment memo.
+
+- id: valuation
+  name: Valuation
+  category: finance
+  domains: [finance]
+  aliases: [dcf valuation, comparables, multiples, equity research]
+  prereqs: [financial_modeling]
+  hours: [10, 30, 40]
+  description: Estimating what a business or asset is worth.
+  learn:
+    - {title: Damodaran Online, provider: Aswath Damodaran (NYU Stern), url: "https://pages.stern.nyu.edu/~adamodar/", type: course}
+  practice: Value three companies using intrinsic and relative methods.
+  build: A full valuation report.
+  prove: Published valuation with assumptions justified.
+
+- id: financial_markets
+  name: Financial Markets
+  category: finance
+  domains: [finance]
+  aliases: [equities, fixed income, bonds, derivatives basics, capital markets, trading]
+  hours: [8, 25, 35]
+  description: How markets, instruments and participants work.
+  learn:
+    - {title: Financial Markets, provider: Yale University (Coursera), url: "https://www.coursera.org/learn/financial-markets-global", type: course}
+  practice: Follow and explain a market event each week.
+  build: A market analysis report on one asset class.
+  prove: Written analysis.
+
+- id: risk_management
+  name: Risk Management
+  category: finance
+  domains: [finance]
+  aliases: [var, credit risk, market risk, stress testing, frm]
+  prereqs: [statistics, financial_markets]
+  hours: [12, 35, 50]
+  description: Measuring and managing market, credit and operational risk.
+  learn:
+    - {title: FRM program overview, provider: GARP, url: "https://www.garp.org/frm", type: docs}
+  practice: Compute VaR/ES for a portfolio three ways and compare.
+  build: A portfolio risk dashboard with stress scenarios.
+  prove: Risk report with methodology.
+
+- id: quantitative_finance
+  name: Quantitative Finance
+  category: finance
+  domains: [finance, research]
+  aliases: [quant, derivatives pricing, stochastic calculus, backtesting, algorithmic trading, black-scholes]
+  prereqs: [statistics, math_for_ml, python]
+  hours: [20, 60, 90]
+  description: Mathematical and statistical modelling of markets and instruments.
+  learn:
+    - {title: Topics in Mathematics with Applications in Finance, provider: MIT OpenCourseWare, url: "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/", type: course}
+    - {title: QuantStart articles, provider: QuantStart, url: "https://www.quantstart.com/articles/", type: docs}
+  practice: Implement pricing models and a simple backtester.
+  build: A backtesting engine avoiding look-ahead bias.
+  prove: Research note with out-of-sample results.
+
+# ---------------------------------------------------------------- marketing
+- id: digital_marketing
+  name: Digital Marketing
+  category: marketing
+  domains: [marketing]
+  aliases: [paid ads, google ads, social media marketing, content marketing, email marketing, campaigns]
+  hours: [8, 25, 35]
+  description: Planning and running campaigns across digital channels.
+  learn:
+    - {title: Google Skillshop, provider: Google, url: "https://skillshop.withgoogle.com/", type: course}
+    - {title: HubSpot Academy, provider: HubSpot, url: "https://academy.hubspot.com/", type: course}
+  practice: Plan and run a small campaign with a real budget or for a club/nonprofit.
+  build: A multi-channel campaign plan with measured results.
+  prove: Campaign report with metrics.
+
+- id: seo
+  name: SEO
+  category: marketing
+  domains: [marketing]
+  aliases: [search engine optimization, keyword research, technical seo]
+  hours: [6, 20, 30]
+  description: Improving discoverability in search through content and technical work.
+  learn:
+    - {title: SEO Starter Guide, provider: Google Search Central, url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide", type: docs}
+    - {title: Beginner's Guide to SEO, provider: Moz, url: "https://moz.com/beginners-guide-to-seo", type: docs}
+  practice: Audit a site and prioritise fixes.
+  build: Grow organic traffic for a site you control.
+  prove: Before/after Search Console data.
+
+- id: marketing_analytics
+  name: Marketing Analytics
+  category: marketing
+  domains: [marketing, data]
+  aliases: [google analytics, ga4, attribution, cohort analysis, funnel analysis, cac, ltv]
+  prereqs: [data_analysis]
+  hours: [8, 25, 35]
+  description: Measuring funnels, attribution, cohorts and campaign effectiveness.
+  learn:
+    - {title: Google Analytics training, provider: Google Skillshop, url: "https://skillshop.withgoogle.com/", type: course}
+  practice: Build a funnel and cohort analysis from event data.
+  build: An attribution comparison on a public dataset.
+  prove: Analysis report with recommendations.
+
+- id: growth
+  name: Growth
+  category: marketing
+  domains: [marketing, product]
+  aliases: [growth hacking, activation, retention, referral, product-led growth]
+  prereqs: [experimentation]
+  hours: [8, 25, 35]
+  description: Finding and scaling levers for acquisition, activation and retention.
+  learn:
+    - {title: Reforge articles, provider: Reforge, url: "https://www.reforge.com/blog", type: docs}
+  practice: Map a product's growth loops and propose experiments.
+  build: Run a growth experiment end to end.
+  prove: Experiment write-up.
+
+- id: marketing_automation
+  name: Marketing Automation & CRM
+  category: marketing
+  domains: [marketing]
+  aliases: [hubspot, salesforce, marketo, crm, lifecycle marketing, email automation]
+  hours: [6, 20, 30]
+  description: Automating lifecycle journeys and managing customer data in CRM platforms.
+  learn:
+    - {title: HubSpot Academy, provider: HubSpot, url: "https://academy.hubspot.com/", type: course}
+    - {title: Trailhead, provider: Salesforce, url: "https://trailhead.salesforce.com/", type: course}
+  practice: Build lead-scoring and nurture flows in a sandbox.
+  build: A lifecycle program with segmentation.
+  prove: Documented workflows and results.
+
+# ---------------------------------------------------------------- design
+- id: ux_research
+  name: UX Research
+  category: design
+  domains: [design, research, product]
+  aliases: [user research, usability testing, interviews, personas, journey mapping]
+  hours: [8, 25, 40]
+  description: Understanding users through interviews, usability tests and synthesis.
+  learn:
+    - {title: Articles & videos, provider: Nielsen Norman Group, url: "https://www.nngroup.com/articles/", type: docs}
+    - {title: Just Enough Research, provider: Erika Hall, url: "https://abookapart.com/", type: book}
+  practice: Run 5 usability tests on an existing product.
+  build: A research study with insights that change a design.
+  prove: Research report and highlight reel.
+
+- id: ui_design
+  name: UI & Visual Design
+  category: design
+  domains: [design]
+  aliases: [visual design, typography, layout, figma, ui design, color theory]
+  hours: [10, 30, 40]
+  description: Visual hierarchy, typography, layout and interface craft.
+  learn:
+    - {title: Refactoring UI, provider: Wathan & Schoger, url: "https://www.refactoringui.com/", type: book}
+    - {title: Figma Learn, provider: Figma, url: "https://help.figma.com/hc/en-us/categories/360002051613", type: course}
+  practice: Recreate and then improve three well-known interfaces.
+  build: A polished UI kit for a product concept.
+  prove: Portfolio case study.
+
+- id: interaction_design
+  name: Interaction Design
+  category: design
+  domains: [design, product]
+  aliases: [ixd, user flows, information architecture, wireframing, prototyping]
+  hours: [8, 25, 40]
+  description: Designing flows, states and behaviours that make products easy to use.
+  learn:
+    - {title: Interaction Design Foundation, provider: IxDF, url: "https://www.interaction-design.org/", type: course}
+  practice: Wireframe and prototype flows for three tasks.
+  build: A clickable prototype validated with users.
+  prove: Prototype plus test results.
+
+- id: design_systems
+  name: Design Systems
+  category: design
+  domains: [design, technology]
+  aliases: [component library, design tokens, storybook]
+  prereqs: [ui_design]
+  hours: [8, 25, 35]
+  description: Reusable components, tokens and guidelines that scale design.
+  learn:
+    - {title: Material Design 3, provider: Google, url: "https://m3.material.io/", type: docs}
+  practice: Audit an app's UI and consolidate components.
+  build: A token-based component library.
+  prove: Documented library site.
+
+- id: accessibility
+  name: Accessibility
+  category: design
+  domains: [design, technology]
+  aliases: [a11y, wcag, screen readers, inclusive design]
+  hours: [5, 15, 25]
+  description: Designing and building products usable by people with disabilities.
+  learn:
+    - {title: Accessibility fundamentals, provider: W3C WAI, url: "https://www.w3.org/WAI/fundamentals/", type: docs}
+    - {title: Learn Accessibility, provider: web.dev (Google), url: "https://web.dev/learn/accessibility", type: course}
+  practice: Audit and fix a site with a screen reader and axe.
+  build: An accessible component set.
+  prove: Audit report before/after.
+
+- id: creative_coding
+  name: Creative Coding
+  category: design
+  domains: [design, media, technology]
+  aliases: [p5.js, three.js, generative art, webgl, shaders, processing]
+  prereqs: [javascript]
+  hours: [8, 25, 40]
+  description: Using code as a creative medium — generative visuals, interactive installations.
+  learn:
+    - {title: The Coding Train, provider: Daniel Shiffman, url: "https://thecodingtrain.com/", type: video}
+    - {title: three.js manual, provider: three.js, url: "https://threejs.org/manual/", type: docs}
+  practice: Make one small sketch a day for two weeks.
+  build: An interactive web piece or installation prototype.
+  prove: Online gallery with source.
+
+# ---------------------------------------------------------------- healthcare & science
+- id: healthcare_data
+  name: Healthcare Data & Standards
+  category: healthcare
+  domains: [healthcare, data]
+  aliases: [ehr, emr, hl7, fhir, icd-10, claims data, clinical data, omop]
+  hours: [8, 25, 40]
+  description: Working with clinical and claims data, coding systems and interoperability standards.
+  learn:
+    - {title: FHIR specification overview, provider: HL7 International, url: "https://hl7.org/fhir/overview.html", type: docs}
+  practice: Explore a synthetic EHR dataset (e.g. Synthea) and map it to FHIR.
+  build: A pipeline that normalises clinical data.
+  prove: Documented pipeline with data dictionary.
+
+- id: health_privacy
+  name: Health Data Privacy & Compliance
+  category: healthcare
+  domains: [healthcare, cybersecurity]
+  aliases: [hipaa, gdpr, phi, de-identification, compliance]
+  hours: [4, 12, 20]
+  description: Legal and ethical handling of sensitive health data.
+  learn:
+    - {title: HIPAA for professionals, provider: U.S. HHS, url: "https://www.hhs.gov/hipaa/for-professionals/index.html", type: docs}
+  practice: De-identify a dataset and document the method.
+  build: A privacy review for a health data project.
+  prove: Privacy impact assessment document.
+
+- id: clinical_domain
+  name: Clinical & Healthcare Domain Knowledge
+  category: healthcare
+  domains: [healthcare]
+  aliases: [clinical workflows, healthcare operations, medical terminology, public health]
+  hours: [10, 30, 40]
+  description: How care is delivered, measured and paid for.
+  learn:
+    - {title: Health informatics resources, provider: AMIA, url: "https://amia.org/", type: docs}
+  practice: Shadow or interview clinicians about one workflow.
+  build: A workflow analysis with improvement ideas.
+  prove: Case study reviewed by a domain expert.
+
+- id: bioinformatics
+  name: Bioinformatics
+  category: healthcare
+  domains: [healthcare, science, research]
+  aliases: [genomics, sequence analysis, biopython, ngs, rna-seq, proteomics]
+  prereqs: [python, statistics]
+  hours: [15, 45, 65]
+  description: Computational analysis of biological data such as sequences and expression.
+  learn:
+    - {title: Rosalind problems, provider: rosalind.info, url: "https://rosalind.info/", type: practice}
+  practice: Solve sequence-analysis problems and run a standard pipeline.
+  build: A reproducible analysis on a public dataset (e.g. from NCBI GEO).
+  prove: Workflow repo with results and methods.
+
+- id: research_methods
+  name: Research Methods
+  category: research
+  domains: [research, science]
+  aliases: [experimental design, literature review, methodology, reproducibility, qualitative research]
+  hours: [10, 30, 40]
+  description: Designing studies, reviewing literature and drawing sound conclusions.
+  learn:
+    - {title: The Craft of Research, provider: University of Chicago Press, url: "https://press.uchicago.edu/", type: book}
+  practice: Write a literature review on a narrow question.
+  build: A small study with preregistered hypotheses.
+  prove: Research paper or preprint.
+
+- id: scientific_computing
+  name: Scientific Computing
+  category: research
+  domains: [science, research, engineering]
+  aliases: [numpy, scipy, numerical methods, simulation, hpc, julia, matlab]
+  prereqs: [python, math_for_ml]
+  hours: [12, 35, 50]
+  description: Numerical methods, simulation and high-performance computing.
+  learn:
+    - {title: NumPy learn, provider: NumPy, url: "https://numpy.org/learn/", type: docs}
+  practice: Implement and validate numerical solvers.
+  build: A simulation of a physical or economic system.
+  prove: Validated results with convergence analysis.
+
+- id: scientific_writing
+  name: Scientific & Academic Writing
+  category: research
+  domains: [research, science, education]
+  aliases: [academic writing, paper writing, latex, publications]
+  hours: [6, 20, 30]
+  description: Writing clear papers, reports and proposals.
+  learn:
+    - {title: Writing in the Sciences, provider: Stanford University (Coursera), url: "https://www.coursera.org/learn/sciwrite", type: course}
+  practice: Rewrite one of your reports to journal standards.
+  build: A preprint or technical report.
+  prove: Published preprint.
+
+# ---------------------------------------------------------------- other professional
+- id: technical_writing
+  name: Technical Writing
+  category: professional
+  domains: [media, technology, education]
+  aliases: [documentation, docs, api documentation, docs-as-code]
+  hours: [5, 18, 30]
+  description: Writing documentation that helps people succeed with technical products.
+  learn:
+    - {title: Technical Writing courses, provider: Google for Developers, url: "https://developers.google.com/tech-writing", type: course}
+  practice: Rewrite the README and docs of an open-source project.
+  build: A docs site with tutorials, how-tos and reference.
+  prove: Merged docs contributions.
+
+- id: teaching
+  name: Teaching & Instructional Design
+  category: professional
+  domains: [education]
+  aliases: [instructional design, curriculum design, tutoring, mentoring]
+  prereqs: [communication]
+  hours: [8, 25, 35]
+  description: Designing learning experiences and helping others learn.
+  learn:
+    - {title: Learning How to Learn, provider: Deep Teaching Solutions (Coursera), url: "https://www.coursera.org/learn/learning-how-to-learn", type: course}
+  practice: Teach a topic weekly and iterate from learner feedback.
+  build: A short course module with assessments.
+  prove: Published module and learner outcomes.
+
+- id: sales_engineering
+  name: Technical Sales & Solutioning
+  category: professional
+  domains: [business, technology]
+  aliases: [pre-sales, solutions engineering, demos, discovery calls, proof of concept]
+  prereqs: [communication]
+  hours: [8, 25, 40]
+  description: Understanding customer problems and showing how technology solves them.
+  learn:
+    - {title: SPIN Selling, provider: Neil Rackham, url: "https://www.mheducation.com/", type: book}
+  practice: Record mock discovery calls and demos.
+  build: A tailored demo and proof-of-concept for a realistic customer.
+  prove: Demo recording and solution document.
+
+- id: customer_success
+  name: Customer Success
+  category: professional
+  domains: [business]
+  aliases: [account management, onboarding customers, churn reduction, support]
+  prereqs: [communication]
+  hours: [6, 20, 30]
+  description: Helping customers adopt a product and achieve their goals.
+  learn:
+    - {title: Customer success resources, provider: Gainsight, url: "https://www.gainsight.com/resources/", type: docs}
+  practice: Design an onboarding plan for a B2B product.
+  build: A health-score model and playbook.
+  prove: Playbook document.
+
+- id: entrepreneurship
+  name: Entrepreneurship
+  category: business
+  domains: [entrepreneurship, business]
+  aliases: [startups, founder, mvp, fundraising, go-to-market, business model]
+  hours: [10, 35, 55]
+  description: Finding a problem worth solving and building a business around it.
+  learn:
+    - {title: Startup School, provider: Y Combinator, url: "https://www.startupschool.org/", type: course}
+  practice: Validate three ideas with customer conversations.
+  build: Launch an MVP and acquire first users.
+  prove: Traction metrics and a launch write-up.

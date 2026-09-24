@@ -1,0 +1,394 @@
+# Certificate metadata. Prices and exam details change often, so they are deliberately
+# not stored here — the UI links to the official page instead.
+# type: exam (proctored, vendor-validated) | course (completion certificate)
+# notes: neutral context the recommendation engine shows alongside its reasoning.
+
+- id: aws-cloud-practitioner
+  name: AWS Certified Cloud Practitioner
+  provider: Amazon Web Services
+  type: exam
+  level: foundational
+  skills: [cloud]
+  url: "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+  aliases: [aws ccp, cloud practitioner, clf-c02]
+  notes: Broad, non-technical overview of AWS. Useful as a structured first step; a deployed project demonstrates more hands-on ability.
+
+- id: aws-solutions-architect-associate
+  name: AWS Certified Solutions Architect – Associate
+  provider: Amazon Web Services
+  type: exam
+  level: associate
+  skills: [cloud, cloud_architecture, networking, cloud_security]
+  url: "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+  aliases: [aws saa, solutions architect associate, saa-c03]
+  notes: Widely recognised cloud design exam. Pairs well with an architecture you actually built.
+
+- id: aws-ml-engineer-associate
+  name: AWS Certified Machine Learning Engineer – Associate
+  provider: Amazon Web Services
+  type: exam
+  level: associate
+  skills: [mlops, model_deployment, cloud, machine_learning]
+  url: "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/"
+  aliases: [aws mla, mla-c01, aws machine learning engineer]
+  notes: Focuses on building and operating ML workloads on AWS services such as SageMaker.
+
+- id: gcp-professional-ml-engineer
+  name: Google Cloud Professional Machine Learning Engineer
+  provider: Google Cloud
+  type: exam
+  level: professional
+  skills: [machine_learning, mlops, model_deployment, cloud]
+  url: "https://cloud.google.com/learn/certification/machine-learning-engineer"
+  aliases: [gcp pmle, professional machine learning engineer]
+  notes: Professional-level exam covering the ML lifecycle on Google Cloud; Google recommends prior hands-on experience.
+
+- id: azure-ai-engineer
+  name: Microsoft Certified – Azure AI Engineer Associate
+  provider: Microsoft
+  type: exam
+  level: associate
+  skills: [llms, rag, cloud, apis]
+  url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/"
+  aliases: [ai-102, azure ai engineer]
+  notes: Covers building AI solutions with Azure AI services, including generative AI and search.
+
+- id: azure-data-scientist
+  name: Microsoft Certified – Azure Data Scientist Associate
+  provider: Microsoft
+  type: exam
+  level: associate
+  skills: [machine_learning, mlops, cloud]
+  url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-scientist/"
+  aliases: [dp-100, azure data scientist]
+  notes: Focused on Azure Machine Learning tooling.
+
+- id: nvidia-genai-llm-associate
+  name: NVIDIA Certified Associate – Generative AI LLMs
+  provider: NVIDIA
+  type: exam
+  level: associate
+  skills: [llms, deep_learning, prompt_engineering, fine_tuning]
+  url: "https://www.nvidia.com/en-us/learn/certification/"
+  aliases: [nca-genl, nvidia generative ai]
+  notes: Entry-level validation of LLM fundamentals on NVIDIA's stack.
+
+- id: dlai-ml-specialization
+  name: Machine Learning Specialization
+  provider: DeepLearning.AI & Stanford (Coursera)
+  type: course
+  level: foundational
+  skills: [machine_learning, python, math_for_ml]
+  url: "https://www.coursera.org/specializations/machine-learning-introduction"
+  aliases: [andrew ng machine learning, ml specialization, machine learning certificate]
+  notes: Strong conceptual foundation. As a completion certificate it signals learning; projects signal applied ability.
+
+- id: dlai-deep-learning-specialization
+  name: Deep Learning Specialization
+  provider: DeepLearning.AI (Coursera)
+  type: course
+  level: intermediate
+  skills: [deep_learning, nlp, computer_vision]
+  url: "https://www.coursera.org/specializations/deep-learning"
+  aliases: [deep learning specialization, andrew ng deep learning]
+  notes: Structured path through neural network fundamentals, CNNs and sequence models.
+
+- id: generative-ai-course-certificate
+  name: Generative AI course certificate
+  provider: Various (Coursera, DeepLearning.AI, Google Cloud Skills Boost)
+  type: course
+  level: foundational
+  skills: [llms, prompt_engineering]
+  url: "https://www.deeplearning.ai/courses/"
+  aliases: [generative ai certificate, genai certificate, generative ai with llms, intro to generative ai]
+  notes: Introductory generative-AI courses teach concepts; a built LLM application provides stronger evidence.
+
+- id: ibm-data-science
+  name: IBM Data Science Professional Certificate
+  provider: IBM (Coursera)
+  type: course
+  level: foundational
+  skills: [python, sql, data_analysis, machine_learning, data_visualization]
+  url: "https://www.coursera.org/professional-certificates/ibm-data-science"
+  aliases: [ibm data science]
+  notes: Broad beginner programme; most useful when you're new to the field.
+
+- id: google-data-analytics
+  name: Google Data Analytics Professional Certificate
+  provider: Google (Coursera)
+  type: course
+  level: foundational
+  skills: [data_analysis, sql, data_visualization, excel, r]
+  url: "https://grow.google/certificates/data-analytics/"
+  aliases: [google data analytics]
+  notes: Beginner-friendly analytics programme with a capstone.
+
+- id: ms-power-bi-analyst
+  name: Microsoft Certified – Power BI Data Analyst Associate
+  provider: Microsoft
+  type: exam
+  level: associate
+  skills: [bi_tools, data_modeling, data_visualization]
+  url: "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/"
+  aliases: [pl-300, power bi certification]
+  notes: Validates Power BI modelling and reporting — relevant where employers use the Microsoft stack.
+
+- id: tableau-data-analyst
+  name: Tableau Certified Data Analyst
+  provider: Tableau (Salesforce)
+  type: exam
+  level: associate
+  skills: [bi_tools, data_visualization]
+  url: "https://www.tableau.com/learn/certification"
+  aliases: [tableau certification]
+  notes: Relevant where teams use Tableau; a public dashboard portfolio often speaks just as clearly.
+
+- id: databricks-data-engineer-associate
+  name: Databricks Certified Data Engineer Associate
+  provider: Databricks
+  type: exam
+  level: associate
+  skills: [big_data, data_engineering, sql]
+  url: "https://www.databricks.com/learn/certification/data-engineer-associate"
+  aliases: [databricks associate]
+  notes: Validates core lakehouse and Spark SQL skills on Databricks.
+
+- id: snowpro-core
+  name: SnowPro Core Certification
+  provider: Snowflake
+  type: exam
+  level: associate
+  skills: [data_modeling, sql, data_engineering]
+  url: "https://www.snowflake.com/en/learn/certifications/"
+  aliases: [snowflake certification, snowpro]
+  notes: Useful where Snowflake is the warehouse of choice.
+
+- id: dbt-analytics-engineering
+  name: dbt Analytics Engineering Certification
+  provider: dbt Labs
+  type: exam
+  level: associate
+  skills: [analytics_engineering, data_modeling, sql]
+  url: "https://www.getdbt.com/certifications"
+  aliases: [dbt certification]
+  notes: Validates dbt modelling and testing practices.
+
+- id: cka
+  name: Certified Kubernetes Administrator (CKA)
+  provider: CNCF / The Linux Foundation
+  type: exam
+  level: professional
+  skills: [kubernetes, linux, networking]
+  url: "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"
+  aliases: [cka, kubernetes administrator]
+  notes: Performance-based exam — you solve tasks on real clusters, which makes it strong practical evidence.
+
+- id: ckad
+  name: Certified Kubernetes Application Developer (CKAD)
+  provider: CNCF / The Linux Foundation
+  type: exam
+  level: associate
+  skills: [kubernetes, docker]
+  url: "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/"
+  aliases: [ckad]
+  notes: Hands-on exam focused on deploying applications to Kubernetes.
+
+- id: terraform-associate
+  name: HashiCorp Certified Terraform Associate
+  provider: HashiCorp
+  type: exam
+  level: associate
+  skills: [infrastructure_as_code, cloud]
+  url: "https://developer.hashicorp.com/certifications/infrastructure-automation"
+  aliases: [terraform associate]
+  notes: Validates Terraform fundamentals.
+
+- id: comptia-security-plus
+  name: CompTIA Security+
+  provider: CompTIA
+  type: exam
+  level: foundational
+  skills: [cybersecurity, networking, security_operations]
+  url: "https://www.comptia.org/certifications/security"
+  aliases: [security+, sec+]
+  notes: Commonly listed in entry-level security job descriptions, and required for some government roles.
+
+- id: google-cybersecurity
+  name: Google Cybersecurity Professional Certificate
+  provider: Google (Coursera)
+  type: course
+  level: foundational
+  skills: [cybersecurity, security_operations, linux, networking]
+  url: "https://grow.google/certificates/cybersecurity/"
+  aliases: [google cybersecurity]
+  notes: Beginner programme with hands-on labs.
+
+- id: oscp
+  name: OffSec Certified Professional (OSCP)
+  provider: OffSec
+  type: exam
+  level: professional
+  skills: [penetration_testing, linux, networking]
+  url: "https://www.offsec.com/courses/pen-200/"
+  aliases: [oscp, pen-200]
+  notes: Demanding hands-on exam, widely respected for offensive security roles.
+
+- id: cissp
+  name: CISSP
+  provider: ISC2
+  type: exam
+  level: professional
+  skills: [cybersecurity, cloud_security, application_security]
+  url: "https://www.isc2.org/certifications/cissp"
+  aliases: [cissp]
+  notes: Senior-level certification that requires several years of professional security experience.
+
+- id: cfa-level-1
+  name: CFA Program – Level I
+  provider: CFA Institute
+  type: exam
+  level: professional
+  skills: [accounting, valuation, financial_markets, financial_modeling]
+  url: "https://www.cfainstitute.org/programs/cfa-program"
+  aliases: [cfa, cfa level 1, cfa level i]
+  notes: Substantial time commitment. Well recognised in investment management and research.
+
+- id: frm-part-1
+  name: FRM – Part I
+  provider: GARP
+  type: exam
+  level: professional
+  skills: [risk_management, statistics, financial_markets]
+  url: "https://www.garp.org/frm"
+  aliases: [frm]
+  notes: Recognised in market and credit risk; full certification also requires work experience.
+
+- id: cfi-fmva
+  name: Financial Modeling & Valuation Analyst (FMVA)
+  provider: Corporate Finance Institute
+  type: course
+  level: intermediate
+  skills: [financial_modeling, valuation, excel, accounting]
+  url: "https://corporatefinanceinstitute.com/certifications/financial-modeling-valuation-analyst-fmva-program/"
+  aliases: [fmva]
+  notes: Practical modelling curriculum; a model you publish demonstrates the same skills directly.
+
+- id: pmp
+  name: Project Management Professional (PMP)
+  provider: PMI
+  type: exam
+  level: professional
+  skills: [project_management, stakeholder_management, agile]
+  url: "https://www.pmi.org/certifications/project-management-pmp"
+  aliases: [pmp]
+  notes: Requires documented project-management experience before you can sit the exam.
+
+- id: capm
+  name: Certified Associate in Project Management (CAPM)
+  provider: PMI
+  type: exam
+  level: foundational
+  skills: [project_management]
+  url: "https://www.pmi.org/certifications/certified-associate-capm"
+  aliases: [capm]
+  notes: Entry-level PMI credential without an experience requirement.
+
+- id: psm-1
+  name: Professional Scrum Master I (PSM I)
+  provider: Scrum.org
+  type: exam
+  level: foundational
+  skills: [agile]
+  url: "https://www.scrum.org/assessments/professional-scrum-master-i-certification"
+  aliases: [psm, psm i, scrum master]
+  notes: Validates understanding of the Scrum framework.
+
+- id: google-project-management
+  name: Google Project Management Professional Certificate
+  provider: Google (Coursera)
+  type: course
+  level: foundational
+  skills: [project_management, agile, communication]
+  url: "https://grow.google/certificates/project-management/"
+  aliases: [google project management]
+  notes: Beginner programme covering traditional and agile project management.
+
+- id: google-ux-design
+  name: Google UX Design Professional Certificate
+  provider: Google (Coursera)
+  type: course
+  level: foundational
+  skills: [ux_research, interaction_design, ui_design]
+  url: "https://grow.google/certificates/ux-design/"
+  aliases: [google ux]
+  notes: Beginner programme. Hiring for design roles leans heavily on portfolio case studies.
+
+- id: nng-ux-certification
+  name: NN/g UX Certification
+  provider: Nielsen Norman Group
+  type: course
+  level: intermediate
+  skills: [ux_research, interaction_design]
+  url: "https://www.nngroup.com/ux-certification/"
+  aliases: [nngroup certification, nn/g]
+  notes: Earned through NN/g courses and exams.
+
+- id: ga4-certification
+  name: Google Analytics Certification
+  provider: Google Skillshop
+  type: exam
+  level: foundational
+  skills: [marketing_analytics]
+  url: "https://skillshop.withgoogle.com/"
+  aliases: [google analytics certification, ga4]
+  notes: Free, platform-specific certification.
+
+- id: google-ads-search
+  name: Google Ads Search Certification
+  provider: Google Skillshop
+  type: exam
+  level: foundational
+  skills: [digital_marketing]
+  url: "https://skillshop.withgoogle.com/"
+  aliases: [google ads certification]
+  notes: Free, platform-specific certification.
+
+- id: hubspot-inbound
+  name: HubSpot Inbound Marketing Certification
+  provider: HubSpot Academy
+  type: course
+  level: foundational
+  skills: [digital_marketing, marketing_automation]
+  url: "https://academy.hubspot.com/"
+  aliases: [hubspot certification, inbound marketing]
+  notes: Free course certificate covering inbound fundamentals.
+
+- id: salesforce-admin
+  name: Salesforce Certified Administrator
+  provider: Salesforce
+  type: exam
+  level: associate
+  skills: [marketing_automation, business_analysis]
+  url: "https://trailhead.salesforce.com/credentials/administrator"
+  aliases: [salesforce admin]
+  notes: Relevant for CRM-heavy operations and marketing roles.
+
+- id: ahima-chda
+  name: Certified Health Data Analyst (CHDA)
+  provider: AHIMA
+  type: exam
+  level: professional
+  skills: [healthcare_data, data_analysis, health_privacy]
+  url: "https://www.ahima.org/certification-careers/certifications-overview/"
+  aliases: [chda]
+  notes: US-focused health data credential; eligibility depends on education and experience.
+
+- id: iiba-ecba
+  name: Entry Certificate in Business Analysis (ECBA)
+  provider: IIBA
+  type: exam
+  level: foundational
+  skills: [business_analysis]
+  url: "https://www.iiba.org/business-analysis-certifications/ecba/"
+  aliases: [ecba]
+  notes: Entry-level business analysis credential based on the BABOK Guide.

@@ -1,0 +1,235 @@
+# Career definitions — business & product family.
+
+- id: business-analyst
+  name: Business Analyst
+  family: business
+  categories: [business, operations]
+  summary: Bridge business needs and solutions by understanding problems deeply.
+  what_they_do: Business analysts elicit requirements, map processes and analyse data so that teams build the right solutions.
+  responsibilities:
+    - Gather and document requirements
+    - Map current and future processes
+    - Analyse data to support decisions
+    - Facilitate workshops between business and technical teams
+  skills:
+    business_analysis: [3, core]
+    communication: [2, core]
+    stakeholder_management: [2, core]
+    excel: [2, important]
+    sql: [1, important]
+    data_analysis: [1, important]
+    agile: [1, useful]
+    bi_tools: [1, useful]
+  technologies: [Jira, Confluence, Excel, BPMN tools, SQL]
+  entry_routes:
+    - Business, economics or IT degrees
+    - Operations or support roles moving into analysis
+  example_projects: [Process improvement case, Requirements pack for a feature]
+  project_templates: [process-improvement-case, product-teardown-prd, sales-analytics-dashboard]
+  certificates: [iiba-ecba, psm-1]
+  related: [product-manager, operations-analyst, data-analyst, project-manager]
+  who_might_enjoy:
+    - People who like understanding how organisations work
+    - Good listeners and translators between groups
+  questions_to_explore:
+    - Do you enjoy documentation and facilitation?
+  signals:
+    domains: {business: 1.0, operations: 0.6, data: 0.3}
+    activities: [people, problem_solving, analyzing_data, managing_projects]
+    work_styles: [solve_business_problems, analyze_information]
+  skill_focus: Requirements and process analysis
+  typical_outputs: Requirements, process maps, analyses
+
+- id: product-manager
+  name: Product Manager
+  family: business
+  categories: [product, business, technology]
+  summary: Decide what to build and why, and lead teams to ship valuable products.
+  what_they_do: Product managers discover user problems, set strategy and priorities, and align engineering, design and business around outcomes.
+  responsibilities:
+    - Understand users and markets
+    - Define product strategy and roadmap
+    - Prioritise and write specs
+    - Measure outcomes and iterate
+  skills:
+    product_management: [3, core]
+    market_research: [2, core]
+    communication: [3, core]
+    stakeholder_management: [2, core]
+    data_analysis: [1, important]
+    sql: [1, useful]
+    experimentation: [1, important]
+    ux_research: [1, useful]
+    agile: [2, important]
+    strategy: [1, important]
+  technologies: [Jira / Linear, Figma, Amplitude, SQL, Notion]
+  entry_routes:
+    - Engineers, designers or analysts moving into product
+    - Associate PM programmes
+    - Founders of small products
+  example_projects: [Product teardown & PRD, A shipped side product with metrics]
+  project_templates: [product-teardown-prd, mvp-launch, ab-test-analysis]
+  certificates: [psm-1]
+  related: [product-analyst, product-designer, business-analyst, entrepreneur, project-manager]
+  who_might_enjoy:
+    - People who like ownership and ambiguity
+    - Communicators who enjoy working across disciplines
+  questions_to_explore:
+    - Are you comfortable with responsibility without direct authority?
+    - Do you enjoy saying no to good ideas to focus on better ones?
+  signals:
+    domains: {product: 1.0, business: 0.8, technology: 0.4, entrepreneurship: 0.3}
+    activities: [people, problem_solving, managing_projects, starting_businesses]
+    work_styles: [create_products, solve_business_problems, manage_teams, work_with_customers]
+  skill_focus: Product discovery and prioritisation
+  typical_outputs: Strategy, roadmaps, PRDs, launch plans
+
+- id: strategy-analyst
+  name: Strategy Analyst
+  family: business
+  categories: [business]
+  summary: Help organisations decide where to play and how to win.
+  what_they_do: Strategy analysts research markets and competitors, build business cases and support leadership decisions.
+  responsibilities:
+    - Analyse markets, competitors and trends
+    - Build business cases and financial models
+    - Prepare leadership-ready recommendations
+  skills:
+    strategy: [3, core]
+    market_research: [2, core]
+    excel: [3, core]
+    financial_modeling: [1, important]
+    communication: [3, core]
+    data_analysis: [1, important]
+  technologies: [Excel, PowerPoint, market data platforms]
+  entry_routes:
+    - Business or economics degrees
+    - Consulting experience
+  example_projects: [Market entry case, Competitive landscape report]
+  project_templates: [market-sizing-case, financial-statement-model]
+  certificates: []
+  related: [management-consultant, business-analyst, investment-analyst]
+  who_might_enjoy:
+    - Big-picture thinkers who like structured analysis
+  questions_to_explore:
+    - Do you enjoy crafting persuasive arguments backed by numbers?
+  signals:
+    domains: {business: 1.0, finance: 0.4, entrepreneurship: 0.3}
+    activities: [problem_solving, researching, numbers]
+    work_styles: [solve_business_problems, analyze_information]
+  skill_focus: Market analysis and recommendations
+  typical_outputs: Strategy decks, business cases, market analyses
+
+- id: operations-analyst
+  name: Operations Analyst
+  family: business
+  categories: [operations, business]
+  summary: Make how an organisation works faster, cheaper and more reliable.
+  what_they_do: Operations analysts measure processes, find bottlenecks and implement improvements across supply chains, service or internal operations.
+  responsibilities:
+    - Track operational KPIs
+    - Analyse bottlenecks and root causes
+    - Design and implement process changes
+  skills:
+    operations_analysis: [3, core]
+    excel: [2, core]
+    sql: [1, important]
+    data_analysis: [2, core]
+    business_analysis: [1, important]
+    communication: [2, important]
+    project_management: [1, useful]
+  technologies: [Excel, SQL, BI tools, ERP systems]
+  entry_routes:
+    - Business, industrial engineering or economics degrees
+    - Frontline operations roles
+  example_projects: [Process improvement case]
+  project_templates: [process-improvement-case, sales-analytics-dashboard]
+  certificates: [google-project-management]
+  related: [business-analyst, project-manager, data-analyst]
+  who_might_enjoy:
+    - Practical problem solvers who like measurable improvements
+  questions_to_explore:
+    - Do you enjoy hands-on work close to how things actually run?
+  signals:
+    domains: {operations: 1.0, business: 0.7, data: 0.3}
+    activities: [problem_solving, managing_projects, analyzing_data, numbers]
+    work_styles: [solve_business_problems, analyze_information, manage_teams]
+  skill_focus: Process measurement and improvement
+  typical_outputs: KPI dashboards, process redesigns, improvement cases
+
+- id: management-consultant
+  name: Management Consultant
+  family: business
+  categories: [business, operations]
+  summary: Help organisations solve their most important problems.
+  what_they_do: Consultants structure ambiguous problems, gather evidence, and recommend and implement changes for client organisations.
+  responsibilities:
+    - Structure problems and hypotheses
+    - Gather and analyse data under time pressure
+    - Present recommendations to executives
+    - Support implementation
+  skills:
+    strategy: [3, core]
+    communication: [3, core]
+    stakeholder_management: [2, core]
+    excel: [2, core]
+    data_analysis: [1, important]
+    financial_modeling: [1, useful]
+    market_research: [2, important]
+    project_management: [1, useful]
+  technologies: [Excel, PowerPoint, survey and data tools]
+  entry_routes:
+    - Undergraduate or MBA recruiting
+    - Industry experts joining specialist practices
+  example_projects: [Market entry case, Process improvement case]
+  project_templates: [market-sizing-case, process-improvement-case]
+  certificates: []
+  related: [strategy-analyst, business-analyst, operations-analyst]
+  who_might_enjoy:
+    - People who enjoy variety and fast learning
+    - Strong communicators
+  questions_to_explore:
+    - How do you feel about travel and demanding hours in some firms?
+  signals:
+    domains: {business: 1.0, operations: 0.5, finance: 0.3}
+    activities: [problem_solving, people, researching]
+    work_styles: [solve_business_problems, work_with_customers, analyze_information]
+  skill_focus: Structured problem solving
+  typical_outputs: Recommendations, decks, implementation plans
+
+- id: project-manager
+  name: Project Manager
+  family: business
+  categories: [operations, business]
+  summary: Deliver projects on time, on scope and with a happy team.
+  what_they_do: Project managers plan work, coordinate people, manage risks and communicate progress from kickoff to delivery.
+  responsibilities:
+    - Plan scope, schedule and resources
+    - Run meetings and track progress
+    - Manage risks, issues and changes
+    - Communicate with stakeholders
+  skills:
+    project_management: [3, core]
+    agile: [2, core]
+    communication: [3, core]
+    stakeholder_management: [2, core]
+    leadership: [2, important]
+    excel: [1, useful]
+  technologies: [Jira, MS Project, Asana, Smartsheet]
+  entry_routes:
+    - Coordinators and team leads
+    - Certifications plus managed projects
+  example_projects: [Delivered community or university project with plan and retrospective]
+  project_templates: [process-improvement-case, product-teardown-prd]
+  certificates: [capm, pmp, psm-1, google-project-management]
+  related: [product-manager, operations-analyst, business-analyst]
+  who_might_enjoy:
+    - Organisers who like bringing people together
+  questions_to_explore:
+    - Do you enjoy coordination more than doing the specialist work?
+  signals:
+    domains: {operations: 1.0, business: 0.7}
+    activities: [managing_projects, people]
+    work_styles: [manage_teams, solve_business_problems]
+  skill_focus: Planning and delivery
+  typical_outputs: Project plans, status reports, delivered projects

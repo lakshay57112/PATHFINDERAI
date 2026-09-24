@@ -1,0 +1,29 @@
+# Web
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+httpx>=0.27
+email-validator>=2.1
+# Data
+sqlalchemy>=2.0.30,<2.1
+psycopg2-binary>=2.9
+pydantic>=2.7,<3
+pydantic-settings>=2.3
+PyYAML>=6.0
+# Security
+bcrypt>=4.1
+PyJWT>=2.8
+cryptography>=42
+# Background jobs & cache
+celery>=5.4
+redis>=5.0
+# AI / RAG / graph
+langgraph>=0.2
+langchain-core>=0.3
+langchain-openai>=0.2
+langchain-google-genai>=2.0
+openai>=1.40
+qdrant-client>=1.10
+rank-bm25>=0.2.2
+neo4j>=5.20
+pypdf>=4.0

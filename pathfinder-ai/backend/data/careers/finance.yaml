@@ -1,0 +1,277 @@
+# Career definitions — finance family.
+
+- id: financial-analyst
+  name: Financial Analyst
+  family: finance
+  categories: [finance, business]
+  summary: Analyse financial performance to guide business and investment decisions.
+  what_they_do: Financial analysts build models, budgets and forecasts, analyse results and advise on decisions such as investments, pricing and cost.
+  responsibilities:
+    - Build budgets, forecasts and models
+    - Analyse variances and performance
+    - Prepare reports for management
+  skills:
+    accounting: [2, core]
+    financial_modeling: [2, core]
+    excel: [3, core]
+    valuation: [1, important]
+    data_analysis: [1, important]
+    communication: [2, important]
+    sql: [1, useful]
+    bi_tools: [1, useful]
+  technologies: [Excel, ERP systems, Power BI, SQL]
+  entry_routes:
+    - Finance, accounting or economics degrees
+    - Rotational finance programmes
+  example_projects: [Three-statement model, Budget variance analysis]
+  project_templates: [financial-statement-model, sales-analytics-dashboard]
+  certificates: [cfi-fmva, cfa-level-1]
+  related: [investment-analyst, financial-data-analyst, strategy-analyst, risk-analyst]
+  who_might_enjoy:
+    - People who like numbers with business meaning
+  questions_to_explore:
+    - Corporate finance (inside a company) or investment side?
+  signals:
+    domains: {finance: 1.0, business: 0.6}
+    activities: [numbers, analyzing_data, problem_solving]
+    work_styles: [financial_information, analyze_information, solve_business_problems]
+  skill_focus: Financial planning and analysis
+  typical_outputs: Models, forecasts, management reports
+
+- id: investment-analyst
+  name: Investment Analyst
+  family: finance
+  categories: [finance, research]
+  summary: Research companies and markets to support investment decisions.
+  what_they_do: Investment analysts value companies, study industries and write recommendations for portfolio managers or clients.
+  responsibilities:
+    - Build valuation models
+    - Research industries and companies
+    - Write investment recommendations
+  skills:
+    valuation: [3, core]
+    financial_modeling: [3, core]
+    accounting: [2, core]
+    financial_markets: [2, core]
+    excel: [2, core]
+    research_methods: [1, important]
+    communication: [2, important]
+    python: [1, useful]
+  technologies: [Excel, Bloomberg / FactSet / Capital IQ, Python]
+  entry_routes:
+    - Finance degrees and internships
+    - CFA candidates
+  example_projects: [Valuation report, Industry deep dive]
+  project_templates: [financial-statement-model, financial-ai-analyst, market-sizing-case]
+  certificates: [cfa-level-1, cfi-fmva]
+  related: [financial-analyst, quantitative-analyst, research-analyst]
+  who_might_enjoy:
+    - Curious readers who like forming independent views
+  questions_to_explore:
+    - How do you feel about being publicly wrong sometimes?
+  signals:
+    domains: {finance: 1.0, research: 0.5}
+    activities: [numbers, researching, writing, analyzing_data]
+    work_styles: [financial_information, analyze_information]
+  skill_focus: Valuation and investment research
+  typical_outputs: Valuation models, research notes, recommendations
+
+- id: risk-analyst
+  name: Risk Analyst
+  family: finance
+  categories: [finance, data]
+  summary: Measure and manage the risks financial institutions take.
+  what_they_do: Risk analysts quantify market, credit or operational risk, run stress tests and report exposures to management and regulators.
+  responsibilities:
+    - Calculate risk metrics (VaR, credit exposure)
+    - Run stress tests and scenarios
+    - Validate models and report results
+  skills:
+    risk_management: [3, core]
+    statistics: [2, core]
+    financial_markets: [2, core]
+    python: [2, important]
+    sql: [2, important]
+    excel: [2, important]
+    time_series: [1, useful]
+    communication: [2, important]
+  technologies: [Python, SQL, Excel, risk platforms]
+  entry_routes:
+    - Quantitative finance or economics degrees
+    - FRM candidates
+  example_projects: [Portfolio risk dashboard, Credit scoring model]
+  project_templates: [portfolio-risk-dashboard, fraud-detection-system]
+  certificates: [frm-part-1, cfa-level-1]
+  related: [quantitative-analyst, financial-data-analyst, financial-analyst]
+  who_might_enjoy:
+    - Careful thinkers who like asking "what could go wrong?"
+  questions_to_explore:
+    - Do you enjoy regulation-heavy environments?
+  signals:
+    domains: {finance: 1.0, data: 0.6}
+    activities: [numbers, analyzing_data, problem_solving]
+    work_styles: [financial_information, analyze_information, work_with_data]
+  skill_focus: Risk measurement
+  typical_outputs: Risk reports, stress tests, model validations
+
+- id: fintech-analyst
+  name: FinTech Analyst
+  family: finance
+  categories: [finance, technology, product]
+  summary: Work at the intersection of financial services and technology products.
+  what_they_do: FinTech analysts analyse payments, lending or investing products — their data, economics and compliance — and help teams improve them.
+  responsibilities:
+    - Analyse product and transaction data
+    - Model unit economics
+    - Support product decisions and compliance
+  skills:
+    sql: [2, core]
+    data_analysis: [2, core]
+    financial_markets: [1, important]
+    accounting: [1, important]
+    product_management: [1, important]
+    python: [1, important]
+    excel: [2, important]
+    communication: [2, important]
+  technologies: [SQL, Python, BI tools, payments & banking APIs]
+  entry_routes:
+    - Finance or analytics roles in FinTech companies
+  example_projects: [Payment funnel analysis, Unit economics model]
+  project_templates: [sales-analytics-dashboard, fraud-detection-system, product-teardown-prd]
+  certificates: []
+  related: [financial-data-analyst, product-analyst, fintech-engineer]
+  who_might_enjoy:
+    - People who like both finance and tech products
+  questions_to_explore:
+    - Product-side or finance-side of FinTech?
+  signals:
+    domains: {finance: 1.0, technology: 0.6, product: 0.5}
+    activities: [analyzing_data, numbers, technology]
+    work_styles: [financial_information, create_products, work_with_data]
+  skill_focus: Financial products and their data
+  typical_outputs: Product analyses, economics models
+
+- id: fintech-engineer
+  name: FinTech AI Engineer
+  family: finance
+  categories: [finance, ai, technology]
+  summary: Build AI and data systems for financial products — fraud, credit, research and automation.
+  what_they_do: FinTech AI engineers apply machine learning and LLMs to financial problems such as fraud detection, credit decisioning, document processing and research assistance, within strict reliability and regulatory constraints.
+  responsibilities:
+    - Build ML models for fraud, risk or personalisation
+    - Build LLM tools over financial documents
+    - Deploy models with auditability and monitoring
+    - Work with compliance on model governance
+  skills:
+    python: [3, core]
+    machine_learning: [3, core]
+    sql: [2, core]
+    llms: [2, important]
+    rag: [2, important]
+    financial_markets: [1, important]
+    accounting: [1, useful]
+    model_deployment: [2, important]
+    statistics: [2, important]
+    docker: [1, useful]
+    time_series: [1, useful]
+  technologies: [Python, scikit-learn, LightGBM, LangChain, FastAPI, SQL, cloud platforms]
+  entry_routes:
+    - ML engineers moving into finance
+    - Finance graduates with strong ML projects
+  example_projects: [Real-time fraud detection, AI filings analyst]
+  project_templates: [fraud-detection-system, financial-ai-analyst, portfolio-risk-dashboard, rag-knowledge-assistant]
+  certificates: [aws-ml-engineer-associate, cfa-level-1]
+  related: [ai-engineer, quantitative-analyst, financial-data-analyst, ml-engineer]
+  who_might_enjoy:
+    - People interested in both AI and money
+    - Engineers who like high-stakes, well-defined problems
+  questions_to_explore:
+    - How do you feel about heavy regulation and explainability requirements?
+  signals:
+    domains: {finance: 1.0, ai: 0.9, technology: 0.6}
+    activities: [building, numbers, analyzing_data, problem_solving]
+    work_styles: [build_software, financial_information, work_with_data]
+  skill_focus: ML/LLM systems for finance
+  typical_outputs: Fraud/risk models, document AI tools, model services
+  phases:
+    - {name: Foundations, skills: [python, sql, statistics, financial_markets]}
+    - {name: ML for Finance, skills: [machine_learning, time_series, accounting]}
+    - {name: GenAI for Finance, skills: [llms, rag]}
+    - {name: Production, skills: [docker, model_deployment]}
+
+- id: quantitative-analyst
+  name: Quantitative Analyst
+  family: finance
+  categories: [finance, research, data]
+  summary: Apply mathematics and programming to markets and financial instruments.
+  what_they_do: Quants build pricing, risk and trading models, test them rigorously and implement them in code.
+  responsibilities:
+    - Develop and backtest models
+    - Price instruments and measure risk
+    - Implement research in production code
+  skills:
+    quantitative_finance: [3, core]
+    statistics: [3, core]
+    math_for_ml: [3, core]
+    python: [3, core]
+    cpp: [1, useful]
+    time_series: [2, core]
+    machine_learning: [2, important]
+    financial_markets: [2, important]
+  technologies: [Python, C++, NumPy, pandas, kdb+/q (some firms)]
+  entry_routes:
+    - Degrees in maths, physics, statistics, CS or financial engineering
+    - Graduate degrees are common
+  example_projects: [Backtesting engine, Options pricer]
+  project_templates: [backtesting-engine, portfolio-risk-dashboard]
+  certificates: [frm-part-1, cfa-level-1]
+  related: [risk-analyst, data-scientist, research-scientist, fintech-engineer]
+  who_might_enjoy:
+    - Strong mathematical thinkers who like competition
+  questions_to_explore:
+    - Research, trading or risk quant?
+  signals:
+    domains: {finance: 1.0, research: 0.6, data: 0.5, science: 0.3}
+    activities: [numbers, researching, problem_solving, analyzing_data]
+    work_styles: [financial_information, research_technology, work_with_data]
+  skill_focus: Mathematical finance
+  typical_outputs: Models, backtests, research notes
+
+- id: financial-data-analyst
+  name: Financial Data Analyst
+  family: finance
+  categories: [finance, data]
+  summary: Combine financial knowledge with data analysis.
+  what_they_do: Financial data analysts work with transaction, market and accounting data to build reporting, analyses and automation for finance teams.
+  responsibilities:
+    - Build financial reports and dashboards
+    - Automate finance data workflows
+    - Analyse drivers of financial performance
+  skills:
+    sql: [3, core]
+    python: [2, core]
+    data_analysis: [2, core]
+    accounting: [2, important]
+    excel: [2, core]
+    bi_tools: [2, important]
+    financial_markets: [1, useful]
+    data_visualization: [2, important]
+    statistics: [1, useful]
+  technologies: [SQL, Python, Excel, Power BI / Tableau]
+  entry_routes:
+    - Finance graduates who learn data skills
+    - Data analysts in finance teams
+  example_projects: [Revenue analytics dashboard, Automated reconciliation]
+  project_templates: [sales-analytics-dashboard, portfolio-risk-dashboard, financial-statement-model]
+  certificates: [ms-power-bi-analyst, cfi-fmva]
+  related: [data-analyst, financial-analyst, fintech-analyst, bi-analyst]
+  who_might_enjoy:
+    - People who like finance and coding together
+  questions_to_explore:
+    - Do you want to go deeper in finance or in data engineering?
+  signals:
+    domains: {finance: 1.0, data: 0.9}
+    activities: [numbers, analyzing_data, problem_solving]
+    work_styles: [financial_information, work_with_data, analyze_information]
+  skill_focus: Finance data and reporting
+  typical_outputs: Financial dashboards, analyses, automations

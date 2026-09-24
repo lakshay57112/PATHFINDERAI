@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest>=8
+ruff>=0.5
+# Optional extras:
+# fastembed>=0.3            # local Hugging Face embeddings (EMBEDDING_PROVIDER=huggingface)
+# sentence-transformers>=3  # cross-encoder reranking (RERANKER_MODEL=cross-encoder/ms-marco-MiniLM-L-6-v2)
+# pytesseract Pillow        # OCR for certificate images
+# opentelemetry-sdk opentelemetry-exporter-otlp opentelemetry-instrumentation-fastapi

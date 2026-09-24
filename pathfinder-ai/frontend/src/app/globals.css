@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafafa;
+  --surface: #ffffff;
+  --surface-secondary: #f5f5f5;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border: #e8e8e8;
+  --border-strong: #d8d8d8;
+  --black: #000000;
+  --white: #ffffff;
+  --success: #4d7c5a;
+  --warning: #9a7b3f;
+  --danger: #a35151;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+* { border-color: var(--border); }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Very low-opacity grain for a tactile, premium surface */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+::selection { background: #111; color: #fff; }
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.16em] text-muted;
+  }
+  .card {
+    @apply rounded-xl border border-line bg-surface;
+  }
+  .card-hover {
+    @apply transition-[transform,box-shadow,border-color] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-0.5 hover:border-line-strong hover:shadow-lift;
+  }
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-black/80 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+  .prose-mentor p { @apply my-2 leading-relaxed; }
+  .prose-mentor ul { @apply my-2 list-disc pl-5; }
+  .prose-mentor ol { @apply my-2 list-decimal pl-5; }
+  .prose-mentor a { @apply underline decoration-line-strong underline-offset-2 hover:decoration-black; }
+  .prose-mentor strong { @apply font-semibold text-fg; }
+  .prose-mentor code { @apply rounded bg-surface-2 px-1 py-0.5 font-mono text-[0.85em]; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* React Flow — monochrome */
+.react-flow__attribution { background: transparent !important; opacity: .45; }
+.react-flow__handle { opacity: 0; }
+.react-flow__edge-path { stroke: #d0d0d0; stroke-width: 1; }
+
+@keyframes sheet-in { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }

@@ -1,0 +1,528 @@
+# Project templates. The recommendation engine personalises them: it picks templates that
+# build evidence for a user's gaps, reuse their strengths, and (via `flavors`) sit in a
+# domain they said they care about.
+
+- id: sales-analytics-dashboard
+  name: Sales Analytics Dashboard
+  difficulty: beginner
+  hours: 20
+  skills: [sql, data_analysis, data_visualization, bi_tools]
+  domains: [data, business]
+  problem: Leaders can't see which products, regions and channels drive revenue, or why it moved last month.
+  architecture: [Public sales dataset, SQL cleaning & modelling, Metric definitions, BI dashboard, Written insights]
+  technologies: [PostgreSQL, SQL, Power BI or Tableau]
+  expected_output: A dashboard with 5–7 defined KPIs plus a one-page insight memo.
+  portfolio_value: Shows you can turn raw data into a decision tool non-technical people use.
+  flavors:
+    finance: Analyse revenue and margin by segment for a listed company's reported data.
+    healthcare: Track appointment volume and no-show rates by clinic.
+    marketing: Break revenue down by acquisition channel and campaign.
+
+- id: customer-churn-prediction
+  name: Customer Churn Prediction System
+  difficulty: intermediate
+  hours: 40
+  skills: [machine_learning, data_analysis, python, statistics]
+  uses: [sql, data_visualization]
+  domains: [data, ai, business]
+  problem: A subscription business loses customers without warning and doesn't know who to help first.
+  architecture: [Customer data, Feature pipeline, Baseline + gradient-boosted model, "Explainability (SHAP)", Retention recommendations]
+  technologies: [Python, pandas, scikit-learn, XGBoost, SHAP]
+  expected_output: A calibrated churn model with error analysis and a prioritised retention list.
+  portfolio_value: A classic, well-understood ML problem that lets you show rigour in evaluation.
+  flavors:
+    finance: Predict credit-card customer attrition.
+    healthcare: Predict patients likely to drop out of a care programme.
+
+- id: fraud-detection-system
+  name: Real-time Fraud Detection Service
+  difficulty: intermediate
+  hours: 45
+  skills: [machine_learning, model_deployment, apis]
+  uses: [python, docker, statistics]
+  domains: [ai, finance, data]
+  problem: Fraudulent transactions are rare, costly and must be flagged within milliseconds.
+  architecture: ["Transaction stream (simulated)", Imbalanced-learning model, Threshold tuning on cost, FastAPI scoring service, Monitoring]
+  technologies: [Python, scikit-learn, LightGBM, FastAPI, Docker]
+  expected_output: A scoring API with precision/recall at business-chosen thresholds.
+  portfolio_value: Combines modelling with deployment and cost-aware evaluation.
+
+- id: rag-knowledge-assistant
+  name: Enterprise RAG Knowledge Assistant
+  difficulty: intermediate
+  hours: 40
+  skills: [rag, llms, vector_databases, llm_evaluation]
+  uses: [python, apis]
+  domains: [ai]
+  problem: Teams waste time searching scattered documents and don't trust chatbot answers without sources.
+  architecture: [Document ingestion & chunking, "Hybrid retrieval (dense + BM25)", Reranker, LLM answer with citations, Evaluation set]
+  technologies: [Python, LangChain, Qdrant, FastAPI, Ragas]
+  expected_output: A cited Q&A app plus an evaluation report (retrieval recall, faithfulness).
+  portfolio_value: Demonstrates the most in-demand GenAI pattern with measurable quality.
+  flavors:
+    finance: Answer questions over annual reports and earnings-call transcripts with page citations.
+    healthcare: Answer questions over public clinical guidelines with citations (no patient data).
+    research: Answer questions over a corpus of arXiv papers.
+    education: Build a course assistant over lecture notes.
+
+- id: agentic-research-assistant
+  name: Agentic Research Assistant
+  difficulty: advanced
+  hours: 60
+  skills: [ai_agents, rag, llm_evaluation, observability]
+  uses: [llms, apis, docker]
+  domains: [ai, research]
+  problem: Research tasks need multi-step planning — searching, reading, comparing and summarising with sources.
+  architecture: [Planner node, Search & retrieval tools, Reader/extractor, Critic/verifier, Report writer, Tracing]
+  technologies: [LangGraph, Python, Qdrant, FastAPI, LangSmith or OpenTelemetry]
+  expected_output: An agent that produces cited research briefs, with traces and a task-success evaluation.
+  portfolio_value: Shows agent design, tool use and — critically — how you measure agent reliability.
+  flavors:
+    finance: Produce cited company research briefs from filings and news.
+    healthcare: Summarise public research on a health topic with citations.
+
+- id: agentic-customer-intelligence
+  name: Agentic Customer Intelligence Platform
+  difficulty: advanced
+  hours: 70
+  skills: [ai_agents, llms, rag, model_deployment]
+  uses: [machine_learning, docker, cloud, apis]
+  domains: [ai, business]
+  problem: Customer feedback, tickets and usage data live in silos; teams need synthesized, actionable insight.
+  architecture: ["Ingestion (tickets, reviews, usage)", Classification & clustering, Agent with SQL + retrieval tools, Insight reports, Deployed API + UI]
+  technologies: [LangGraph, PostgreSQL, Qdrant, FastAPI, Docker, a cloud provider]
+  expected_output: A deployed platform generating weekly insight reports with traceable evidence.
+  portfolio_value: A flagship end-to-end system combining ML, agents and production deployment.
+
+- id: production-ml-api
+  name: Production ML Inference Service
+  difficulty: intermediate
+  hours: 30
+  skills: [model_deployment, docker, ci_cd, cloud]
+  uses: [apis, machine_learning, observability]
+  domains: [ai, cloud]
+  problem: A model that only runs in a notebook creates no value; it needs to be served reliably.
+  architecture: [Trained model artefact, FastAPI service, Docker image, CI/CD pipeline, Cloud deployment, Health checks & logs]
+  technologies: [FastAPI, Docker, GitHub Actions, AWS/GCP/Azure]
+  expected_output: A live endpoint with CI/CD, load-test results and a runbook.
+  portfolio_value: Directly addresses the "can you ship it?" question for AI roles.
+
+- id: mlops-pipeline
+  name: End-to-end MLOps Pipeline
+  difficulty: advanced
+  hours: 60
+  skills: [mlops, orchestration, observability, kubernetes]
+  uses: [docker, ci_cd, machine_learning]
+  domains: [ai, cloud]
+  problem: Models silently degrade and retraining is manual and error-prone.
+  architecture: [Data validation, Training pipeline, Experiment tracking & registry, Automated deployment, Drift monitoring & alerting]
+  technologies: [MLflow, Airflow or Prefect, Docker, Kubernetes, Prometheus, Evidently]
+  expected_output: A reproducible pipeline that retrains and redeploys on drift, with dashboards.
+  portfolio_value: Demonstrates operational maturity beyond model building.
+
+- id: image-classifier
+  name: Transfer-learning Image Classifier
+  difficulty: intermediate
+  hours: 30
+  skills: [deep_learning, computer_vision]
+  uses: [python, model_deployment]
+  domains: [ai]
+  problem: Classifying images for a niche use case where little labelled data exists.
+  architecture: [Dataset collection & labelling, Pretrained backbone, Fine-tuning, Evaluation & error analysis, Demo app]
+  technologies: [PyTorch, torchvision, Gradio]
+  expected_output: A model card, confusion analysis and an interactive demo.
+  portfolio_value: Shows deep learning practice with honest evaluation.
+  flavors:
+    healthcare: Classify public dermatology or X-ray images (research datasets, non-diagnostic).
+
+- id: llm-fine-tune-eval
+  name: Fine-tune vs Prompt Benchmark
+  difficulty: advanced
+  hours: 45
+  skills: [fine_tuning, llm_evaluation, deep_learning]
+  uses: [llms, python]
+  domains: [ai, research]
+  problem: Teams can't tell whether fine-tuning a small model beats prompting a large one for their task.
+  architecture: [Task dataset, Prompting baselines, LoRA fine-tune, Evaluation harness, Cost/latency comparison]
+  technologies: [Hugging Face Transformers, PEFT, PyTorch]
+  expected_output: A benchmark report comparing quality, cost and latency.
+  portfolio_value: Research-style rigour that stands out for ML and GenAI roles.
+
+- id: etl-warehouse-pipeline
+  name: API-to-Warehouse Data Pipeline
+  difficulty: intermediate
+  hours: 40
+  skills: [data_engineering, orchestration, data_modeling, sql]
+  uses: [python, docker, cloud]
+  domains: [data, cloud]
+  problem: Operational data sits in APIs and files; analysts need clean, reliable tables daily.
+  architecture: [Extract from public API, Land raw data, Transform to star schema, Orchestrate & test, Serve to dashboard]
+  technologies: [Python, Airflow, PostgreSQL or BigQuery, dbt, Docker]
+  expected_output: A scheduled pipeline with data-quality tests and lineage docs.
+  portfolio_value: The core artefact hiring managers look for in data engineering.
+
+- id: dbt-analytics-project
+  name: Analytics Engineering Project with dbt
+  difficulty: intermediate
+  hours: 25
+  skills: [analytics_engineering, data_modeling, sql]
+  uses: [bi_tools, git]
+  domains: [data]
+  problem: Business metrics are defined inconsistently across dashboards.
+  architecture: [Raw sources, Staging models, Marts, Tests & docs, Metric layer, Dashboard]
+  technologies: [dbt, DuckDB or Postgres, Git]
+  expected_output: A tested dbt project with hosted docs and consistent metrics.
+  portfolio_value: Proves you can build trustworthy data foundations.
+
+- id: ab-test-analysis
+  name: A/B Test Analysis Toolkit
+  difficulty: intermediate
+  hours: 25
+  skills: [experimentation, statistics]
+  uses: [python, data_visualization, sql]
+  domains: [data, product, marketing]
+  problem: Product teams ship changes based on noisy metrics and misread experiment results.
+  architecture: [Experiment data, Power analysis, Frequentist & Bayesian analysis, Guardrail metrics, Decision memo]
+  technologies: [Python, SciPy, statsmodels]
+  expected_output: A reusable analysis notebook and a decision memo.
+  portfolio_value: Shows statistical judgment, not just code.
+
+- id: fullstack-web-app
+  name: Full-stack Web Application
+  difficulty: intermediate
+  hours: 50
+  skills: [frontend, apis, databases, testing]
+  uses: [typescript, git, docker]
+  domains: [technology]
+  problem: A real group (club, small business, community) needs a tool to manage something they do by hand.
+  architecture: [React/Next.js frontend, REST API, PostgreSQL, Auth, Tests, CI deployment]
+  technologies: [Next.js, TypeScript, FastAPI or Node, PostgreSQL]
+  expected_output: A deployed app with real users and feedback.
+  portfolio_value: Real users are powerful evidence of software engineering ability.
+
+- id: mobile-app
+  name: Offline-first Mobile App
+  difficulty: intermediate
+  hours: 45
+  skills: [mobile, apis]
+  uses: [databases, testing]
+  domains: [technology]
+  problem: People need a focused mobile tool that works without a reliable connection.
+  architecture: [Mobile UI, Local storage, Sync API, Push notifications]
+  technologies: [React Native or Kotlin/Swift, SQLite, REST API]
+  expected_output: A published or TestFlight app.
+  portfolio_value: Store-published apps are concrete evidence for mobile roles.
+
+- id: cloud-infra-terraform
+  name: Cloud Infrastructure as Code
+  difficulty: intermediate
+  hours: 30
+  skills: [infrastructure_as_code, cloud, ci_cd, cloud_architecture]
+  uses: [docker, networking]
+  domains: [cloud]
+  problem: Hand-built cloud environments drift and can't be reproduced.
+  architecture: [Network & IAM modules, Compute & database, Remote state, Plan/apply in CI, Cost tags]
+  technologies: [Terraform, AWS/GCP/Azure, GitHub Actions]
+  expected_output: Reusable modules that stand up a full environment in one command.
+  portfolio_value: Demonstrates repeatable, reviewable infrastructure work.
+
+- id: k8s-microservices
+  name: Observable Microservices on Kubernetes
+  difficulty: advanced
+  hours: 55
+  skills: [kubernetes, observability, docker, system_design]
+  uses: [ci_cd, apis]
+  domains: [cloud, technology]
+  problem: Distributed services fail in ways that are hard to see and diagnose.
+  architecture: [3 services, Helm charts, Ingress, Metrics/logs/traces, SLOs & alerts, Chaos test]
+  technologies: [Kubernetes, Helm, Prometheus, Grafana, OpenTelemetry]
+  expected_output: A cluster setup with dashboards, alerts and an incident post-mortem.
+  portfolio_value: Shows production-grade operational thinking.
+
+- id: home-soc-lab
+  name: Home SOC Lab
+  difficulty: intermediate
+  hours: 40
+  skills: [security_operations, networking, linux]
+  uses: [cybersecurity]
+  domains: [cybersecurity]
+  problem: Detecting real attacks requires practice with real telemetry.
+  architecture: [Virtual network, Endpoints with logging, SIEM, Detection rules, Simulated attacks, Incident reports]
+  technologies: [Wazuh or Elastic, Sysmon, Atomic Red Team]
+  expected_output: Detection rules and written incident reports.
+  portfolio_value: Hands-on evidence valued for SOC analyst roles.
+
+- id: webapp-pentest-report
+  name: Web Application Security Assessment
+  difficulty: intermediate
+  hours: 35
+  skills: [penetration_testing, application_security]
+  uses: [networking, linux]
+  domains: [cybersecurity]
+  problem: Organisations need clear, prioritised reports of how their apps can be attacked.
+  architecture: [Scoping, Recon, Testing against OWASP Top 10, "Exploitation (lab only)", Report with remediation]
+  technologies: [Burp Suite, OWASP Juice Shop, Kali Linux]
+  expected_output: A professional pentest report on an intentionally vulnerable app.
+  portfolio_value: Mirrors the real deliverable of the job.
+
+- id: financial-statement-model
+  name: Three-statement Model & Valuation
+  difficulty: intermediate
+  hours: 35
+  skills: [financial_modeling, accounting, valuation, excel]
+  domains: [finance]
+  problem: Investors need a defensible view of a company's future cash flows and value.
+  architecture: [Historical statements, Driver assumptions, Linked 3 statements, DCF, Scenarios & sensitivities, Memo]
+  technologies: [Excel or Google Sheets, "Python (optional)"]
+  expected_output: A model plus a two-page investment memo.
+  portfolio_value: The core artefact of finance interviews and work.
+
+- id: portfolio-risk-dashboard
+  name: Portfolio Risk Dashboard
+  difficulty: intermediate
+  hours: 35
+  skills: [risk_management, statistics, time_series]
+  uses: [python, data_visualization]
+  domains: [finance, data]
+  problem: Portfolio managers need to see exposures, VaR and stress results quickly.
+  architecture: [Market data ingest, Returns & covariance, "VaR/ES (3 methods)", Stress scenarios, Interactive dashboard]
+  technologies: [Python, pandas, NumPy, Plotly or Streamlit]
+  expected_output: A dashboard with a methodology note and backtest of VaR.
+  portfolio_value: Combines finance knowledge with programming and statistics.
+
+- id: backtesting-engine
+  name: Event-driven Backtesting Engine
+  difficulty: advanced
+  hours: 60
+  skills: [quantitative_finance, time_series, python]
+  uses: [statistics, testing]
+  domains: [finance, research]
+  problem: Trading ideas look great until look-ahead bias and costs are accounted for.
+  architecture: [Data handler, Strategy interface, Execution & cost model, Portfolio accounting, Performance analytics]
+  technologies: [Python, NumPy, pandas]
+  expected_output: An engine with tests plus a research note on one strategy's out-of-sample results.
+  portfolio_value: Signals quant rigour — correctness over flashy returns.
+
+- id: financial-ai-analyst
+  name: AI Financial Filings Analyst
+  difficulty: advanced
+  hours: 50
+  skills: [rag, ai_agents, accounting]
+  uses: [llms, data_analysis, llm_evaluation]
+  domains: [finance, ai]
+  problem: Analysts spend hours extracting and comparing figures from long filings.
+  architecture: [Filing ingestion, Table extraction, Hybrid retrieval, Agent with calculator tool, Cited comparison report, Accuracy evaluation]
+  technologies: [Python, LangGraph, Qdrant, pandas]
+  expected_output: Cited, numerically verified comparisons across companies.
+  portfolio_value: Sits at the intersection of finance and AI — rare and memorable.
+
+- id: marketing-attribution
+  name: Marketing Attribution & Funnel Analysis
+  difficulty: intermediate
+  hours: 30
+  skills: [marketing_analytics, sql, statistics]
+  uses: [data_visualization]
+  domains: [marketing, data]
+  problem: Marketing budgets are allocated on last-click data that misrepresents channel value.
+  architecture: [Event data, Funnel & cohorts, Attribution models comparison, Budget recommendation]
+  technologies: [SQL, Python, GA4 sample dataset]
+  expected_output: A report comparing attribution models with a budget recommendation.
+  portfolio_value: Shows analytical marketing thinking.
+
+- id: seo-growth-plan
+  name: SEO Audit & Growth Plan
+  difficulty: beginner
+  hours: 20
+  skills: [seo, digital_marketing]
+  uses: [data_analysis]
+  domains: [marketing]
+  problem: A small site gets little organic traffic and doesn't know why.
+  architecture: [Technical audit, Keyword research, Content plan, Implementation, Measurement]
+  technologies: [Google Search Console, Screaming Frog, GA4]
+  expected_output: An audit, a prioritised plan and measured results after 6–8 weeks.
+  portfolio_value: Real before/after numbers are compelling.
+
+- id: ux-case-study
+  name: End-to-end UX Case Study
+  difficulty: intermediate
+  hours: 40
+  skills: [ux_research, interaction_design, ui_design]
+  uses: [accessibility]
+  domains: [design, product]
+  problem: An existing app frustrates users in a key flow.
+  architecture: [Research plan, Interviews & usability tests, Synthesis, Wireframes, Prototype, Validation]
+  technologies: [Figma, Maze or in-person testing]
+  expected_output: A portfolio case study showing process, decisions and results.
+  portfolio_value: The single most important artefact for design hiring.
+  flavors:
+    healthcare: Redesign a patient appointment-booking flow.
+    finance: Redesign a budgeting app's onboarding.
+
+- id: design-system-kit
+  name: Accessible Design System
+  difficulty: intermediate
+  hours: 35
+  skills: [design_systems, ui_design, accessibility]
+  uses: [frontend]
+  domains: [design, technology]
+  problem: Inconsistent UI slows teams and excludes users.
+  architecture: [Audit, Tokens, Core components, Accessibility specs, Documentation site]
+  technologies: [Figma, Storybook, React]
+  expected_output: A token-based component library with docs.
+  portfolio_value: Shows systems thinking valued in product design.
+
+- id: product-teardown-prd
+  name: Product Teardown & PRD
+  difficulty: beginner
+  hours: 15
+  skills: [product_management, market_research, business_analysis]
+  uses: [communication]
+  domains: [product, business]
+  problem: Picking what to build next requires understanding users, market and constraints.
+  architecture: [User research, Competitive teardown, Problem statement, PRD with metrics, Prioritised roadmap]
+  technologies: [Notion or Docs, "Figma (optional)"]
+  expected_output: A PRD and teardown you can walk through in interviews.
+  portfolio_value: Demonstrates product thinking without needing a PM title.
+
+- id: process-improvement-case
+  name: Process Improvement Case Study
+  difficulty: beginner
+  hours: 20
+  skills: [operations_analysis, business_analysis, data_analysis]
+  uses: [excel, communication]
+  domains: [operations, business]
+  problem: A recurring process is slow, error-prone and nobody measures it.
+  architecture: [As-is process map, Data collection, Bottleneck analysis, To-be design, Impact estimate]
+  technologies: [Excel, Lucidchart or Miro]
+  expected_output: A case study with before/after metrics.
+  portfolio_value: Shows structured problem solving with measurable impact.
+
+- id: market-sizing-case
+  name: Market Entry Strategy Case
+  difficulty: beginner
+  hours: 20
+  skills: [strategy, market_research, excel]
+  uses: [communication]
+  domains: [business, entrepreneurship]
+  problem: A company is considering entering a new market and needs a recommendation.
+  architecture: [Market sizing, Competitive analysis, Economics, Risks, Recommendation deck]
+  technologies: [Excel, Slides]
+  expected_output: A consulting-style deck with a clear recommendation.
+  portfolio_value: Mirrors consulting and strategy work.
+
+- id: health-readmission-analysis
+  name: Hospital Readmission Risk Analysis
+  difficulty: intermediate
+  hours: 40
+  skills: [healthcare_data, machine_learning, health_privacy]
+  uses: [data_analysis, statistics]
+  domains: [healthcare, data, ai]
+  problem: Avoidable readmissions harm patients and cost hospitals; care teams need to know who's at risk.
+  architecture: [Public/synthetic clinical dataset, Cohort definition, Model, Fairness checks, Clinician-facing summary]
+  technologies: [Python, scikit-learn, MIMIC-IV demo or Synthea]
+  expected_output: A model with subgroup fairness analysis and a privacy note.
+  portfolio_value: Shows domain awareness, ethics and ML together.
+
+- id: fhir-pipeline
+  name: FHIR Interoperability Pipeline
+  difficulty: intermediate
+  hours: 35
+  skills: [healthcare_data, data_engineering, apis]
+  uses: [python, health_privacy]
+  domains: [healthcare, data]
+  problem: Clinical data arrives in inconsistent formats and can't be analysed together.
+  architecture: [Synthetic EHR data, FHIR mapping, Validation, Analytics tables, Dashboard]
+  technologies: [Python, HAPI FHIR, Synthea, PostgreSQL]
+  expected_output: A validated pipeline with a data dictionary.
+  portfolio_value: Directly relevant to health informatics roles.
+
+- id: genomics-pipeline
+  name: Reproducible Genomics Workflow
+  difficulty: intermediate
+  hours: 40
+  skills: [bioinformatics, scientific_computing]
+  uses: [python, statistics]
+  domains: [healthcare, science, research]
+  problem: Biological analyses are often hard to reproduce.
+  architecture: [Public sequencing data, QC, Alignment/quantification, Differential analysis, Report]
+  technologies: [Snakemake or Nextflow, Python/R, Bioconductor]
+  expected_output: A reproducible workflow with a methods write-up.
+  portfolio_value: Standard evidence for bioinformatics roles.
+
+- id: reproducible-research-study
+  name: Reproducible Research Study
+  difficulty: intermediate
+  hours: 45
+  skills: [research_methods, statistics, scientific_writing]
+  uses: [python]
+  domains: [research, science]
+  problem: A question in your field has conflicting evidence.
+  architecture: [Literature review, Hypotheses, Data collection/analysis, Robustness checks, Write-up]
+  technologies: [Python or R, Quarto, LaTeX]
+  expected_output: A preprint-style paper with code and data.
+  portfolio_value: Demonstrates research ability end to end.
+
+- id: technical-docs-site
+  name: Docs-as-code Documentation Site
+  difficulty: beginner
+  hours: 20
+  skills: [technical_writing, git]
+  uses: [communication]
+  domains: [media, technology]
+  problem: A useful open-source tool has documentation that confuses newcomers.
+  architecture: [Doc audit, Information architecture, Tutorials, How-tos, Reference, Contribution]
+  technologies: [Markdown, MkDocs or Docusaurus, GitHub]
+  expected_output: A docs site and merged upstream contributions.
+  portfolio_value: Public, merged docs are the clearest writing evidence.
+
+- id: mvp-launch
+  name: Validated MVP Launch
+  difficulty: intermediate
+  hours: 60
+  skills: [entrepreneurship, market_research, product_management]
+  uses: [frontend, digital_marketing]
+  domains: [entrepreneurship, product]
+  problem: You have an idea but no evidence anyone wants it.
+  architecture: [Customer interviews, Landing page test, MVP, First users, Metrics & learnings]
+  technologies: [No-code or Next.js, "Stripe (optional)", Analytics]
+  expected_output: An MVP with real users and a learnings write-up.
+  portfolio_value: Traction — even small — is strong founder evidence.
+
+- id: generative-art-piece
+  name: Interactive Generative Art Piece
+  difficulty: beginner
+  hours: 20
+  skills: [creative_coding]
+  uses: [javascript, ui_design]
+  domains: [design, media]
+  problem: Explore how code can create expressive, interactive visual experiences.
+  architecture: [Concept, Sketches, Generative system, Interaction, Web deployment]
+  technologies: [p5.js or three.js]
+  expected_output: A live interactive piece with a process write-up.
+  portfolio_value: Shows creative and technical range.
+
+- id: solution-demo
+  name: Customer Solution Demo & POC
+  difficulty: intermediate
+  hours: 30
+  skills: [sales_engineering, apis, communication]
+  uses: [cloud]
+  domains: [business, technology]
+  problem: A prospective customer needs to see how a product solves their specific workflow.
+  architecture: [Discovery notes, Solution design, Working integration POC, Demo script, ROI summary]
+  technologies: [A public API product, Python or JavaScript]
+  expected_output: A recorded demo and solution document.
+  portfolio_value: Mirrors the day-to-day of solutions and sales engineering.
+
+- id: course-module
+  name: Short Course Module
+  difficulty: beginner
+  hours: 25
+  skills: [teaching, communication]
+  uses: [technical_writing]
+  domains: [education]
+  problem: Learners struggle with a topic you understand well.
+  architecture: [Learning objectives, Content, Exercises, Assessment, Feedback loop]
+  technologies: [Slides, video, a learning platform]
+  expected_output: A published module with learner feedback.
+  portfolio_value: Evidence of teaching ability and clear communication.

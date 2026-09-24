@@ -1,0 +1,522 @@
+# Career definitions — healthcare, science/research and other families.
+
+- id: health-data-analyst
+  name: Health Data Analyst
+  family: healthcare
+  categories: [healthcare, data]
+  summary: Analyse clinical and operational data to improve care and efficiency.
+  what_they_do: Health data analysts work with EHR, claims and operational data to measure quality, outcomes and costs for providers, payers and public health bodies.
+  responsibilities:
+    - Build quality and outcome reports
+    - Analyse clinical and claims data
+    - Support audits and regulatory reporting
+  skills:
+    sql: [3, core]
+    healthcare_data: [2, core]
+    data_analysis: [2, core]
+    health_privacy: [2, core]
+    statistics: [1, important]
+    bi_tools: [2, important]
+    clinical_domain: [1, important]
+    python: [1, useful]
+  technologies: [SQL, Epic Clarity/Caboodle (some orgs), Power BI / Tableau, Python or R]
+  entry_routes:
+    - Health sciences or public health degrees with data skills
+    - Data analysts joining healthcare organisations
+  example_projects: [Readmission analysis, Clinic operations dashboard]
+  project_templates: [health-readmission-analysis, sales-analytics-dashboard, fhir-pipeline]
+  certificates: [ahima-chda, google-data-analytics]
+  related: [health-informatics-specialist, data-analyst, healthcare-ai-engineer]
+  who_might_enjoy:
+    - People motivated by improving health outcomes
+  questions_to_explore:
+    - Are you comfortable with the sensitivity of health data?
+  signals:
+    domains: {healthcare: 1.0, data: 0.8}
+    activities: [analyzing_data, numbers, problem_solving]
+    work_styles: [work_with_data, analyze_information]
+  skill_focus: Healthcare analytics
+  typical_outputs: Quality reports, dashboards, outcome analyses
+
+- id: health-informatics-specialist
+  name: Health Informatics Specialist
+  family: healthcare
+  categories: [healthcare, technology]
+  summary: Connect clinical workflows with the systems and data that support them.
+  what_they_do: Health informatics specialists implement and optimise clinical systems, interoperability and data standards so care teams have the right information.
+  responsibilities:
+    - Support EHR configuration and optimisation
+    - Implement interoperability (HL7/FHIR)
+    - Train clinical users and gather requirements
+  skills:
+    healthcare_data: [3, core]
+    clinical_domain: [2, core]
+    health_privacy: [2, core]
+    business_analysis: [2, important]
+    sql: [1, important]
+    apis: [1, useful]
+    communication: [2, important]
+  technologies: [EHR platforms, HL7 v2, FHIR, SQL]
+  entry_routes:
+    - Clinicians moving into IT
+    - Health informatics degrees
+  example_projects: [FHIR pipeline, Workflow analysis]
+  project_templates: [fhir-pipeline, process-improvement-case]
+  certificates: [ahima-chda]
+  related: [health-data-analyst, business-analyst, healthcare-ai-engineer]
+  who_might_enjoy:
+    - People who understand both clinicians and technology
+  questions_to_explore:
+    - Do you enjoy implementation and training work?
+  signals:
+    domains: {healthcare: 1.0, technology: 0.6}
+    activities: [technology, people, problem_solving]
+    work_styles: [solve_business_problems, work_with_data]
+  skill_focus: Clinical systems and interoperability
+  typical_outputs: System configurations, integrations, workflow improvements
+
+- id: healthcare-ai-engineer
+  name: Healthcare AI Engineer
+  family: healthcare
+  categories: [healthcare, ai, technology]
+  summary: Build AI systems for healthcare with safety and privacy at the core.
+  what_they_do: Healthcare AI engineers develop models and LLM tools for clinical, operational or research use, working under strict privacy, validation and regulatory requirements.
+  responsibilities:
+    - Build and validate models on clinical data
+    - Evaluate fairness, safety and robustness
+    - Deploy with privacy and audit controls
+  skills:
+    python: [3, core]
+    machine_learning: [3, core]
+    deep_learning: [2, important]
+    healthcare_data: [2, core]
+    health_privacy: [2, core]
+    llms: [1, important]
+    statistics: [2, important]
+    model_deployment: [1, important]
+    computer_vision: [1, useful]
+    clinical_domain: [1, important]
+  technologies: [Python, PyTorch, MONAI, FHIR, cloud healthcare APIs]
+  entry_routes:
+    - ML engineers moving into health
+    - Biomedical engineering graduates with ML skills
+  example_projects: [Readmission risk with fairness analysis, Medical imaging classifier (research data)]
+  project_templates: [health-readmission-analysis, image-classifier, rag-knowledge-assistant, fhir-pipeline]
+  certificates: [dlai-deep-learning-specialization, aws-ml-engineer-associate]
+  related: [ai-engineer, health-data-analyst, bioinformatics-analyst, ml-engineer]
+  who_might_enjoy:
+    - Engineers motivated by health impact
+  questions_to_explore:
+    - How do you feel about slower, heavily validated release cycles?
+  signals:
+    domains: {healthcare: 1.0, ai: 0.9, technology: 0.5}
+    activities: [building, analyzing_data, researching, problem_solving]
+    work_styles: [build_software, work_with_data, research_technology]
+  skill_focus: Safe, validated AI for health
+  typical_outputs: Validated models, clinical AI tools, evaluation reports
+
+- id: bioinformatics-analyst
+  name: Bioinformatics Analyst
+  family: healthcare
+  categories: [healthcare, science, research]
+  summary: Analyse biological data to answer research questions.
+  what_they_do: Bioinformatics analysts build and run pipelines for sequencing and other biological data, and help scientists interpret results.
+  responsibilities:
+    - Run and maintain analysis pipelines
+    - Analyse genomic and molecular data
+    - Collaborate with lab scientists
+  skills:
+    bioinformatics: [3, core]
+    python: [2, core]
+    r: [2, important]
+    statistics: [2, core]
+    scientific_computing: [1, important]
+    linux: [2, important]
+    research_methods: [1, useful]
+  technologies: [Python, R/Bioconductor, Nextflow/Snakemake, HPC clusters]
+  entry_routes:
+    - Biology degrees with computational training
+    - CS graduates learning biology
+  example_projects: [Reproducible genomics workflow]
+  project_templates: [genomics-pipeline, reproducible-research-study]
+  certificates: []
+  related: [computational-scientist, research-scientist, healthcare-ai-engineer]
+  who_might_enjoy:
+    - People fascinated by biology and computing
+  questions_to_explore:
+    - Academia, biotech, or clinical genomics?
+  signals:
+    domains: {healthcare: 0.8, science: 1.0, research: 0.8}
+    activities: [researching, analyzing_data, problem_solving]
+    work_styles: [research_technology, work_with_data]
+  skill_focus: Computational biology
+  typical_outputs: Pipelines, analyses, figures for papers
+
+# ------------------------------------------------------------ science / research
+- id: research-scientist
+  name: Research Scientist (AI/ML)
+  family: research
+  categories: [research, ai, science]
+  summary: Advance the state of the art through original research.
+  what_they_do: Research scientists formulate questions, design experiments, develop new methods and publish results, in industry labs or academia.
+  responsibilities:
+    - Develop new methods and models
+    - Design rigorous experiments
+    - Publish and present findings
+  skills:
+    math_for_ml: [3, core]
+    deep_learning: [3, core]
+    machine_learning: [3, core]
+    python: [3, core]
+    research_methods: [3, core]
+    scientific_writing: [2, core]
+    statistics: [2, important]
+    llms: [2, useful]
+  technologies: [PyTorch, JAX, LaTeX, compute clusters]
+  entry_routes:
+    - PhD (most common) or Master's with publications
+    - Research engineering roles as a stepping stone
+  example_projects: [Reproduction of a recent paper with extensions, Fine-tune vs prompt benchmark]
+  project_templates: [llm-fine-tune-eval, reproducible-research-study, image-classifier]
+  certificates: []
+  related: [data-researcher, computational-scientist, ai-engineer, data-scientist]
+  who_might_enjoy:
+    - Deeply curious people comfortable with long, uncertain projects
+  questions_to_explore:
+    - Are you prepared for the time a PhD or research path usually takes?
+  signals:
+    domains: {research: 1.0, ai: 0.9, science: 0.7}
+    activities: [researching, problem_solving, writing]
+    work_styles: [research_technology]
+  skill_focus: Original research
+  typical_outputs: Papers, new methods, open-source research code
+
+- id: data-researcher
+  name: Data Researcher
+  family: research
+  categories: [research, data]
+  summary: Investigate questions rigorously using data.
+  what_they_do: Data researchers design studies and analyses — often for policy, social science or industry research teams — and publish evidence-based findings.
+  responsibilities:
+    - Design studies and collect data
+    - Apply statistical and causal methods
+    - Write reports and papers
+  skills:
+    research_methods: [3, core]
+    statistics: [3, core]
+    python: [2, important]
+    r: [2, important]
+    data_analysis: [2, core]
+    scientific_writing: [2, core]
+    experimentation: [1, useful]
+  technologies: [Python, R, Stata, survey platforms]
+  entry_routes:
+    - Graduate degrees in quantitative social or natural sciences
+  example_projects: [Reproducible research study]
+  project_templates: [reproducible-research-study, ab-test-analysis]
+  certificates: []
+  related: [research-analyst, research-scientist, data-scientist]
+  who_might_enjoy:
+    - People who care about getting the answer right
+  questions_to_explore:
+    - Academic, public sector or industry research?
+  signals:
+    domains: {research: 1.0, data: 0.8, science: 0.5}
+    activities: [researching, analyzing_data, writing]
+    work_styles: [analyze_information, research_technology, work_with_data]
+  skill_focus: Empirical research
+  typical_outputs: Studies, papers, datasets
+
+- id: computational-scientist
+  name: Computational Scientist
+  family: research
+  categories: [science, research, engineering]
+  summary: Use simulation and computation to study complex systems.
+  what_they_do: Computational scientists build numerical models and simulations — in physics, chemistry, climate, engineering or biology — often on high-performance computers.
+  responsibilities:
+    - Develop numerical models and simulations
+    - Optimise code for HPC
+    - Validate results against theory and data
+  skills:
+    scientific_computing: [3, core]
+    math_for_ml: [3, core]
+    python: [2, core]
+    cpp: [2, important]
+    statistics: [2, important]
+    linux: [2, important]
+    research_methods: [2, important]
+    machine_learning: [1, useful]
+  technologies: [Python, C++/Fortran, MPI, GPUs, Julia]
+  entry_routes:
+    - Degrees in physics, engineering, applied maths
+  example_projects: [Validated simulation with convergence study]
+  project_templates: [reproducible-research-study, genomics-pipeline]
+  certificates: []
+  related: [research-scientist, bioinformatics-analyst, quantitative-analyst]
+  who_might_enjoy:
+    - Mathematically minded builders
+  questions_to_explore:
+    - Which scientific domain excites you most?
+  signals:
+    domains: {science: 1.0, research: 0.8, engineering: 0.6}
+    activities: [researching, numbers, building, problem_solving]
+    work_styles: [research_technology]
+  skill_focus: Simulation and numerical methods
+  typical_outputs: Simulations, research code, papers
+
+# --------------------------------------------------------------------- other
+- id: entrepreneur
+  name: Entrepreneur
+  family: other
+  categories: [entrepreneurship, business]
+  summary: Start and grow a business around a problem you care about.
+  what_they_do: Entrepreneurs find problems worth solving, build a team and product, find customers and keep the business alive and growing.
+  responsibilities:
+    - Validate problems and markets
+    - Build and sell a product
+    - Raise or manage money
+    - Hire and lead a team
+  skills:
+    entrepreneurship: [3, core]
+    market_research: [2, core]
+    product_management: [2, important]
+    communication: [3, core]
+    strategy: [2, important]
+    financial_modeling: [1, important]
+    digital_marketing: [1, useful]
+    leadership: [2, important]
+  technologies: [No-code tools, analytics, CRM]
+  entry_routes:
+    - There is no single route — many founders start with side projects
+  example_projects: [Validated MVP launch]
+  project_templates: [mvp-launch, market-sizing-case, product-teardown-prd]
+  certificates: []
+  related: [technical-founder, product-manager, strategy-analyst]
+  who_might_enjoy:
+    - People comfortable with risk and uncertainty
+  questions_to_explore:
+    - How much financial uncertainty can you accept right now?
+    - What problem would you work on for years?
+  signals:
+    domains: {entrepreneurship: 1.0, business: 0.8, product: 0.5}
+    activities: [starting_businesses, people, building]
+    work_styles: [create_products, solve_business_problems, manage_teams]
+  skill_focus: Building a business
+  typical_outputs: Products, customers, a company
+
+- id: technical-founder
+  name: Technical Founder
+  family: other
+  categories: [entrepreneurship, technology]
+  summary: Build a company where you also build the product.
+  what_they_do: Technical founders combine engineering with entrepreneurship — shipping the first versions of a product while finding customers and shaping the company.
+  responsibilities:
+    - Build the product end to end
+    - Talk to users constantly
+    - Make architecture and hiring decisions
+  skills:
+    entrepreneurship: [2, core]
+    python: [2, important]
+    frontend: [2, important]
+    apis: [2, core]
+    databases: [2, important]
+    product_management: [2, core]
+    market_research: [2, core]
+    cloud: [1, important]
+    llms: [1, useful]
+    communication: [2, important]
+  technologies: [Whatever ships fastest for the problem]
+  entry_routes:
+    - Engineers with a problem they deeply understand
+  example_projects: [Validated MVP, Full-stack app with users]
+  project_templates: [mvp-launch, fullstack-web-app, rag-knowledge-assistant]
+  certificates: []
+  related: [entrepreneur, software-engineer, ai-engineer, product-manager]
+  who_might_enjoy:
+    - Builders who want ownership of the whole outcome
+  questions_to_explore:
+    - Do you enjoy selling as much as building?
+  signals:
+    domains: {entrepreneurship: 1.0, technology: 0.9, product: 0.5}
+    activities: [building, starting_businesses, problem_solving]
+    work_styles: [build_software, create_products]
+  skill_focus: Product engineering + company building
+  typical_outputs: Products, customers, a company
+
+- id: educator
+  name: Educator / Technical Trainer
+  family: other
+  categories: [education]
+  summary: Help others learn — in classrooms, companies or online.
+  what_they_do: Educators design and deliver learning experiences, assess understanding and adapt to learners' needs.
+  responsibilities:
+    - Design curricula and materials
+    - Teach and facilitate
+    - Assess and give feedback
+  skills:
+    teaching: [3, core]
+    communication: [3, core]
+    technical_writing: [1, important]
+    research_methods: [1, useful]
+  technologies: [LMS platforms, video tools, slides]
+  entry_routes:
+    - Teaching qualifications
+    - Subject experts who start mentoring or tutoring
+  example_projects: [Short course module]
+  project_templates: [course-module, technical-docs-site]
+  certificates: []
+  related: [technical-writer, customer-success-engineer]
+  who_might_enjoy:
+    - Patient explainers who enjoy others' progress
+  questions_to_explore:
+    - Which subject would you love to teach?
+  signals:
+    domains: {education: 1.0, media: 0.3}
+    activities: [teaching, people, writing]
+    work_styles: [work_with_customers]
+  skill_focus: Teaching and learning design
+  typical_outputs: Courses, lessons, learning materials
+
+- id: technical-writer
+  name: Technical Writer
+  family: other
+  categories: [media, technology]
+  summary: Make complex products understandable through documentation.
+  what_they_do: Technical writers create tutorials, guides and reference docs, working with engineers and users to make products easy to adopt.
+  responsibilities:
+    - Plan and write documentation
+    - Interview engineers and test products
+    - Maintain docs as products change
+  skills:
+    technical_writing: [3, core]
+    communication: [2, core]
+    git: [1, important]
+    apis: [1, useful]
+    python: [1, useful]
+    html_css: [1, useful]
+  technologies: [Markdown, docs-as-code tools, Git]
+  entry_routes:
+    - Writers learning technology
+    - Engineers who love writing
+  example_projects: [Docs-as-code site with merged contributions]
+  project_templates: [technical-docs-site, course-module]
+  certificates: []
+  related: [educator, seo-specialist, sales-engineer]
+  who_might_enjoy:
+    - Clear writers who enjoy learning new tech
+  questions_to_explore:
+    - API docs, end-user docs, or developer education?
+  signals:
+    domains: {media: 1.0, technology: 0.6, education: 0.4}
+    activities: [writing, technology, teaching]
+    work_styles: [work_with_customers, research_technology]
+  skill_focus: Documentation
+  typical_outputs: Docs, tutorials, guides
+
+- id: solutions-architect
+  name: Solutions Architect
+  family: other
+  categories: [technology, cloud, business]
+  summary: Design technical solutions that solve customers' business problems.
+  what_they_do: Solutions architects understand customer requirements and design architectures — often cloud-based — that meet them, bridging sales, engineering and customers.
+  responsibilities:
+    - Gather technical requirements
+    - Design architectures and proofs of concept
+    - Guide implementation and review designs
+  skills:
+    cloud_architecture: [3, core]
+    cloud: [3, core]
+    system_design: [2, core]
+    communication: [3, core]
+    sales_engineering: [1, important]
+    networking: [2, important]
+    cloud_security: [1, important]
+    apis: [1, useful]
+  technologies: [AWS / Azure / GCP, architecture diagramming, IaC]
+  entry_routes:
+    - Experienced engineers moving customer-facing
+  example_projects: [Cloud architecture with design review]
+  project_templates: [cloud-infra-terraform, solution-demo, k8s-microservices]
+  certificates: [aws-solutions-architect-associate, terraform-associate]
+  related: [cloud-engineer, sales-engineer, software-engineer]
+  who_might_enjoy:
+    - Technical people who enjoy customer conversations
+  questions_to_explore:
+    - Do you enjoy presenting and persuading?
+  signals:
+    domains: {cloud: 0.9, technology: 0.8, business: 0.5}
+    activities: [technology, people, problem_solving]
+    work_styles: [work_with_customers, solve_business_problems, build_software]
+  skill_focus: Customer-facing architecture
+  typical_outputs: Architectures, POCs, design reviews
+
+- id: sales-engineer
+  name: Sales Engineer
+  family: other
+  categories: [business, technology]
+  summary: Help customers understand how a technical product solves their problems.
+  what_they_do: Sales engineers run technical discovery, demos and proofs of concept alongside account executives.
+  responsibilities:
+    - Run discovery and technical demos
+    - Build proofs of concept
+    - Answer technical and security questions
+  skills:
+    sales_engineering: [3, core]
+    communication: [3, core]
+    apis: [1, important]
+    cloud: [1, important]
+    stakeholder_management: [2, important]
+    python: [1, useful]
+  technologies: [The product's platform, CRM, demo environments]
+  entry_routes:
+    - Engineers or support staff who enjoy customers
+  example_projects: [Customer solution demo & POC]
+  project_templates: [solution-demo, fullstack-web-app]
+  certificates: [aws-cloud-practitioner]
+  related: [solutions-architect, customer-success-engineer, technical-writer]
+  who_might_enjoy:
+    - Technical communicators who like variety
+  questions_to_explore:
+    - How do you feel about variable compensation tied to sales targets?
+  signals:
+    domains: {business: 0.8, technology: 0.8}
+    activities: [people, technology, problem_solving]
+    work_styles: [work_with_customers, solve_business_problems]
+  skill_focus: Technical selling
+  typical_outputs: Demos, POCs, solution documents
+
+- id: customer-success-engineer
+  name: Customer Success Engineer
+  family: other
+  categories: [business, technology, operations]
+  summary: Help customers get lasting value from a technical product.
+  what_they_do: Customer success engineers onboard customers, solve technical issues and turn feedback into product improvements.
+  responsibilities:
+    - Onboard and support customers technically
+    - Troubleshoot integrations
+    - Relay feedback to product teams
+  skills:
+    customer_success: [3, core]
+    communication: [2, core]
+    apis: [1, important]
+    sql: [1, useful]
+    linux: [1, useful]
+    technical_writing: [1, useful]
+  technologies: [The product, ticketing systems, APIs, SQL]
+  entry_routes:
+    - Support engineers
+    - Graduates with technical and people skills
+  example_projects: [Onboarding playbook, Integration guide]
+  project_templates: [solution-demo, technical-docs-site]
+  certificates: []
+  related: [sales-engineer, solutions-architect, educator]
+  who_might_enjoy:
+    - Helpful problem solvers
+  questions_to_explore:
+    - Do you enjoy long-term relationships with customers?
+  signals:
+    domains: {business: 0.7, technology: 0.6, operations: 0.5}
+    activities: [people, problem_solving, technology, teaching]
+    work_styles: [work_with_customers]
+  skill_focus: Customer technical success
+  typical_outputs: Onboarding plans, integration guides, feedback reports

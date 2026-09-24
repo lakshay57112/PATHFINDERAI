@@ -1,0 +1,47 @@
+# Demo profile used by "Try the demo". It is a normal user account seeded on startup.
+email: demo@pathfinder.ai
+password: demo-pathfinder-2026
+name: Lakshay
+interests: [ai, technology, finance]
+skills:
+  python: advanced
+  sql: intermediate
+  java: intermediate
+  machine_learning: intermediate
+  rag: intermediate
+  data_analysis: intermediate
+  statistics: intermediate
+  llms: intermediate
+  git: intermediate
+  deep_learning: beginner
+  ai_agents: beginner
+  docker: beginner
+  apis: beginner
+  prompt_engineering: intermediate
+unsure: [cloud]
+activities: [building, researching, problem_solving, analyzing_data]
+work_styles: [build_software, research_technology, work_with_data]
+subjects: [Machine learning, Statistics, Finance]
+education:
+  level: Bachelor's (in progress)
+  degree: BCA
+  field: Computer Applications
+experience_level: student
+internships: ML internship — customer churn analysis and prediction.
+career_goals: Become an AI engineer building production LLM systems, potentially in FinTech.
+learning_preferences: [hands_on, projects, reading]
+hours_per_week: 12
+certificates:
+  - {name: Machine Learning Certificate, issuer: Coursera}
+  - {name: Generative AI Certificate, issuer: DeepLearning.AI}
+projects:
+  - name: Fraud Detection
+    description: Built a classifier to detect fraudulent credit card transactions on an imbalanced dataset using scikit-learn and XGBoost, with precision-recall analysis and threshold tuning.
+    technologies: [Python, pandas, scikit-learn, XGBoost]
+    role: Solo developer
+    github_url: "https://github.com/example/fraud-detection"
+  - name: RAG Chatbot
+    description: Retrieval-augmented chatbot answering questions over PDF documents with LangChain, embeddings and a vector store, returning cited sources.
+    technologies: [Python, LangChain, OpenAI, ChromaDB, Streamlit]
+    role: Solo developer
+    github_url: "https://github.com/example/rag-chatbot"

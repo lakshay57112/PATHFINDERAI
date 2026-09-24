@@ -1,0 +1,252 @@
+# Career definitions — data family.
+
+- id: data-analyst
+  name: Data Analyst
+  family: data
+  categories: [data, business]
+  summary: Turn data into answers that help people make better decisions.
+  what_they_do: Data analysts clean, explore and visualise data, define metrics and communicate insights to teams across the business.
+  responsibilities:
+    - Write SQL to answer business questions
+    - Build dashboards and reports
+    - Define and maintain metrics
+    - Present findings and recommendations
+  skills:
+    sql: [3, core]
+    excel: [2, core]
+    data_analysis: [2, core]
+    data_visualization: [2, core]
+    bi_tools: [2, core]
+    statistics: [1, important]
+    python: [1, important]
+    communication: [2, core]
+    experimentation: [1, useful]
+  technologies: [SQL, Excel/Sheets, Power BI / Tableau / Looker, Python or R]
+  entry_routes:
+    - Graduates from any quantitative field with a portfolio
+    - Business roles moving into analytics
+    - Analytics certificates plus real projects
+  example_projects: [Sales dashboard with insight memo, Cohort analysis, A/B test analysis]
+  project_templates: [sales-analytics-dashboard, ab-test-analysis, marketing-attribution]
+  certificates: [google-data-analytics, ms-power-bi-analyst, tableau-data-analyst]
+  related: [bi-analyst, product-analyst, data-scientist, business-analyst, analytics-engineer]
+  who_might_enjoy:
+    - Curious people who like finding the "why" behind numbers
+    - People who enjoy explaining things clearly
+  questions_to_explore:
+    - Do you enjoy stakeholder conversations as much as analysis?
+    - Would you rather go deep in statistics or broad in business?
+  signals:
+    domains: {data: 1.0, business: 0.6}
+    activities: [analyzing_data, numbers, problem_solving]
+    work_styles: [analyze_information, work_with_data, solve_business_problems]
+  skill_focus: Analysis, metrics and communication
+  typical_outputs: Dashboards, analyses, reports, metric definitions
+  phases:
+    - {name: Foundations, skills: [excel, sql, data_analysis]}
+    - {name: Visual Analytics, skills: [data_visualization, bi_tools, communication]}
+    - {name: Analytical Depth, skills: [python, statistics, experimentation]}
+
+- id: data-scientist
+  name: Data Scientist
+  family: data
+  categories: [data, ai, research]
+  summary: Use statistics, machine learning and data to solve problems.
+  what_they_do: Data scientists frame problems quantitatively, build models and experiments, and translate results into decisions or product features.
+  responsibilities:
+    - Frame business problems as analytical or modelling tasks
+    - Build and evaluate predictive models
+    - Design and analyse experiments
+    - Communicate results and uncertainty to stakeholders
+  skills:
+    python: [3, core]
+    sql: [2, core]
+    statistics: [3, core]
+    machine_learning: [3, core]
+    data_analysis: [3, core]
+    data_visualization: [2, important]
+    experimentation: [2, important]
+    math_for_ml: [2, important]
+    deep_learning: [1, useful]
+    communication: [2, important]
+    time_series: [1, useful]
+    llms: [1, useful]
+  technologies: [Python, pandas, scikit-learn, SQL, Jupyter, statsmodels, a cloud notebook platform]
+  entry_routes:
+    - Quantitative degrees (statistics, CS, economics, sciences)
+    - Analysts growing into modelling
+    - Master's programmes with applied projects
+  example_projects: [Churn prediction with error analysis, Experiment analysis, Forecasting pipeline]
+  project_templates: [customer-churn-prediction, ab-test-analysis, fraud-detection-system, portfolio-risk-dashboard]
+  certificates: [dlai-ml-specialization, ibm-data-science, azure-data-scientist]
+  related: [ml-engineer, data-analyst, ai-engineer, research-scientist, quantitative-analyst]
+  who_might_enjoy:
+    - People who like both mathematics and real-world problems
+    - People comfortable with ambiguity
+  questions_to_explore:
+    - Do you prefer modelling depth or business impact?
+    - How do you feel about work where results are often "it depends"?
+  signals:
+    domains: {data: 1.0, ai: 0.7, research: 0.5, science: 0.3}
+    activities: [analyzing_data, researching, problem_solving, numbers]
+    work_styles: [work_with_data, analyze_information, research_technology]
+  skill_focus: Statistical modelling and inference
+  typical_outputs: Models, experiment analyses, forecasts, insight reports
+  phases:
+    - {name: Foundations, skills: [python, sql, data_analysis]}
+    - {name: Statistics, skills: [statistics, math_for_ml, experimentation]}
+    - {name: Machine Learning, skills: [machine_learning, time_series, deep_learning]}
+    - {name: Communication & Impact, skills: [data_visualization, communication, llms]}
+
+- id: bi-analyst
+  name: BI Analyst
+  family: data
+  categories: [data, business]
+  summary: Build the dashboards and data models that organisations run on.
+  what_they_do: BI analysts design reporting layers, semantic models and dashboards, and help teams self-serve reliable metrics.
+  responsibilities:
+    - Build and maintain dashboards
+    - Design semantic models and metric definitions
+    - Train stakeholders to self-serve
+  skills:
+    sql: [3, core]
+    bi_tools: [3, core]
+    data_modeling: [2, core]
+    data_visualization: [2, core]
+    excel: [2, important]
+    communication: [2, important]
+    analytics_engineering: [1, useful]
+  technologies: [Power BI, Tableau, Looker, SQL, dbt]
+  entry_routes:
+    - Data analysts specialising in BI
+    - Finance or operations analysts with strong Excel skills
+  example_projects: [Executive KPI dashboard, Semantic model]
+  project_templates: [sales-analytics-dashboard, dbt-analytics-project]
+  certificates: [ms-power-bi-analyst, tableau-data-analyst]
+  related: [data-analyst, analytics-engineer, financial-data-analyst]
+  who_might_enjoy:
+    - People who like organising information visually
+  questions_to_explore:
+    - Do you enjoy building tools others use every day?
+  signals:
+    domains: {data: 1.0, business: 0.7}
+    activities: [analyzing_data, designing, numbers]
+    work_styles: [analyze_information, work_with_data]
+  skill_focus: Dashboards and semantic models
+  typical_outputs: Dashboards, data models, metric definitions
+
+- id: product-analyst
+  name: Product Analyst
+  family: data
+  categories: [data, product, business]
+  summary: Use data to understand products and customer behaviour.
+  what_they_do: Product analysts measure how people use a product, run experiments, and help product teams decide what to build next.
+  responsibilities:
+    - Define product metrics and instrumentation
+    - Analyse funnels, retention and engagement
+    - Design and read A/B tests
+    - Partner with PMs on prioritisation
+  skills:
+    sql: [3, core]
+    data_analysis: [2, core]
+    experimentation: [2, core]
+    statistics: [2, important]
+    data_visualization: [2, important]
+    product_management: [1, important]
+    python: [1, useful]
+    communication: [2, core]
+    bi_tools: [1, useful]
+  technologies: [SQL, Amplitude / Mixpanel, Python, BI tools]
+  entry_routes:
+    - Data analysts joining product teams
+    - Graduates with product-focused analysis projects
+  example_projects: [Funnel analysis, A/B test toolkit, Retention cohort study]
+  project_templates: [ab-test-analysis, product-teardown-prd, sales-analytics-dashboard]
+  certificates: [google-data-analytics]
+  related: [data-analyst, product-manager, growth-analyst, data-scientist]
+  who_might_enjoy:
+    - People curious about why users behave the way they do
+  questions_to_explore:
+    - Would you enjoy influencing decisions without owning them?
+  signals:
+    domains: {data: 0.9, product: 1.0, business: 0.5}
+    activities: [analyzing_data, problem_solving, people]
+    work_styles: [analyze_information, create_products, work_with_data]
+  skill_focus: Product metrics and experimentation
+  typical_outputs: Funnel analyses, experiment reads, product dashboards
+
+- id: analytics-engineer
+  name: Analytics Engineer
+  family: data
+  categories: [data, technology]
+  summary: Build clean, tested data models that analysts and the business trust.
+  what_they_do: Analytics engineers apply software engineering practices to analytics — version-controlled, tested SQL transformations and consistent metrics.
+  responsibilities:
+    - Build and test transformation models
+    - Define metrics in a semantic layer
+    - Document data for self-service
+  skills:
+    sql: [3, core]
+    analytics_engineering: [3, core]
+    data_modeling: [3, core]
+    git: [2, core]
+    python: [1, important]
+    bi_tools: [1, useful]
+    testing: [1, important]
+    orchestration: [1, useful]
+  technologies: [dbt, Snowflake / BigQuery, Git, Airflow, Looker]
+  entry_routes:
+    - Data analysts who enjoy engineering
+    - Data engineers who enjoy business logic
+  example_projects: [dbt project with tests and docs]
+  project_templates: [dbt-analytics-project, etl-warehouse-pipeline]
+  certificates: [dbt-analytics-engineering, snowpro-core]
+  related: [data-engineer, data-analyst, bi-analyst]
+  who_might_enjoy:
+    - Organised thinkers who like clean systems
+  questions_to_explore:
+    - Do you prefer building the data foundation or doing the analysis on top?
+  signals:
+    domains: {data: 1.0, technology: 0.6}
+    activities: [building, analyzing_data, problem_solving]
+    work_styles: [work_with_data, build_software]
+  skill_focus: Data modelling and transformation
+  typical_outputs: dbt models, tests, documentation, metric layers
+
+- id: research-analyst
+  name: Research Analyst
+  family: data
+  categories: [research, business, data]
+  summary: Investigate questions and synthesise evidence into clear conclusions.
+  what_they_do: Research analysts gather and analyse information — market, policy, industry or academic — and write reports that inform decisions.
+  responsibilities:
+    - Design research questions and methods
+    - Collect and analyse quantitative and qualitative data
+    - Write reports and briefings
+  skills:
+    research_methods: [2, core]
+    data_analysis: [2, core]
+    statistics: [2, important]
+    excel: [2, important]
+    market_research: [2, important]
+    scientific_writing: [2, core]
+    communication: [2, core]
+    python: [1, useful]
+  technologies: [Excel, survey tools, Python or R, databases of industry data]
+  entry_routes:
+    - Degrees in economics, social sciences or sciences
+    - Research assistant positions
+  example_projects: [Industry report, Survey study]
+  project_templates: [reproducible-research-study, market-sizing-case]
+  certificates: []
+  related: [data-researcher, strategy-analyst, investment-analyst, data-analyst]
+  who_might_enjoy:
+    - Curious readers and writers who like evidence
+  questions_to_explore:
+    - Do you enjoy writing long-form, carefully sourced reports?
+  signals:
+    domains: {research: 1.0, data: 0.6, business: 0.4}
+    activities: [researching, writing, analyzing_data]
+    work_styles: [analyze_information, research_technology]
+  skill_focus: Evidence synthesis and reporting
+  typical_outputs: Research reports, briefings, datasets

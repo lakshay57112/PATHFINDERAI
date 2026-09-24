@@ -1,0 +1,627 @@
+# Career definitions — technology family.
+# skills: {skill_id: [target_level 1-3, importance core|important|useful]}
+# signals: how interests/activities/work styles relate to the career (used for discovery).
+# phases (optional): career-specific roadmap skeleton; skills not listed are placed automatically.
+
+- id: software-engineer
+  name: Software Engineer
+  family: technology
+  categories: [technology, engineering]
+  summary: Design, build and maintain software systems that people and businesses rely on.
+  what_they_do: Software engineers turn requirements into reliable, maintainable code. They design components, write and review code, test it, and keep systems running as they grow.
+  responsibilities:
+    - Design and implement features across the stack or within a focused area
+    - Write tests and review teammates' code
+    - Debug production issues and improve reliability
+    - Collaborate with product and design on scope and trade-offs
+  skills:
+    python: [2, important]
+    java: [2, useful]
+    typescript: [2, useful]
+    dsa: [2, core]
+    git: [2, core]
+    apis: [2, core]
+    databases: [2, core]
+    testing: [2, core]
+    system_design: [2, important]
+    linux: [2, important]
+    docker: [1, useful]
+    ci_cd: [1, useful]
+    communication: [1, useful]
+  technologies: [Git, Linux, PostgreSQL, Docker, a cloud platform, one backend framework]
+  entry_routes:
+    - Computer science or related degree plus internships
+    - Bootcamp or self-taught path with a strong portfolio of shipped projects
+    - Internal transfer from QA, support or IT roles
+  example_projects: [A full-stack app with real users, An open-source contribution, A CLI tool solving a real workflow]
+  project_templates: [fullstack-web-app, k8s-microservices, technical-docs-site]
+  certificates: [aws-cloud-practitioner, ckad]
+  related: [web-developer, ai-engineer, devops-engineer, data-engineer, mobile-developer]
+  who_might_enjoy:
+    - People who like building things and seeing them work
+    - People who enjoy breaking problems into precise steps
+    - People comfortable with continual learning as tools change
+  questions_to_explore:
+    - Do you prefer user-facing features or infrastructure behind the scenes?
+    - How do you feel about debugging for hours to find one small cause?
+    - Would you rather go deep in one language/stack or stay broad?
+  signals:
+    domains: {technology: 1.0, engineering: 0.8}
+    activities: [building, problem_solving, technology]
+    work_styles: [build_software, create_products]
+  skill_focus: Writing reliable, maintainable software
+  typical_outputs: Features, services, libraries, code reviews, design docs
+  phases:
+    - {name: Foundations, skills: [python, git, linux, dsa]}
+    - {name: Building Software, skills: [apis, databases, testing]}
+    - {name: Systems, skills: [system_design, docker, ci_cd]}
+
+- id: ai-engineer
+  name: AI Engineer
+  family: technology
+  categories: [technology, ai]
+  summary: Build intelligent systems using ML, LLMs and AI infrastructure.
+  what_they_do: AI engineers build products and internal tools powered by machine learning and large language models — combining models, retrieval, agents and APIs into systems that are evaluated, deployed and monitored.
+  responsibilities:
+    - Build LLM-powered features such as RAG, agents and structured extraction
+    - Train, fine-tune or integrate ML models where they add value
+    - Design evaluations to measure quality, safety and regressions
+    - Deploy AI services with attention to latency, cost and reliability
+    - Work with product teams to scope what AI can realistically do
+  skills:
+    python: [3, core]
+    machine_learning: [3, core]
+    deep_learning: [2, important]
+    llms: [3, core]
+    rag: [2, core]
+    ai_agents: [2, core]
+    prompt_engineering: [2, important]
+    llm_evaluation: [2, important]
+    apis: [2, core]
+    vector_databases: [2, important]
+    sql: [2, important]
+    git: [2, important]
+    docker: [2, important]
+    model_deployment: [2, important]
+    cloud: [2, important]
+    mlops: [1, useful]
+    statistics: [1, useful]
+  technologies: [Python, PyTorch, LangChain / LangGraph, Qdrant or pgvector, FastAPI, Docker, AWS/GCP/Azure, OpenAI / Gemini / open models]
+  entry_routes:
+    - Software engineers adding ML and LLM skills
+    - Data scientists moving toward production systems
+    - Graduates with strong, deployed AI projects
+  example_projects: [RAG assistant with citations and evals, Multi-tool agent with tracing, Deployed model API with monitoring]
+  project_templates: [rag-knowledge-assistant, agentic-research-assistant, agentic-customer-intelligence, production-ml-api, financial-ai-analyst]
+  certificates: [aws-ml-engineer-associate, azure-ai-engineer, gcp-professional-ml-engineer, nvidia-genai-llm-associate, dlai-deep-learning-specialization]
+  related: [ml-engineer, genai-engineer, mlops-engineer, data-scientist, software-engineer]
+  who_might_enjoy:
+    - Builders who enjoy fast-moving technology
+    - People who like combining research ideas with practical engineering
+    - People comfortable with systems that are probabilistic, not deterministic
+  questions_to_explore:
+    - Are you more excited by building products or by improving models themselves?
+    - How comfortable are you with rapid change in tools and best practices?
+    - Do you enjoy measuring quality rigorously, not just demoing?
+  signals:
+    domains: {ai: 1.0, technology: 0.8, data: 0.4}
+    activities: [building, problem_solving, technology, researching]
+    work_styles: [build_software, research_technology, create_products, work_with_data]
+  skill_focus: Building and shipping AI-powered systems
+  typical_outputs: LLM features, RAG pipelines, agents, model APIs, evaluation suites
+  phases:
+    - {name: Foundations, skills: [python, sql, git, apis]}
+    - {name: Machine Learning, skills: [statistics, machine_learning, deep_learning]}
+    - {name: Generative AI, skills: [llms, prompt_engineering, vector_databases, rag, ai_agents, llm_evaluation]}
+    - {name: Production AI, skills: [docker, model_deployment, cloud, mlops]}
+
+- id: ml-engineer
+  name: ML Engineer
+  family: technology
+  categories: [technology, ai]
+  summary: Take machine learning models from experiments to reliable production systems.
+  what_they_do: ML engineers build the pipelines, training infrastructure and serving systems that make models useful at scale, working closely with data scientists and platform teams.
+  responsibilities:
+    - Build training and feature pipelines
+    - Optimise and serve models with latency and cost targets
+    - Monitor models for drift and degradation
+    - Improve model quality through data and architecture changes
+  skills:
+    python: [3, core]
+    machine_learning: [3, core]
+    deep_learning: [2, core]
+    math_for_ml: [2, important]
+    statistics: [2, important]
+    sql: [2, important]
+    model_deployment: [3, core]
+    mlops: [2, core]
+    docker: [2, core]
+    kubernetes: [1, useful]
+    cloud: [2, important]
+    data_engineering: [1, useful]
+    testing: [2, important]
+    system_design: [1, useful]
+  technologies: [PyTorch, scikit-learn, MLflow, Airflow, Docker, Kubernetes, Ray, a cloud ML platform]
+  entry_routes:
+    - Software engineers specialising in ML
+    - Data scientists who enjoy engineering
+    - Graduate degrees with applied ML projects
+  example_projects: [End-to-end MLOps pipeline, Low-latency model serving, Drift monitoring system]
+  project_templates: [production-ml-api, mlops-pipeline, customer-churn-prediction, image-classifier]
+  certificates: [aws-ml-engineer-associate, gcp-professional-ml-engineer, azure-data-scientist, ckad]
+  related: [ai-engineer, mlops-engineer, data-scientist, data-engineer]
+  who_might_enjoy:
+    - People who like both modelling and systems engineering
+    - People who enjoy optimising for performance and reliability
+  questions_to_explore:
+    - Do you prefer improving models or the infrastructure around them?
+    - Are you comfortable owning systems that run in production?
+  signals:
+    domains: {ai: 1.0, technology: 0.8, data: 0.5, cloud: 0.3}
+    activities: [building, problem_solving, analyzing_data, technology]
+    work_styles: [build_software, work_with_data, research_technology]
+  skill_focus: Productionising machine learning
+  typical_outputs: Training pipelines, model services, feature stores, monitoring
+  phases:
+    - {name: Foundations, skills: [python, sql, statistics, math_for_ml]}
+    - {name: Modelling, skills: [machine_learning, deep_learning]}
+    - {name: Production ML, skills: [testing, docker, model_deployment, cloud]}
+    - {name: ML Platform, skills: [mlops, kubernetes, data_engineering, system_design]}
+
+- id: genai-engineer
+  name: GenAI Engineer
+  family: technology
+  categories: [technology, ai]
+  summary: Specialise in building applications on large language and generative models.
+  what_they_do: GenAI engineers design LLM applications end to end — prompts, retrieval, agents, fine-tuning where needed, guardrails and evaluation — and ship them into products.
+  responsibilities:
+    - Design RAG and agentic workflows
+    - Build evaluation harnesses and monitor quality in production
+    - Choose between prompting, retrieval and fine-tuning
+    - Manage cost, latency and safety trade-offs
+  skills:
+    python: [3, core]
+    llms: [3, core]
+    prompt_engineering: [3, core]
+    rag: [3, core]
+    ai_agents: [3, core]
+    llm_evaluation: [3, core]
+    vector_databases: [2, important]
+    fine_tuning: [1, useful]
+    apis: [2, core]
+    docker: [2, important]
+    cloud: [1, useful]
+    machine_learning: [1, useful]
+    observability: [1, useful]
+  technologies: [LangChain / LangGraph, LlamaIndex, Qdrant, OpenAI / Anthropic / Gemini APIs, open models via Hugging Face, FastAPI]
+  entry_routes:
+    - Backend engineers moving into AI
+    - AI/ML practitioners specialising in LLMs
+    - Builders with strong public GenAI projects
+  example_projects: [Production RAG with evals, Agent with tool use and tracing, Fine-tune vs prompting benchmark]
+  project_templates: [rag-knowledge-assistant, agentic-research-assistant, llm-fine-tune-eval, agentic-customer-intelligence]
+  certificates: [azure-ai-engineer, nvidia-genai-llm-associate, generative-ai-course-certificate]
+  related: [ai-engineer, ml-engineer, software-engineer]
+  who_might_enjoy:
+    - People who enjoy experimenting and iterating quickly
+    - People fascinated by language and reasoning systems
+  questions_to_explore:
+    - How do you feel about a field where best practices shift every few months?
+    - Do you enjoy the unglamorous work of evaluation and edge cases?
+  signals:
+    domains: {ai: 1.0, technology: 0.7}
+    activities: [building, technology, problem_solving, writing]
+    work_styles: [build_software, research_technology, create_products]
+  skill_focus: LLM applications, retrieval and agents
+  typical_outputs: RAG systems, agents, eval suites, prompt libraries
+  phases:
+    - {name: Foundations, skills: [python, apis, llms]}
+    - {name: Core GenAI, skills: [prompt_engineering, vector_databases, rag]}
+    - {name: Agents & Quality, skills: [ai_agents, llm_evaluation, observability]}
+    - {name: Advanced, skills: [fine_tuning, docker, cloud]}
+
+- id: data-engineer
+  name: Data Engineer
+  family: technology
+  categories: [technology, data, cloud]
+  summary: Build the pipelines and platforms that make data reliable and available.
+  what_they_do: Data engineers design how data is collected, stored, transformed and served, so analysts, data scientists and applications can trust it.
+  responsibilities:
+    - Build batch and streaming pipelines
+    - Model data in warehouses and lakehouses
+    - Ensure data quality, lineage and governance
+    - Optimise cost and performance of data platforms
+  skills:
+    python: [2, core]
+    sql: [3, core]
+    data_engineering: [3, core]
+    data_modeling: [2, core]
+    orchestration: [2, important]
+    big_data: [2, important]
+    cloud: [2, important]
+    databases: [2, important]
+    docker: [1, useful]
+    analytics_engineering: [1, useful]
+    git: [2, important]
+    testing: [1, useful]
+  technologies: [SQL, Python, Airflow, dbt, Spark, Kafka, Snowflake / BigQuery / Databricks]
+  entry_routes:
+    - Analysts who grow into pipeline work
+    - Software engineers specialising in data
+    - Graduates with end-to-end pipeline projects
+  example_projects: [API-to-warehouse pipeline, Streaming pipeline, dbt project]
+  project_templates: [etl-warehouse-pipeline, dbt-analytics-project, fhir-pipeline]
+  certificates: [databricks-data-engineer-associate, snowpro-core, dbt-analytics-engineering, aws-cloud-practitioner]
+  related: [analytics-engineer, ml-engineer, cloud-engineer, data-scientist]
+  who_might_enjoy:
+    - People who like making systems reliable and well organised
+    - People who enjoy enabling others' work
+  questions_to_explore:
+    - Do you enjoy infrastructure work that others build upon?
+    - Are you comfortable being paged when a pipeline breaks?
+  signals:
+    domains: {data: 1.0, technology: 0.8, cloud: 0.5}
+    activities: [building, problem_solving, technology, analyzing_data]
+    work_styles: [build_software, work_with_data]
+  skill_focus: Reliable data movement and modelling
+  typical_outputs: Pipelines, data models, warehouse tables, data-quality checks
+  phases:
+    - {name: Foundations, skills: [python, sql, git, databases]}
+    - {name: Pipelines, skills: [data_engineering, data_modeling, orchestration]}
+    - {name: Scale & Cloud, skills: [big_data, cloud, docker]}
+
+- id: cloud-engineer
+  name: Cloud Engineer
+  family: technology
+  categories: [technology, cloud, engineering]
+  summary: Design, build and operate infrastructure on cloud platforms.
+  what_they_do: Cloud engineers provision and manage compute, networking, storage and security on AWS, Azure or GCP — increasingly through code.
+  responsibilities:
+    - Provision infrastructure with IaC
+    - Design networks, IAM and security controls
+    - Automate deployments and scaling
+    - Monitor cost, performance and availability
+  skills:
+    cloud: [3, core]
+    cloud_architecture: [2, core]
+    infrastructure_as_code: [2, core]
+    networking: [2, core]
+    linux: [2, core]
+    docker: [2, important]
+    kubernetes: [1, useful]
+    ci_cd: [2, important]
+    cloud_security: [1, important]
+    python: [1, useful]
+    observability: [1, useful]
+  technologies: [AWS / Azure / GCP, Terraform, Docker, Kubernetes, GitHub Actions, Linux]
+  entry_routes:
+    - Systems administrators and IT professionals
+    - Developers moving into infrastructure
+    - Graduates with cloud projects and associate certifications
+  example_projects: [Terraform-built environment, Serverless application, Cost-optimised architecture]
+  project_templates: [cloud-infra-terraform, k8s-microservices, production-ml-api]
+  certificates: [aws-cloud-practitioner, aws-solutions-architect-associate, terraform-associate, cka]
+  related: [devops-engineer, solutions-architect, data-engineer, cybersecurity-engineer]
+  who_might_enjoy:
+    - People who like systems and how things connect
+    - People who enjoy automation
+  questions_to_explore:
+    - Do you enjoy infrastructure more than application features?
+    - Are you comfortable with on-call responsibilities?
+  signals:
+    domains: {cloud: 1.0, technology: 0.8, engineering: 0.4}
+    activities: [technology, building, problem_solving]
+    work_styles: [build_software, research_technology]
+  skill_focus: Cloud infrastructure and automation
+  typical_outputs: IaC modules, architectures, deployment pipelines
+  phases:
+    - {name: Foundations, skills: [linux, networking, cloud]}
+    - {name: Automation, skills: [infrastructure_as_code, docker, ci_cd]}
+    - {name: Architecture, skills: [cloud_architecture, cloud_security, kubernetes, observability]}
+
+- id: devops-engineer
+  name: DevOps Engineer
+  family: technology
+  categories: [technology, cloud, engineering]
+  summary: Make software delivery fast, safe and repeatable.
+  what_they_do: DevOps engineers build CI/CD pipelines, platform tooling and observability so teams can ship frequently and recover quickly.
+  responsibilities:
+    - Build and maintain CI/CD pipelines
+    - Operate container platforms
+    - Implement monitoring, alerting and incident response
+    - Improve developer experience and reliability
+  skills:
+    linux: [3, core]
+    ci_cd: [3, core]
+    docker: [3, core]
+    kubernetes: [2, core]
+    infrastructure_as_code: [2, core]
+    cloud: [2, important]
+    observability: [2, core]
+    networking: [2, important]
+    python: [1, important]
+    go: [1, useful]
+    git: [2, core]
+    system_design: [1, useful]
+  technologies: [GitHub Actions / GitLab CI, Docker, Kubernetes, Terraform, Prometheus, Grafana]
+  entry_routes:
+    - Sysadmins and support engineers
+    - Developers who enjoy tooling and automation
+  example_projects: [Kubernetes platform with observability, Zero-downtime deployment pipeline]
+  project_templates: [k8s-microservices, cloud-infra-terraform, production-ml-api]
+  certificates: [cka, ckad, terraform-associate, aws-solutions-architect-associate]
+  related: [cloud-engineer, mlops-engineer, software-engineer]
+  who_might_enjoy:
+    - People who love automating repetitive work
+    - Calm problem solvers during incidents
+  questions_to_explore:
+    - Do you enjoy supporting other engineers' productivity?
+    - How do you feel about incident response?
+  signals:
+    domains: {cloud: 1.0, technology: 0.9, engineering: 0.4}
+    activities: [technology, building, problem_solving]
+    work_styles: [build_software]
+  skill_focus: Delivery automation and reliability
+  typical_outputs: CI/CD pipelines, platform tooling, dashboards, runbooks
+  phases:
+    - {name: Foundations, skills: [linux, git, networking, python]}
+    - {name: Delivery, skills: [docker, ci_cd, infrastructure_as_code]}
+    - {name: Platform & Reliability, skills: [kubernetes, cloud, observability, system_design]}
+
+- id: mlops-engineer
+  name: MLOps Engineer
+  family: technology
+  categories: [technology, ai, cloud]
+  summary: Build the platforms and processes that keep ML systems running reliably.
+  what_they_do: MLOps engineers bring DevOps practices to machine learning — reproducible training, model registries, automated deployment and monitoring.
+  responsibilities:
+    - Build training and deployment pipelines
+    - Manage experiment tracking and model registries
+    - Monitor models and data for drift
+    - Standardise tooling for data science teams
+  skills:
+    python: [2, core]
+    machine_learning: [2, important]
+    mlops: [3, core]
+    model_deployment: [3, core]
+    docker: [3, core]
+    kubernetes: [2, core]
+    ci_cd: [2, core]
+    cloud: [2, core]
+    orchestration: [2, important]
+    observability: [2, important]
+    infrastructure_as_code: [1, useful]
+    linux: [2, important]
+  technologies: [MLflow, Kubeflow, Airflow, Docker, Kubernetes, Prometheus, SageMaker / Vertex AI]
+  entry_routes:
+    - DevOps engineers learning ML
+    - ML engineers focusing on platforms
+  example_projects: [Automated retraining pipeline, Model registry with CI/CD]
+  project_templates: [mlops-pipeline, production-ml-api, k8s-microservices]
+  certificates: [aws-ml-engineer-associate, gcp-professional-ml-engineer, cka]
+  related: [ml-engineer, devops-engineer, ai-engineer]
+  who_might_enjoy:
+    - People who enjoy both infrastructure and ML
+    - Systems thinkers
+  questions_to_explore:
+    - Are you more drawn to platforms than to modelling?
+  signals:
+    domains: {ai: 0.8, cloud: 0.9, technology: 0.8}
+    activities: [technology, building, problem_solving]
+    work_styles: [build_software, work_with_data]
+  skill_focus: Operating ML systems
+  typical_outputs: ML pipelines, registries, monitoring, platform tooling
+  phases:
+    - {name: Foundations, skills: [python, linux, machine_learning]}
+    - {name: Delivery, skills: [docker, ci_cd, model_deployment]}
+    - {name: ML Platform, skills: [mlops, orchestration, kubernetes, cloud, observability]}
+
+- id: cybersecurity-engineer
+  name: Cybersecurity Engineer
+  family: technology
+  categories: [cybersecurity, technology]
+  summary: Design and build the controls that protect systems and data.
+  what_they_do: Security engineers harden infrastructure and applications, build detection and response capabilities, and help teams build securely.
+  responsibilities:
+    - Implement and tune security controls
+    - Perform threat modelling and security reviews
+    - Build detection and response tooling
+    - Respond to and learn from incidents
+  skills:
+    cybersecurity: [3, core]
+    networking: [2, core]
+    linux: [2, core]
+    application_security: [2, core]
+    cloud_security: [2, important]
+    security_operations: [2, important]
+    python: [2, important]
+    cloud: [1, important]
+    penetration_testing: [1, useful]
+    infrastructure_as_code: [1, useful]
+  technologies: [SIEM (Splunk/Elastic), EDR, Burp Suite, cloud security tooling, Python]
+  entry_routes:
+    - IT support or SOC analyst roles
+    - Software or cloud engineers specialising in security
+    - Security degrees plus hands-on labs
+  example_projects: [Home SOC lab, Threat model of a real app, Cloud security guardrails]
+  project_templates: [home-soc-lab, webapp-pentest-report, cloud-infra-terraform]
+  certificates: [comptia-security-plus, google-cybersecurity, oscp, cissp, aws-solutions-architect-associate]
+  related: [security-analyst, penetration-tester, cloud-engineer, devops-engineer]
+  who_might_enjoy:
+    - People who like thinking like an adversary
+    - Detail-oriented problem solvers
+  questions_to_explore:
+    - Do you prefer defending (blue team) or testing (red team)?
+    - Are you comfortable with high-pressure incidents?
+  signals:
+    domains: {cybersecurity: 1.0, technology: 0.7, cloud: 0.3}
+    activities: [problem_solving, technology, researching]
+    work_styles: [build_software, research_technology, analyze_information]
+  skill_focus: Building security controls
+  typical_outputs: Hardened systems, detections, threat models, security reviews
+  phases:
+    - {name: Foundations, skills: [linux, networking, cybersecurity, python]}
+    - {name: Defence, skills: [security_operations, application_security]}
+    - {name: Cloud & Offence, skills: [cloud, cloud_security, penetration_testing]}
+
+- id: security-analyst
+  name: Security Analyst (SOC)
+  family: technology
+  categories: [cybersecurity]
+  summary: Monitor, detect and respond to security threats.
+  what_they_do: SOC analysts triage alerts, investigate suspicious activity and coordinate incident response, often as the first line of defence.
+  responsibilities:
+    - Triage and investigate alerts
+    - Write and tune detection rules
+    - Document and escalate incidents
+    - Hunt for threats proactively
+  skills:
+    cybersecurity: [2, core]
+    security_operations: [3, core]
+    networking: [2, core]
+    linux: [2, important]
+    python: [1, useful]
+    communication: [2, important]
+    cloud_security: [1, useful]
+  technologies: [Splunk / Elastic / Sentinel, EDR tools, Wireshark, MITRE ATT&CK]
+  entry_routes:
+    - IT support and help desk
+    - Security certificates plus home lab experience
+  example_projects: [Home SOC lab, Detection engineering write-ups]
+  project_templates: [home-soc-lab, webapp-pentest-report]
+  certificates: [comptia-security-plus, google-cybersecurity]
+  related: [cybersecurity-engineer, penetration-tester]
+  who_might_enjoy:
+    - Investigators who like piecing clues together
+    - People who stay calm under pressure
+  questions_to_explore:
+    - Are you comfortable with shift work in some organisations?
+  signals:
+    domains: {cybersecurity: 1.0, technology: 0.5}
+    activities: [problem_solving, analyzing_data, researching, technology]
+    work_styles: [analyze_information, research_technology]
+  skill_focus: Detection and response
+  typical_outputs: Investigations, incident reports, detection rules
+
+- id: penetration-tester
+  name: Penetration Tester
+  family: technology
+  categories: [cybersecurity]
+  summary: Legally attack systems to find weaknesses before real attackers do.
+  what_they_do: Penetration testers scope, test and report on the security of applications, networks and cloud environments, then help teams fix what they find.
+  responsibilities:
+    - Plan and execute authorised security tests
+    - Exploit vulnerabilities in controlled ways
+    - Write clear reports with remediation guidance
+  skills:
+    penetration_testing: [3, core]
+    networking: [2, core]
+    linux: [3, core]
+    application_security: [2, core]
+    python: [2, important]
+    cybersecurity: [2, core]
+    communication: [2, important]
+  technologies: [Burp Suite, Nmap, Metasploit, Kali Linux]
+  entry_routes:
+    - SOC or IT roles plus offensive labs and CTFs
+    - Bug bounty track record
+  example_projects: [Web app assessment report, CTF write-ups]
+  project_templates: [webapp-pentest-report, home-soc-lab]
+  certificates: [oscp, comptia-security-plus]
+  related: [cybersecurity-engineer, security-analyst]
+  who_might_enjoy:
+    - Curious people who like figuring out how things break
+  questions_to_explore:
+    - Do you enjoy writing reports as much as hacking? (It's a big part of the job.)
+  signals:
+    domains: {cybersecurity: 1.0, technology: 0.6}
+    activities: [problem_solving, technology, researching]
+    work_styles: [research_technology]
+  skill_focus: Offensive security testing
+  typical_outputs: Pentest reports, proof-of-concept exploits, remediation advice
+
+- id: web-developer
+  name: Web Developer
+  family: technology
+  categories: [technology, design]
+  summary: Build websites and web applications people use every day.
+  what_they_do: Web developers build user interfaces and the services behind them, focusing on performance, accessibility and usability.
+  responsibilities:
+    - Build responsive, accessible interfaces
+    - Integrate APIs and manage client state
+    - Optimise performance and SEO
+    - Collaborate closely with designers
+  skills:
+    html_css: [3, core]
+    javascript: [3, core]
+    typescript: [2, important]
+    frontend: [3, core]
+    apis: [2, important]
+    git: [2, core]
+    accessibility: [2, important]
+    testing: [1, important]
+    databases: [1, useful]
+    ui_design: [1, useful]
+  technologies: [HTML, CSS, JavaScript/TypeScript, React / Next.js, Node.js]
+  entry_routes:
+    - Self-taught with a portfolio
+    - Bootcamps
+    - Computer science degrees
+  example_projects: [Full-stack app, Accessible component library, Portfolio site]
+  project_templates: [fullstack-web-app, design-system-kit]
+  certificates: []
+  related: [software-engineer, ui-designer, creative-technologist, mobile-developer]
+  who_might_enjoy:
+    - People who like visible, immediate results
+    - People who care about design and details
+  questions_to_explore:
+    - Do you prefer the visual front end or the logic behind it?
+  signals:
+    domains: {technology: 1.0, design: 0.5}
+    activities: [building, designing, technology]
+    work_styles: [build_software, design_experiences, create_products]
+  skill_focus: Web interfaces and applications
+  typical_outputs: Websites, web apps, UI components
+  phases:
+    - {name: Foundations, skills: [html_css, javascript, git]}
+    - {name: Modern Frontend, skills: [typescript, frontend, accessibility]}
+    - {name: Full Stack, skills: [apis, databases, testing]}
+
+- id: mobile-developer
+  name: Mobile Developer
+  family: technology
+  categories: [technology]
+  summary: Build apps for iOS and Android.
+  what_they_do: Mobile developers build native or cross-platform apps, handling device constraints, offline behaviour and app-store release processes.
+  responsibilities:
+    - Build app screens and navigation
+    - Integrate APIs and local storage
+    - Handle performance and battery constraints
+    - Ship through app stores
+  skills:
+    mobile: [3, core]
+    kotlin: [2, important]
+    swift: [2, important]
+    javascript: [1, useful]
+    apis: [2, core]
+    git: [2, core]
+    testing: [1, important]
+    ui_design: [1, useful]
+  technologies: [Kotlin / Jetpack Compose, Swift / SwiftUI, React Native or Flutter]
+  entry_routes:
+    - Self-taught with published apps
+    - Web developers moving to mobile
+  example_projects: [Offline-first app, App with real users on a store]
+  project_templates: [mobile-app, fullstack-web-app]
+  certificates: []
+  related: [web-developer, software-engineer, ui-designer]
+  who_might_enjoy:
+    - People who love polished, tactile product experiences
+  questions_to_explore:
+    - Native (one platform, deep) or cross-platform (both, broader)?
+  signals:
+    domains: {technology: 1.0, design: 0.4}
+    activities: [building, designing, technology]
+    work_styles: [build_software, create_products, design_experiences]
+  skill_focus: Mobile applications
+  typical_outputs: iOS/Android apps, app releases
